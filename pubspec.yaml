@@ -5,13 +5,13 @@ author: Thomas Burkhart
 homepage: https://github.com/FlutterGL/opengl_es_bindings
 
 environment:
-  sdk: ">=2.12.0-0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  ffi: ^0.2.0-nullsafety.1
+  ffi: ^2.1.0
 
 dev_dependencies:
-  ffigen: ^2.0.0-null-safety.1
+  ffigen: ^9.0.1
   lint: ^1.5.1
   test: ^1.16.0-nullsafety.13
 
