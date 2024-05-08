@@ -5895,7 +5895,8 @@ abstract class khronos_boolean_enum_t {
   static const int KHRONOS_BOOLEAN_ENUM_FORCE_SIZE = 2147483647;
 }
 
-class __GLsync extends ffi.Struct {}
+base class __GLsync extends ffi.Opaque {
+}
 
 const int __gles2_gl2ext_h_ = 1;
 

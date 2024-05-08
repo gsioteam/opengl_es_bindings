@@ -4,7 +4,7 @@
 import 'dart:ffi' as ffi;
 
 /// https://www.khronos.org/registry/OpenGL/index_es.php#headers3
-class LibEGL {
+base class LibEGL {
   /// Holds the Dynamic library.
   final ffi.DynamicLibrary _dylib;
 
@@ -55170,9 +55170,9 @@ class LibEGL {
   _dart_onexit? _onexit_1;
 }
 
-class AHardwareBuffer extends ffi.Struct {}
+base class AHardwareBuffer extends ffi.Opaque {}
 
-class EGLClientPixmapHI extends ffi.Struct {
+base class EGLClientPixmapHI extends ffi.Struct {
   external ffi.Pointer<ffi.Void> pData;
 
   @ffi.Int32()
@@ -55192,13 +55192,13 @@ abstract class EXCEPTION_DISPOSITION {
   static const int ExceptionCollidedUnwind = 3;
 }
 
-class EXCEPTION_RECORD extends ffi.Struct {}
+base class EXCEPTION_RECORD extends ffi.Opaque {}
 
-class PCONTEXT extends ffi.Struct {}
+base class PCONTEXT extends ffi.Opaque {}
 
-class PDISPATCHER_CONTEXT extends ffi.Struct {}
+base class PDISPATCHER_CONTEXT extends ffi.Opaque {}
 
-class __crt_locale_data_public extends ffi.Struct {
+base class __crt_locale_data_public extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> _locale_pctype;
 
   @ffi.Int32()
@@ -55208,17 +55208,17 @@ class __crt_locale_data_public extends ffi.Struct {
   external int _locale_lc_codepage;
 }
 
-class __crt_locale_data extends ffi.Struct {}
+base class __crt_locale_data extends ffi.Opaque {}
 
-class __crt_multibyte_data extends ffi.Struct {}
+base class __crt_multibyte_data extends ffi.Opaque {}
 
-class __crt_locale_pointers extends ffi.Struct {
+base class __crt_locale_pointers extends ffi.Struct {
   external ffi.Pointer<__crt_locale_data> locinfo;
 
   external ffi.Pointer<__crt_multibyte_data> mbcinfo;
 }
 
-class _Mbstatet extends ffi.Struct {
+base class _Mbstatet extends ffi.Struct {
   @ffi.Uint64()
   external int _Wchar;
 
@@ -55229,7 +55229,7 @@ class _Mbstatet extends ffi.Struct {
   external int _State;
 }
 
-class PPROCESSOR_NUMBER extends ffi.Struct {
+base class PPROCESSOR_NUMBER extends ffi.Struct {
   @ffi.Uint16()
   external int Group;
 
@@ -55240,14 +55240,14 @@ class PPROCESSOR_NUMBER extends ffi.Struct {
   external int Reserved;
 }
 
-class PGROUP_AFFINITY extends ffi.Struct {}
+base class PGROUP_AFFINITY extends ffi.Opaque {}
 
 abstract class PCOMPARTMENT_ID {
   static const int UNSPECIFIED_COMPARTMENT_ID = 0;
   static const int DEFAULT_COMPARTMENT_ID = 1;
 }
 
-class FLOAT128 extends ffi.Struct {
+base class FLOAT128 extends ffi.Struct {
   @ffi.Int64()
   external int LowPart;
 
@@ -55255,7 +55255,7 @@ class FLOAT128 extends ffi.Struct {
   external int HighPart;
 }
 
-class PLUID extends ffi.Struct {
+base class PLUID extends ffi.Struct {
   @ffi.Uint64()
   external int LowPart;
 
@@ -55263,17 +55263,17 @@ class PLUID extends ffi.Struct {
   external int HighPart;
 }
 
-class PRLIST_ENTRY extends ffi.Struct {
+base class PRLIST_ENTRY extends ffi.Struct {
   external ffi.Pointer<PRLIST_ENTRY> Flink;
 
   external ffi.Pointer<PRLIST_ENTRY> Blink;
 }
 
-class PSINGLE_LIST_ENTRY extends ffi.Struct {
+base class PSINGLE_LIST_ENTRY extends ffi.Struct {
   external ffi.Pointer<PSINGLE_LIST_ENTRY> Next;
 }
 
-class LIST_ENTRY32 extends ffi.Struct {
+base class LIST_ENTRY32 extends ffi.Struct {
   @ffi.Uint64()
   external int Flink;
 
@@ -55281,7 +55281,7 @@ class LIST_ENTRY32 extends ffi.Struct {
   external int Blink;
 }
 
-class LIST_ENTRY64 extends ffi.Struct {
+base class LIST_ENTRY64 extends ffi.Struct {
   @ffi.Uint64()
   external int Flink;
 
@@ -55289,11 +55289,11 @@ class LIST_ENTRY64 extends ffi.Struct {
   external int Blink;
 }
 
-class GUID extends ffi.Struct {}
+base class GUID extends ffi.Opaque {}
 
-class OBJECTID extends ffi.Struct {}
+base class OBJECTID extends ffi.Opaque {}
 
-class PM128A extends ffi.Struct {
+base class PM128A extends ffi.Struct {
   @ffi.Uint64()
   external int Low;
 
@@ -55301,9 +55301,9 @@ class PM128A extends ffi.Struct {
   external int High;
 }
 
-class PXSAVE_FORMAT extends ffi.Struct {}
+base class PXSAVE_FORMAT extends ffi.Opaque {}
 
-class PXSAVE_CET_U_FORMAT extends ffi.Struct {
+base class PXSAVE_CET_U_FORMAT extends ffi.Struct {
   @ffi.Uint64()
   external int Ia32CetUMsr;
 
@@ -55311,11 +55311,11 @@ class PXSAVE_CET_U_FORMAT extends ffi.Struct {
   external int Ia32Pl3SspMsr;
 }
 
-class PXSAVE_AREA_HEADER extends ffi.Struct {}
+base class PXSAVE_AREA_HEADER extends ffi.Opaque {}
 
-class PXSAVE_AREA extends ffi.Struct {}
+base class PXSAVE_AREA extends ffi.Opaque {}
 
-class PXSTATE_CONTEXT extends ffi.Struct {
+base class PXSTATE_CONTEXT extends ffi.Struct {
   @ffi.Uint64()
   external int Mask;
 
@@ -55330,28 +55330,28 @@ class PXSTATE_CONTEXT extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Buffer;
 }
 
-class PSCOPE_TABLE_AMD64 extends ffi.Struct {}
+base class PSCOPE_TABLE_AMD64 extends ffi.Opaque {}
 
-class _PIMAGE_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {}
+base class _PIMAGE_RUNTIME_FUNCTION_ENTRY extends ffi.Opaque {}
 
-class PUNWIND_HISTORY_TABLE_ENTRY extends ffi.Struct {
+base class PUNWIND_HISTORY_TABLE_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int ImageBase;
 
   external ffi.Pointer<_PIMAGE_RUNTIME_FUNCTION_ENTRY> FunctionEntry;
 }
 
-class PUNWIND_HISTORY_TABLE extends ffi.Struct {}
+base class PUNWIND_HISTORY_TABLE extends ffi.Opaque {}
 
-class PEXCEPTION_POINTERS extends ffi.Struct {}
+base class PEXCEPTION_POINTERS extends ffi.Opaque {}
 
-class PKNONVOLATILE_CONTEXT_POINTERS extends ffi.Struct {}
+base class PKNONVOLATILE_CONTEXT_POINTERS extends ffi.Opaque {}
 
-class PSCOPE_TABLE_ARM extends ffi.Struct {}
+base class PSCOPE_TABLE_ARM extends ffi.Opaque {}
 
-class PSCOPE_TABLE_ARM64 extends ffi.Struct {}
+base class PSCOPE_TABLE_ARM64 extends ffi.Opaque {}
 
-class PKNONVOLATILE_CONTEXT_POINTERS_ARM64 extends ffi.Struct {
+base class PKNONVOLATILE_CONTEXT_POINTERS_ARM64 extends ffi.Struct {
   external ffi.Pointer<ffi.Uint64> X19;
 
   external ffi.Pointer<ffi.Uint64> X20;
@@ -55393,21 +55393,21 @@ class PKNONVOLATILE_CONTEXT_POINTERS_ARM64 extends ffi.Struct {
   external ffi.Pointer<ffi.Uint64> D15;
 }
 
-class PLDT_ENTRY extends ffi.Struct {}
+base class PLDT_ENTRY extends ffi.Opaque {}
 
-class WOW64_FLOATING_SAVE_AREA extends ffi.Struct {}
+base class WOW64_FLOATING_SAVE_AREA extends ffi.Opaque {}
 
-class WOW64_CONTEXT extends ffi.Struct {}
+base class WOW64_CONTEXT extends ffi.Opaque {}
 
-class PWOW64_LDT_ENTRY extends ffi.Struct {}
+base class PWOW64_LDT_ENTRY extends ffi.Opaque {}
 
-class PWOW64_DESCRIPTOR_TABLE_ENTRY extends ffi.Struct {}
+base class PWOW64_DESCRIPTOR_TABLE_ENTRY extends ffi.Opaque {}
 
-class PEXCEPTION_RECORD32 extends ffi.Struct {}
+base class PEXCEPTION_RECORD32 extends ffi.Opaque {}
 
-class PEXCEPTION_RECORD64 extends ffi.Struct {}
+base class PEXCEPTION_RECORD64 extends ffi.Opaque {}
 
-class GENERIC_MAPPING extends ffi.Struct {
+base class GENERIC_MAPPING extends ffi.Struct {
   @ffi.Uint64()
   external int GenericRead;
 
@@ -55421,11 +55421,11 @@ class GENERIC_MAPPING extends ffi.Struct {
   external int GenericAll;
 }
 
-class PLUID_AND_ATTRIBUTES extends ffi.Struct {}
+base class PLUID_AND_ATTRIBUTES extends ffi.Opaque {}
 
-class PSID_IDENTIFIER_AUTHORITY extends ffi.Struct {}
+base class PSID_IDENTIFIER_AUTHORITY extends ffi.Opaque {}
 
-class PISID extends ffi.Struct {}
+base class PISID extends ffi.Opaque {}
 
 abstract class PSID_NAME_USE {
   static const int SidTypeUser = 1;
@@ -55441,14 +55441,14 @@ abstract class PSID_NAME_USE {
   static const int SidTypeLogonSession = 11;
 }
 
-class PSID_AND_ATTRIBUTES extends ffi.Struct {
+base class PSID_AND_ATTRIBUTES extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Sid;
 
   @ffi.Uint64()
   external int Attributes;
 }
 
-class PSID_AND_ATTRIBUTES_HASH extends ffi.Struct {}
+base class PSID_AND_ATTRIBUTES_HASH extends ffi.Opaque {}
 
 abstract class WELL_KNOWN_SID_TYPE {
   static const int WinNullSid = 0;
@@ -55573,7 +55573,7 @@ abstract class WELL_KNOWN_SID_TYPE {
   static const int WinBuiltinDeviceOwnersSid = 119;
 }
 
-class ACL extends ffi.Struct {
+base class ACL extends ffi.Struct {
   @ffi.Uint8()
   external int AclRevision;
 
@@ -55590,7 +55590,7 @@ class ACL extends ffi.Struct {
   external int Sbz2;
 }
 
-class ACE_HEADER extends ffi.Struct {
+base class ACE_HEADER extends ffi.Struct {
   @ffi.Uint8()
   external int AceType;
 
@@ -55601,59 +55601,59 @@ class ACE_HEADER extends ffi.Struct {
   external int AceSize;
 }
 
-class ACCESS_ALLOWED_ACE extends ffi.Struct {}
+base class ACCESS_ALLOWED_ACE extends ffi.Opaque {}
 
-class ACCESS_DENIED_ACE extends ffi.Struct {}
+base class ACCESS_DENIED_ACE extends ffi.Opaque {}
 
-class SYSTEM_AUDIT_ACE extends ffi.Struct {}
+base class SYSTEM_AUDIT_ACE extends ffi.Opaque {}
 
-class SYSTEM_ALARM_ACE extends ffi.Struct {}
+base class SYSTEM_ALARM_ACE extends ffi.Opaque {}
 
-class PSYSTEM_RESOURCE_ATTRIBUTE_ACE extends ffi.Struct {}
+base class PSYSTEM_RESOURCE_ATTRIBUTE_ACE extends ffi.Opaque {}
 
-class PSYSTEM_SCOPED_POLICY_ID_ACE extends ffi.Struct {}
+base class PSYSTEM_SCOPED_POLICY_ID_ACE extends ffi.Opaque {}
 
-class PSYSTEM_MANDATORY_LABEL_ACE extends ffi.Struct {}
+base class PSYSTEM_MANDATORY_LABEL_ACE extends ffi.Opaque {}
 
-class PSYSTEM_PROCESS_TRUST_LABEL_ACE extends ffi.Struct {}
+base class PSYSTEM_PROCESS_TRUST_LABEL_ACE extends ffi.Opaque {}
 
-class PSYSTEM_ACCESS_FILTER_ACE extends ffi.Struct {}
+base class PSYSTEM_ACCESS_FILTER_ACE extends ffi.Opaque {}
 
-class PACCESS_ALLOWED_OBJECT_ACE extends ffi.Struct {}
+base class PACCESS_ALLOWED_OBJECT_ACE extends ffi.Opaque {}
 
-class PACCESS_DENIED_OBJECT_ACE extends ffi.Struct {}
+base class PACCESS_DENIED_OBJECT_ACE extends ffi.Opaque {}
 
-class PSYSTEM_AUDIT_OBJECT_ACE extends ffi.Struct {}
+base class PSYSTEM_AUDIT_OBJECT_ACE extends ffi.Opaque {}
 
-class PSYSTEM_ALARM_OBJECT_ACE extends ffi.Struct {}
+base class PSYSTEM_ALARM_OBJECT_ACE extends ffi.Opaque {}
 
-class PACCESS_ALLOWED_CALLBACK_ACE extends ffi.Struct {}
+base class PACCESS_ALLOWED_CALLBACK_ACE extends ffi.Opaque {}
 
-class PACCESS_DENIED_CALLBACK_ACE extends ffi.Struct {}
+base class PACCESS_DENIED_CALLBACK_ACE extends ffi.Opaque {}
 
-class PSYSTEM_AUDIT_CALLBACK_ACE extends ffi.Struct {}
+base class PSYSTEM_AUDIT_CALLBACK_ACE extends ffi.Opaque {}
 
-class PSYSTEM_ALARM_CALLBACK_ACE extends ffi.Struct {}
+base class PSYSTEM_ALARM_CALLBACK_ACE extends ffi.Opaque {}
 
-class PACCESS_ALLOWED_CALLBACK_OBJECT_ACE extends ffi.Struct {}
+base class PACCESS_ALLOWED_CALLBACK_OBJECT_ACE extends ffi.Opaque {}
 
-class PACCESS_DENIED_CALLBACK_OBJECT_ACE extends ffi.Struct {}
+base class PACCESS_DENIED_CALLBACK_OBJECT_ACE extends ffi.Opaque {}
 
-class PSYSTEM_AUDIT_CALLBACK_OBJECT_ACE extends ffi.Struct {}
+base class PSYSTEM_AUDIT_CALLBACK_OBJECT_ACE extends ffi.Opaque {}
 
-class PSYSTEM_ALARM_CALLBACK_OBJECT_ACE extends ffi.Struct {}
+base class PSYSTEM_ALARM_CALLBACK_OBJECT_ACE extends ffi.Opaque {}
 
 abstract class ACL_INFORMATION_CLASS {
   static const int AclRevisionInformation = 1;
   static const int AclSizeInformation = 2;
 }
 
-class ACL_REVISION_INFORMATION extends ffi.Struct {
+base class ACL_REVISION_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int AclRevision;
 }
 
-class ACL_SIZE_INFORMATION extends ffi.Struct {
+base class ACL_SIZE_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int AceCount;
 
@@ -55664,7 +55664,7 @@ class ACL_SIZE_INFORMATION extends ffi.Struct {
   external int AclBytesFree;
 }
 
-class PISECURITY_DESCRIPTOR_RELATIVE extends ffi.Struct {
+base class PISECURITY_DESCRIPTOR_RELATIVE extends ffi.Struct {
   @ffi.Uint8()
   external int Revision;
 
@@ -55687,7 +55687,7 @@ class PISECURITY_DESCRIPTOR_RELATIVE extends ffi.Struct {
   external int Dacl;
 }
 
-class PISECURITY_DESCRIPTOR extends ffi.Struct {
+base class PISECURITY_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint8()
   external int Revision;
 
@@ -55706,7 +55706,7 @@ class PISECURITY_DESCRIPTOR extends ffi.Struct {
   external ffi.Pointer<ACL> Dacl;
 }
 
-class PSECURITY_OBJECT_AI_PARAMS extends ffi.Struct {
+base class PSECURITY_OBJECT_AI_PARAMS extends ffi.Struct {
   @ffi.Uint64()
   external int Size;
 
@@ -55714,7 +55714,7 @@ class PSECURITY_OBJECT_AI_PARAMS extends ffi.Struct {
   external int ConstraintMask;
 }
 
-class POBJECT_TYPE_LIST extends ffi.Struct {
+base class POBJECT_TYPE_LIST extends ffi.Struct {
   @ffi.Uint16()
   external int Level;
 
@@ -55729,7 +55729,7 @@ abstract class PAUDIT_EVENT_TYPE {
   static const int AuditEventDirectoryServiceAccess = 1;
 }
 
-class PPRIVILEGE_SET extends ffi.Struct {}
+base class PPRIVILEGE_SET extends ffi.Opaque {}
 
 abstract class ACCESS_REASON_TYPE {
   static const int AccessReasonNone = 0;
@@ -55752,9 +55752,9 @@ abstract class ACCESS_REASON_TYPE {
   static const int AccessReasonFilterAce = 10485760;
 }
 
-class PACCESS_REASONS extends ffi.Struct {}
+base class PACCESS_REASONS extends ffi.Opaque {}
 
-class PSE_SECURITY_DESCRIPTOR extends ffi.Struct {
+base class PSE_SECURITY_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint64()
   external int Size;
 
@@ -55764,7 +55764,7 @@ class PSE_SECURITY_DESCRIPTOR extends ffi.Struct {
   external ffi.Pointer<ffi.Void> SecurityDescriptor;
 }
 
-class PSE_ACCESS_REQUEST extends ffi.Struct {
+base class PSE_ACCESS_REQUEST extends ffi.Struct {
   @ffi.Uint64()
   external int Size;
 
@@ -55786,7 +55786,7 @@ class PSE_ACCESS_REQUEST extends ffi.Struct {
   external ffi.Pointer<POBJECT_TYPE_LIST> ObjectTypeList;
 }
 
-class PSE_ACCESS_REPLY extends ffi.Struct {
+base class PSE_ACCESS_REPLY extends ffi.Struct {
   @ffi.Uint64()
   external int Size;
 
@@ -55872,63 +55872,63 @@ abstract class PTOKEN_INFORMATION_CLASS {
   static const int MaxTokenInfoClass = 49;
 }
 
-class PTOKEN_USER extends ffi.Struct {}
+base class PTOKEN_USER extends ffi.Opaque {}
 
-class PSE_TOKEN_USER extends ffi.Struct {}
+base class PSE_TOKEN_USER extends ffi.Opaque {}
 
-class PTOKEN_GROUPS extends ffi.Struct {}
+base class PTOKEN_GROUPS extends ffi.Opaque {}
 
-class PTOKEN_PRIVILEGES extends ffi.Struct {}
+base class PTOKEN_PRIVILEGES extends ffi.Opaque {}
 
-class PTOKEN_OWNER extends ffi.Struct {
+base class PTOKEN_OWNER extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Owner;
 }
 
-class PTOKEN_PRIMARY_GROUP extends ffi.Struct {
+base class PTOKEN_PRIMARY_GROUP extends ffi.Struct {
   external ffi.Pointer<ffi.Void> PrimaryGroup;
 }
 
-class PTOKEN_DEFAULT_DACL extends ffi.Struct {
+base class PTOKEN_DEFAULT_DACL extends ffi.Struct {
   external ffi.Pointer<ACL> DefaultDacl;
 }
 
-class PTOKEN_USER_CLAIMS extends ffi.Struct {
+base class PTOKEN_USER_CLAIMS extends ffi.Struct {
   external ffi.Pointer<ffi.Void> UserClaims;
 }
 
-class PTOKEN_DEVICE_CLAIMS extends ffi.Struct {
+base class PTOKEN_DEVICE_CLAIMS extends ffi.Struct {
   external ffi.Pointer<ffi.Void> DeviceClaims;
 }
 
-class PTOKEN_GROUPS_AND_PRIVILEGES extends ffi.Struct {}
+base class PTOKEN_GROUPS_AND_PRIVILEGES extends ffi.Opaque {}
 
-class PTOKEN_LINKED_TOKEN extends ffi.Struct {
+base class PTOKEN_LINKED_TOKEN extends ffi.Struct {
   external ffi.Pointer<ffi.Void> LinkedToken;
 }
 
-class PTOKEN_ELEVATION extends ffi.Struct {
+base class PTOKEN_ELEVATION extends ffi.Struct {
   @ffi.Uint64()
   external int TokenIsElevated;
 }
 
-class PTOKEN_MANDATORY_LABEL extends ffi.Struct {}
+base class PTOKEN_MANDATORY_LABEL extends ffi.Opaque {}
 
-class PTOKEN_MANDATORY_POLICY extends ffi.Struct {
+base class PTOKEN_MANDATORY_POLICY extends ffi.Struct {
   @ffi.Uint64()
   external int Policy;
 }
 
-class PTOKEN_ACCESS_INFORMATION extends ffi.Struct {}
+base class PTOKEN_ACCESS_INFORMATION extends ffi.Opaque {}
 
-class PTOKEN_AUDIT_POLICY extends ffi.Struct {}
+base class PTOKEN_AUDIT_POLICY extends ffi.Opaque {}
 
-class PTOKEN_SOURCE extends ffi.Struct {}
+base class PTOKEN_SOURCE extends ffi.Opaque {}
 
-class PTOKEN_STATISTICS extends ffi.Struct {}
+base class PTOKEN_STATISTICS extends ffi.Opaque {}
 
-class PTOKEN_CONTROL extends ffi.Struct {}
+base class PTOKEN_CONTROL extends ffi.Opaque {}
 
-class PTOKEN_ORIGIN extends ffi.Struct {}
+base class PTOKEN_ORIGIN extends ffi.Opaque {}
 
 abstract class PMANDATORY_LEVEL {
   static const int MandatoryLevelUntrusted = 0;
@@ -55940,42 +55940,42 @@ abstract class PMANDATORY_LEVEL {
   static const int MandatoryLevelCount = 6;
 }
 
-class PTOKEN_APPCONTAINER_INFORMATION extends ffi.Struct {
+base class PTOKEN_APPCONTAINER_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> TokenAppContainer;
 }
 
-class PTOKEN_SID_INFORMATION extends ffi.Struct {
+base class PTOKEN_SID_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Sid;
 }
 
-class PTOKEN_BNO_ISOLATION_INFORMATION extends ffi.Struct {
+base class PTOKEN_BNO_ISOLATION_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> IsolationPrefix;
 
   @ffi.Uint8()
   external int IsolationEnabled;
 }
 
-class PCLAIM_SECURITY_ATTRIBUTE_FQBN_VALUE extends ffi.Struct {
+base class PCLAIM_SECURITY_ATTRIBUTE_FQBN_VALUE extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
   external ffi.Pointer<ffi.Uint16> Name;
 }
 
-class PCLAIM_SECURITY_ATTRIBUTE_OCTET_STRING_VALUE extends ffi.Struct {
+base class PCLAIM_SECURITY_ATTRIBUTE_OCTET_STRING_VALUE extends ffi.Struct {
   external ffi.Pointer<ffi.Void> pValue;
 
   @ffi.Uint64()
   external int ValueLength;
 }
 
-class PCLAIM_SECURITY_ATTRIBUTE_V1 extends ffi.Struct {}
+base class PCLAIM_SECURITY_ATTRIBUTE_V1 extends ffi.Opaque {}
 
-class PCLAIM_SECURITY_ATTRIBUTE_RELATIVE_V1 extends ffi.Struct {}
+base class PCLAIM_SECURITY_ATTRIBUTE_RELATIVE_V1 extends ffi.Opaque {}
 
-class PCLAIM_SECURITY_ATTRIBUTES_INFORMATION extends ffi.Struct {}
+base class PCLAIM_SECURITY_ATTRIBUTES_INFORMATION extends ffi.Opaque {}
 
-class PSECURITY_QUALITY_OF_SERVICE extends ffi.Struct {
+base class PSECURITY_QUALITY_OF_SERVICE extends ffi.Struct {
   @ffi.Uint64()
   external int Length;
 
@@ -55989,7 +55989,7 @@ class PSECURITY_QUALITY_OF_SERVICE extends ffi.Struct {
   external int EffectiveOnly;
 }
 
-class PSE_IMPERSONATION_STATE extends ffi.Struct {
+base class PSE_IMPERSONATION_STATE extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Token;
 
   @ffi.Uint8()
@@ -56018,7 +56018,7 @@ abstract class SE_LEARNING_MODE_DATA_TYPE {
   static const int SeLearningModeMax = 2;
 }
 
-class LPSECURITY_CAPABILITIES extends ffi.Struct {
+base class LPSECURITY_CAPABILITIES extends ffi.Struct {
   external ffi.Pointer<ffi.Void> AppContainerSid;
 
   external ffi.Pointer<PSID_AND_ATTRIBUTES> Capabilities;
@@ -56030,7 +56030,7 @@ class LPSECURITY_CAPABILITIES extends ffi.Struct {
   external int Reserved;
 }
 
-class PJOB_SET_ARRAY extends ffi.Struct {
+base class PJOB_SET_ARRAY extends ffi.Struct {
   external ffi.Pointer<ffi.Void> JobHandle;
 
   @ffi.Uint64()
@@ -56040,13 +56040,13 @@ class PJOB_SET_ARRAY extends ffi.Struct {
   external int Flags;
 }
 
-class EXCEPTION_REGISTRATION_RECORD extends ffi.Struct {
+base class EXCEPTION_REGISTRATION_RECORD extends ffi.Struct {
   external ffi.Pointer<EXCEPTION_REGISTRATION_RECORD> Next;
 
   external ffi.Pointer<ffi.NativeFunction<PEXCEPTION_ROUTINE>> Handler;
 }
 
-class NT_TIB extends ffi.Struct {
+base class NT_TIB extends ffi.Struct {
   external ffi.Pointer<EXCEPTION_REGISTRATION_RECORD> ExceptionList;
 
   external ffi.Pointer<ffi.Void> StackBase;
@@ -56060,7 +56060,7 @@ class NT_TIB extends ffi.Struct {
   external ffi.Pointer<NT_TIB> Self;
 }
 
-class PNT_TIB32 extends ffi.Struct {
+base class PNT_TIB32 extends ffi.Struct {
   @ffi.Uint64()
   external int ExceptionList;
 
@@ -56080,7 +56080,7 @@ class PNT_TIB32 extends ffi.Struct {
   external int Self;
 }
 
-class PNT_TIB64 extends ffi.Struct {
+base class PNT_TIB64 extends ffi.Struct {
   @ffi.Uint64()
   external int ExceptionList;
 
@@ -56100,7 +56100,7 @@ class PNT_TIB64 extends ffi.Struct {
   external int Self;
 }
 
-class PUMS_CREATE_THREAD_ATTRIBUTES extends ffi.Struct {
+base class PUMS_CREATE_THREAD_ATTRIBUTES extends ffi.Struct {
   @ffi.Uint64()
   external int UmsVersion;
 
@@ -56109,9 +56109,9 @@ class PUMS_CREATE_THREAD_ATTRIBUTES extends ffi.Struct {
   external ffi.Pointer<ffi.Void> UmsCompletionList;
 }
 
-class WOW64_ARCHITECTURE_INFORMATION extends ffi.Struct {}
+base class WOW64_ARCHITECTURE_INFORMATION extends ffi.Opaque {}
 
-class PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET extends ffi.Struct {
+base class PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET extends ffi.Struct {
   @ffi.Uint64()
   external int TargetAddress;
 
@@ -56119,7 +56119,7 @@ class PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET extends ffi.Struct {
   external int Flags;
 }
 
-class PPROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION extends ffi.Struct {
+base class PPROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION extends ffi.Struct {
   @ffi.Uint16()
   external int NumberOfTargets;
 
@@ -56132,7 +56132,7 @@ class PPROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION extends ffi.Struct {
   external ffi.Pointer<PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET> Targets;
 }
 
-class PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE extends ffi.Struct {
+base class PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE extends ffi.Struct {
   @ffi.Uint64()
   external int BaseAddress;
 
@@ -56143,7 +56143,7 @@ class PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE extends ffi.Struct {
   external int Flags;
 }
 
-class PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION extends ffi.Struct {
+base class PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION extends ffi.Struct {
   @ffi.Uint16()
   external int NumberOfRanges;
 
@@ -56156,11 +56156,11 @@ class PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION extends ffi.Struct {
   external ffi.Pointer<PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE> Ranges;
 }
 
-class PQUOTA_LIMITS extends ffi.Struct {}
+base class PQUOTA_LIMITS extends ffi.Opaque {}
 
-class PQUOTA_LIMITS_EX extends ffi.Struct {}
+base class PQUOTA_LIMITS_EX extends ffi.Opaque {}
 
-class IO_COUNTERS extends ffi.Struct {
+base class IO_COUNTERS extends ffi.Struct {
   @ffi.Uint64()
   external int ReadOperationCount;
 
@@ -56205,53 +56205,53 @@ abstract class PPROCESS_MITIGATION_POLICY {
   static const int MaxProcessMitigationPolicy = 16;
 }
 
-class PPROCESS_MITIGATION_ASLR_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_ASLR_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_DEP_POLICY extends ffi.Struct {
+base class PPROCESS_MITIGATION_DEP_POLICY extends ffi.Struct {
   @ffi.Uint8()
   external int Permanent;
 }
 
-class PPROCESS_MITIGATION_STRICT_HANDLE_CHECK_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_STRICT_HANDLE_CHECK_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_SYSTEM_CALL_DISABLE_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_SYSTEM_CALL_DISABLE_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_EXTENSION_POINT_DISABLE_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_EXTENSION_POINT_DISABLE_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_DYNAMIC_CODE_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_DYNAMIC_CODE_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_CONTROL_FLOW_GUARD_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_CONTROL_FLOW_GUARD_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_BINARY_SIGNATURE_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_BINARY_SIGNATURE_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_FONT_DISABLE_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_FONT_DISABLE_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_IMAGE_LOAD_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_IMAGE_LOAD_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_SYSTEM_CALL_FILTER_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_SYSTEM_CALL_FILTER_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_PAYLOAD_RESTRICTION_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_PAYLOAD_RESTRICTION_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_CHILD_PROCESS_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_CHILD_PROCESS_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY extends ffi.Opaque {}
 
-class PPROCESS_MITIGATION_USER_SHADOW_STACK_POLICY extends ffi.Struct {}
+base class PPROCESS_MITIGATION_USER_SHADOW_STACK_POLICY extends ffi.Opaque {}
 
-class PJOBOBJECT_BASIC_ACCOUNTING_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_BASIC_ACCOUNTING_INFORMATION extends ffi.Opaque {}
 
-class PJOBOBJECT_BASIC_LIMIT_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_BASIC_LIMIT_INFORMATION extends ffi.Opaque {}
 
-class PJOBOBJECT_EXTENDED_LIMIT_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_EXTENDED_LIMIT_INFORMATION extends ffi.Opaque {}
 
-class PJOBOBJECT_BASIC_PROCESS_ID_LIST extends ffi.Struct {}
+base class PJOBOBJECT_BASIC_PROCESS_ID_LIST extends ffi.Opaque {}
 
-class PJOBOBJECT_BASIC_UI_RESTRICTIONS extends ffi.Struct {
+base class PJOBOBJECT_BASIC_UI_RESTRICTIONS extends ffi.Struct {
   @ffi.Uint64()
   external int UIRestrictionsClass;
 }
 
-class PJOBOBJECT_SECURITY_LIMIT_INFORMATION extends ffi.Struct {
+base class PJOBOBJECT_SECURITY_LIMIT_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int SecurityLimitFlags;
 
@@ -56264,20 +56264,20 @@ class PJOBOBJECT_SECURITY_LIMIT_INFORMATION extends ffi.Struct {
   external ffi.Pointer<PTOKEN_GROUPS> RestrictedSids;
 }
 
-class PJOBOBJECT_END_OF_JOB_TIME_INFORMATION extends ffi.Struct {
+base class PJOBOBJECT_END_OF_JOB_TIME_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int EndOfJobTimeAction;
 }
 
-class PJOBOBJECT_ASSOCIATE_COMPLETION_PORT extends ffi.Struct {
+base class PJOBOBJECT_ASSOCIATE_COMPLETION_PORT extends ffi.Struct {
   external ffi.Pointer<ffi.Void> CompletionKey;
 
   external ffi.Pointer<ffi.Void> CompletionPort;
 }
 
-class PJOBOBJECT_BASIC_AND_IO_ACCOUNTING_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_BASIC_AND_IO_ACCOUNTING_INFORMATION extends ffi.Opaque {}
 
-class PJOBOBJECT_JOBSET_INFORMATION extends ffi.Struct {
+base class PJOBOBJECT_JOBSET_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int MemberLevel;
 }
@@ -56294,15 +56294,15 @@ abstract class PJOBOBJECT_RATE_CONTROL_TOLERANCE_INTERVAL {
   static const int ToleranceIntervalLong = 3;
 }
 
-class PJOBOBJECT_NOTIFICATION_LIMIT_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_NOTIFICATION_LIMIT_INFORMATION extends ffi.Opaque {}
 
-class JOBOBJECT_NOTIFICATION_LIMIT_INFORMATION_2 extends ffi.Struct {}
+base class JOBOBJECT_NOTIFICATION_LIMIT_INFORMATION_2 extends ffi.Opaque {}
 
-class PJOBOBJECT_LIMIT_VIOLATION_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_LIMIT_VIOLATION_INFORMATION extends ffi.Opaque {}
 
-class JOBOBJECT_LIMIT_VIOLATION_INFORMATION_2 extends ffi.Struct {}
+base class JOBOBJECT_LIMIT_VIOLATION_INFORMATION_2 extends ffi.Opaque {}
 
-class PJOBOBJECT_CPU_RATE_CONTROL_INFORMATION extends ffi.Struct {
+base class PJOBOBJECT_CPU_RATE_CONTROL_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ControlFlags;
 }
@@ -56314,7 +56314,7 @@ abstract class JOB_OBJECT_NET_RATE_CONTROL_FLAGS {
   static const int JOB_OBJECT_NET_RATE_CONTROL_VALID_FLAGS = 7;
 }
 
-class JOBOBJECT_NET_RATE_CONTROL_INFORMATION extends ffi.Struct {
+base class JOBOBJECT_NET_RATE_CONTROL_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int MaxBandwidth;
 
@@ -56333,7 +56333,7 @@ abstract class JOB_OBJECT_IO_RATE_CONTROL_FLAGS {
   static const int JOB_OBJECT_IO_RATE_CONTROL_VALID_FLAGS = 15;
 }
 
-class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE extends ffi.Struct {
+base class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE extends ffi.Struct {
   @ffi.Int64()
   external int MaxIops;
 
@@ -56355,7 +56355,7 @@ class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE extends ffi.Struct {
   external int VolumeNameLength;
 }
 
-class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V2 extends ffi.Struct {
+base class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V2 extends ffi.Struct {
   @ffi.Int64()
   external int MaxIops;
 
@@ -56395,7 +56395,7 @@ class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V2 extends ffi.Struct {
   external int CriticalReservationTimePercent;
 }
 
-class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V3 extends ffi.Struct {
+base class JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V3 extends ffi.Struct {
   @ffi.Int64()
   external int MaxIops;
 
@@ -56459,7 +56459,7 @@ abstract class JOBOBJECT_IO_ATTRIBUTION_CONTROL_FLAGS {
   static const int JOBOBJECT_IO_ATTRIBUTION_CONTROL_VALID_FLAGS = 3;
 }
 
-class PJOBOBJECT_IO_ATTRIBUTION_STATS extends ffi.Struct {
+base class PJOBOBJECT_IO_ATTRIBUTION_STATS extends ffi.Struct {
   @ffi.Uint64()
   external int IoCount;
 
@@ -56473,7 +56473,7 @@ class PJOBOBJECT_IO_ATTRIBUTION_STATS extends ffi.Struct {
   external int TotalSize;
 }
 
-class PJOBOBJECT_IO_ATTRIBUTION_INFORMATION extends ffi.Struct {}
+base class PJOBOBJECT_IO_ATTRIBUTION_INFORMATION extends ffi.Opaque {}
 
 abstract class JOBOBJECTINFOCLASS {
   static const int JobObjectBasicAccountingInformation = 1;
@@ -56526,7 +56526,7 @@ abstract class JOBOBJECTINFOCLASS {
   static const int MaxJobObjectInfoClass = 48;
 }
 
-class PSILOOBJECT_BASIC_INFORMATION extends ffi.Struct {}
+base class PSILOOBJECT_BASIC_INFORMATION extends ffi.Opaque {}
 
 abstract class PSERVERSILO_STATE {
   static const int SERVERSILO_INITING = 0;
@@ -56536,7 +56536,7 @@ abstract class PSERVERSILO_STATE {
   static const int SERVERSILO_TERMINATED = 4;
 }
 
-class PSERVERSILO_BASIC_INFORMATION extends ffi.Struct {
+base class PSERVERSILO_BASIC_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ServiceSessionId;
 
@@ -56577,7 +56577,7 @@ abstract class PROCESSOR_CACHE_TYPE {
   static const int CacheTrace = 3;
 }
 
-class PCACHE_DESCRIPTOR extends ffi.Struct {
+base class PCACHE_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint8()
   external int Level;
 
@@ -56594,7 +56594,7 @@ class PCACHE_DESCRIPTOR extends ffi.Struct {
   external int Type;
 }
 
-class PSYSTEM_LOGICAL_PROCESSOR_INFORMATION extends ffi.Struct {
+base class PSYSTEM_LOGICAL_PROCESSOR_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ProcessorMask;
 
@@ -56602,17 +56602,17 @@ class PSYSTEM_LOGICAL_PROCESSOR_INFORMATION extends ffi.Struct {
   external int Relationship;
 }
 
-class PPROCESSOR_RELATIONSHIP extends ffi.Struct {}
+base class PPROCESSOR_RELATIONSHIP extends ffi.Opaque {}
 
-class PNUMA_NODE_RELATIONSHIP extends ffi.Struct {}
+base class PNUMA_NODE_RELATIONSHIP extends ffi.Opaque {}
 
-class PCACHE_RELATIONSHIP extends ffi.Struct {}
+base class PCACHE_RELATIONSHIP extends ffi.Opaque {}
 
-class PPROCESSOR_GROUP_INFO extends ffi.Struct {}
+base class PPROCESSOR_GROUP_INFO extends ffi.Opaque {}
 
-class PGROUP_RELATIONSHIP extends ffi.Struct {}
+base class PGROUP_RELATIONSHIP extends ffi.Opaque {}
 
-class _SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX extends ffi.Struct {
+base class _SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX extends ffi.Struct {
   @ffi.Int32()
   external int Relationship;
 
@@ -56624,7 +56624,7 @@ abstract class PCPU_SET_INFORMATION_TYPE {
   static const int CpuSetInformation = 0;
 }
 
-class _SYSTEM_CPU_SET_INFORMATION extends ffi.Struct {
+base class _SYSTEM_CPU_SET_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int Size;
 
@@ -56632,17 +56632,17 @@ class _SYSTEM_CPU_SET_INFORMATION extends ffi.Struct {
   external int Type;
 }
 
-class PSYSTEM_POOL_ZEROING_INFORMATION extends ffi.Struct {
+base class PSYSTEM_POOL_ZEROING_INFORMATION extends ffi.Struct {
   @ffi.Uint8()
   external int PoolZeroingSupportPresent;
 }
 
-class PSYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION extends ffi.Struct {
+base class PSYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int CycleTime;
 }
 
-class PXSTATE_FEATURE extends ffi.Struct {
+base class PXSTATE_FEATURE extends ffi.Struct {
   @ffi.Uint64()
   external int Offset;
 
@@ -56650,9 +56650,9 @@ class PXSTATE_FEATURE extends ffi.Struct {
   external int Size;
 }
 
-class PXSTATE_CONFIGURATION extends ffi.Struct {}
+base class PXSTATE_CONFIGURATION extends ffi.Opaque {}
 
-class PMEMORY_BASIC_INFORMATION extends ffi.Struct {
+base class PMEMORY_BASIC_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> BaseAddress;
 
   external ffi.Pointer<ffi.Void> AllocationBase;
@@ -56676,7 +56676,7 @@ class PMEMORY_BASIC_INFORMATION extends ffi.Struct {
   external int Type;
 }
 
-class PMEMORY_BASIC_INFORMATION32 extends ffi.Struct {
+base class PMEMORY_BASIC_INFORMATION32 extends ffi.Struct {
   @ffi.Uint64()
   external int BaseAddress;
 
@@ -56699,7 +56699,7 @@ class PMEMORY_BASIC_INFORMATION32 extends ffi.Struct {
   external int Type;
 }
 
-class PMEMORY_BASIC_INFORMATION64 extends ffi.Struct {
+base class PMEMORY_BASIC_INFORMATION64 extends ffi.Struct {
   @ffi.Uint64()
   external int BaseAddress;
 
@@ -56728,7 +56728,7 @@ class PMEMORY_BASIC_INFORMATION64 extends ffi.Struct {
   external int __alignment2;
 }
 
-class PCFG_CALL_TARGET_INFO extends ffi.Struct {
+base class PCFG_CALL_TARGET_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int Offset;
 
@@ -56736,7 +56736,7 @@ class PCFG_CALL_TARGET_INFO extends ffi.Struct {
   external int Flags;
 }
 
-class PMEM_ADDRESS_REQUIREMENTS extends ffi.Struct {
+base class PMEM_ADDRESS_REQUIREMENTS extends ffi.Struct {
   external ffi.Pointer<ffi.Void> LowestStartingAddress;
 
   external ffi.Pointer<ffi.Void> HighestEndingAddress;
@@ -56755,7 +56755,7 @@ abstract class PMEM_EXTENDED_PARAMETER_TYPE {
   static const int MemExtendedParameterMax = 6;
 }
 
-class PMEM_EXTENDED_PARAMETER extends ffi.Struct {}
+base class PMEM_EXTENDED_PARAMETER extends ffi.Opaque {}
 
 abstract class PMEM_SECTION_EXTENDED_PARAMETER_TYPE {
   static const int MemSectionExtendedParameterInvalidType = 0;
@@ -56764,22 +56764,22 @@ abstract class PMEM_SECTION_EXTENDED_PARAMETER_TYPE {
   static const int MemSectionExtendedParameterMax = 3;
 }
 
-class PENCLAVE_CREATE_INFO_SGX extends ffi.Struct {}
+base class PENCLAVE_CREATE_INFO_SGX extends ffi.Opaque {}
 
-class PENCLAVE_INIT_INFO_SGX extends ffi.Struct {}
+base class PENCLAVE_INIT_INFO_SGX extends ffi.Opaque {}
 
-class PENCLAVE_CREATE_INFO_VBS extends ffi.Struct {}
+base class PENCLAVE_CREATE_INFO_VBS extends ffi.Opaque {}
 
-class PENCLAVE_CREATE_INFO_VBS_BASIC extends ffi.Struct {}
+base class PENCLAVE_CREATE_INFO_VBS_BASIC extends ffi.Opaque {}
 
-class PENCLAVE_LOAD_DATA_VBS_BASIC extends ffi.Struct {
+base class PENCLAVE_LOAD_DATA_VBS_BASIC extends ffi.Struct {
   @ffi.Uint64()
   external int PageType;
 }
 
-class PENCLAVE_INIT_INFO_VBS_BASIC extends ffi.Struct {}
+base class PENCLAVE_INIT_INFO_VBS_BASIC extends ffi.Opaque {}
 
-class PENCLAVE_INIT_INFO_VBS extends ffi.Struct {
+base class PENCLAVE_INIT_INFO_VBS extends ffi.Struct {
   @ffi.Uint64()
   external int Length;
 
@@ -56787,17 +56787,17 @@ class PENCLAVE_INIT_INFO_VBS extends ffi.Struct {
   external int ThreadCount;
 }
 
-class PFILE_ID_128 extends ffi.Struct {}
+base class PFILE_ID_128 extends ffi.Opaque {}
 
-class PFILE_NOTIFY_INFORMATION extends ffi.Struct {}
+base class PFILE_NOTIFY_INFORMATION extends ffi.Opaque {}
 
-class PFILE_NOTIFY_EXTENDED_INFORMATION extends ffi.Struct {}
+base class PFILE_NOTIFY_EXTENDED_INFORMATION extends ffi.Opaque {}
 
-class PREPARSE_GUID_DATA_BUFFER extends ffi.Struct {}
+base class PREPARSE_GUID_DATA_BUFFER extends ffi.Opaque {}
 
-class PSCRUB_DATA_INPUT extends ffi.Struct {}
+base class PSCRUB_DATA_INPUT extends ffi.Opaque {}
 
-class PSCRUB_PARITY_EXTENT extends ffi.Struct {
+base class PSCRUB_PARITY_EXTENT extends ffi.Struct {
   @ffi.Int64()
   external int Offset;
 
@@ -56805,9 +56805,9 @@ class PSCRUB_PARITY_EXTENT extends ffi.Struct {
   external int Length;
 }
 
-class PSCRUB_PARITY_EXTENT_DATA extends ffi.Struct {}
+base class PSCRUB_PARITY_EXTENT_DATA extends ffi.Opaque {}
 
-class PSCRUB_DATA_OUTPUT extends ffi.Struct {}
+base class PSCRUB_DATA_OUTPUT extends ffi.Opaque {}
 
 abstract class SharedVirtualDiskSupportType {
   static const int SharedVirtualDisksUnsupported = 0;
@@ -56822,7 +56822,7 @@ abstract class SharedVirtualDiskHandleState {
   static const int SharedVirtualDiskHandleStateHandleShared = 3;
 }
 
-class PSHARED_VIRTUAL_DISK_SUPPORT extends ffi.Struct {
+base class PSHARED_VIRTUAL_DISK_SUPPORT extends ffi.Struct {
   @ffi.Int32()
   external int SharedVirtualDiskSupport;
 
@@ -56830,7 +56830,7 @@ class PSHARED_VIRTUAL_DISK_SUPPORT extends ffi.Struct {
   external int HandleState;
 }
 
-class PREARRANGE_FILE_DATA extends ffi.Struct {
+base class PREARRANGE_FILE_DATA extends ffi.Struct {
   @ffi.Uint64()
   external int SourceStartingOffset;
 
@@ -56846,7 +56846,7 @@ class PREARRANGE_FILE_DATA extends ffi.Struct {
   external int Flags;
 }
 
-class PREARRANGE_FILE_DATA32 extends ffi.Struct {
+base class PREARRANGE_FILE_DATA32 extends ffi.Struct {
   @ffi.Uint64()
   external int SourceStartingOffset;
 
@@ -56863,7 +56863,7 @@ class PREARRANGE_FILE_DATA32 extends ffi.Struct {
   external int Flags;
 }
 
-class PSHUFFLE_FILE_DATA extends ffi.Struct {
+base class PSHUFFLE_FILE_DATA extends ffi.Struct {
   @ffi.Int64()
   external int StartingOffset;
 
@@ -56874,7 +56874,7 @@ class PSHUFFLE_FILE_DATA extends ffi.Struct {
   external int Flags;
 }
 
-class PNETWORK_APP_INSTANCE_EA extends ffi.Struct {}
+base class PNETWORK_APP_INSTANCE_EA extends ffi.Opaque {}
 
 abstract class PSYSTEM_POWER_STATE {
   static const int PowerSystemUnspecified = 0;
@@ -56934,7 +56934,7 @@ abstract class PPOWER_REQUEST_TYPE {
   static const int PowerRequestExecutionRequired = 3;
 }
 
-class PCM_POWER_DATA extends ffi.Struct {}
+base class PCM_POWER_DATA extends ffi.Opaque {}
 
 abstract class POWER_INFORMATION_LEVEL {
   static const int SystemPowerPolicyAc = 0;
@@ -57042,12 +57042,12 @@ abstract class PPOWER_USER_PRESENCE_TYPE {
   static const int UserUnknown = 255;
 }
 
-class PPOWER_USER_PRESENCE extends ffi.Struct {
+base class PPOWER_USER_PRESENCE extends ffi.Struct {
   @ffi.Int32()
   external int UserPresence;
 }
 
-class PPOWER_SESSION_CONNECT extends ffi.Struct {
+base class PPOWER_SESSION_CONNECT extends ffi.Struct {
   @ffi.Uint8()
   external int Connected;
 
@@ -57055,7 +57055,7 @@ class PPOWER_SESSION_CONNECT extends ffi.Struct {
   external int Console;
 }
 
-class PPOWER_SESSION_TIMEOUTS extends ffi.Struct {
+base class PPOWER_SESSION_TIMEOUTS extends ffi.Struct {
   @ffi.Uint64()
   external int InputTimeout;
 
@@ -57063,7 +57063,7 @@ class PPOWER_SESSION_TIMEOUTS extends ffi.Struct {
   external int DisplayTimeout;
 }
 
-class PPOWER_SESSION_RIT_STATE extends ffi.Struct {
+base class PPOWER_SESSION_RIT_STATE extends ffi.Struct {
   @ffi.Uint8()
   external int Active;
 
@@ -57071,7 +57071,7 @@ class PPOWER_SESSION_RIT_STATE extends ffi.Struct {
   external int LastInputTime;
 }
 
-class PPOWER_SESSION_WINLOGON extends ffi.Struct {
+base class PPOWER_SESSION_WINLOGON extends ffi.Struct {
   @ffi.Uint64()
   external int SessionId;
 
@@ -57082,12 +57082,12 @@ class PPOWER_SESSION_WINLOGON extends ffi.Struct {
   external int Locked;
 }
 
-class PPOWER_SESSION_ALLOW_EXTERNAL_DMA_DEVICES extends ffi.Struct {
+base class PPOWER_SESSION_ALLOW_EXTERNAL_DMA_DEVICES extends ffi.Struct {
   @ffi.Uint8()
   external int IsAllowed;
 }
 
-class PPOWER_IDLE_RESILIENCY extends ffi.Struct {
+base class PPOWER_IDLE_RESILIENCY extends ffi.Struct {
   @ffi.Uint64()
   external int CoalescingTimeout;
 
@@ -57156,7 +57156,7 @@ abstract class POWER_MONITOR_REQUEST_TYPE {
   static const int MonitorRequestTypeToggleOn = 2;
 }
 
-class PPOWER_MONITOR_INVOCATION extends ffi.Struct {
+base class PPOWER_MONITOR_INVOCATION extends ffi.Struct {
   @ffi.Uint8()
   external int Console;
 
@@ -57164,7 +57164,7 @@ class PPOWER_MONITOR_INVOCATION extends ffi.Struct {
   external int RequestReason;
 }
 
-class PRESUME_PERFORMANCE extends ffi.Struct {
+base class PRESUME_PERFORMANCE extends ffi.Struct {
   @ffi.Uint64()
   external int PostTimeMs;
 
@@ -57182,11 +57182,11 @@ abstract class SYSTEM_POWER_CONDITION {
   static const int PoConditionMaximum = 3;
 }
 
-class PSET_POWER_SETTING_VALUE extends ffi.Struct {}
+base class PSET_POWER_SETTING_VALUE extends ffi.Opaque {}
 
-class PNOTIFY_USER_POWER_SETTING extends ffi.Struct {}
+base class PNOTIFY_USER_POWER_SETTING extends ffi.Opaque {}
 
-class PAPPLICATIONLAUNCH_SETTING_VALUE extends ffi.Struct {}
+base class PAPPLICATIONLAUNCH_SETTING_VALUE extends ffi.Opaque {}
 
 abstract class PPOWER_PLATFORM_ROLE {
   static const int PlatformRoleUnspecified = 0;
@@ -57201,12 +57201,12 @@ abstract class PPOWER_PLATFORM_ROLE {
   static const int PlatformRoleMaximum = 9;
 }
 
-class PPOWER_PLATFORM_INFORMATION extends ffi.Struct {
+base class PPOWER_PLATFORM_INFORMATION extends ffi.Struct {
   @ffi.Uint8()
   external int AoAc;
 }
 
-class PBATTERY_REPORTING_SCALE extends ffi.Struct {
+base class PBATTERY_REPORTING_SCALE extends ffi.Struct {
   @ffi.Uint64()
   external int Granularity;
 
@@ -57214,7 +57214,7 @@ class PBATTERY_REPORTING_SCALE extends ffi.Struct {
   external int Capacity;
 }
 
-class PPPM_WMI_LEGACY_PERFSTATE extends ffi.Struct {
+base class PPPM_WMI_LEGACY_PERFSTATE extends ffi.Struct {
   @ffi.Uint64()
   external int Frequency;
 
@@ -57225,7 +57225,7 @@ class PPPM_WMI_LEGACY_PERFSTATE extends ffi.Struct {
   external int PercentFrequency;
 }
 
-class PPPM_WMI_IDLE_STATE extends ffi.Struct {
+base class PPPM_WMI_IDLE_STATE extends ffi.Struct {
   @ffi.Uint64()
   external int Latency;
 
@@ -57260,11 +57260,11 @@ class PPPM_WMI_IDLE_STATE extends ffi.Struct {
   external int Reserved1;
 }
 
-class PPPM_WMI_IDLE_STATES extends ffi.Struct {}
+base class PPPM_WMI_IDLE_STATES extends ffi.Opaque {}
 
-class PPPM_WMI_IDLE_STATES_EX extends ffi.Struct {}
+base class PPPM_WMI_IDLE_STATES_EX extends ffi.Opaque {}
 
-class PPPM_WMI_PERF_STATE extends ffi.Struct {
+base class PPPM_WMI_PERF_STATE extends ffi.Struct {
   @ffi.Uint64()
   external int Frequency;
 
@@ -57308,15 +57308,15 @@ class PPPM_WMI_PERF_STATE extends ffi.Struct {
   external int Reserved3;
 }
 
-class PPPM_WMI_PERF_STATES extends ffi.Struct {}
+base class PPPM_WMI_PERF_STATES extends ffi.Opaque {}
 
-class PPPM_WMI_PERF_STATES_EX extends ffi.Struct {}
+base class PPPM_WMI_PERF_STATES_EX extends ffi.Opaque {}
 
-class PPPM_IDLE_STATE_ACCOUNTING extends ffi.Struct {}
+base class PPPM_IDLE_STATE_ACCOUNTING extends ffi.Opaque {}
 
-class PPPM_IDLE_ACCOUNTING extends ffi.Struct {}
+base class PPPM_IDLE_ACCOUNTING extends ffi.Opaque {}
 
-class PPPM_IDLE_STATE_BUCKET_EX extends ffi.Struct {
+base class PPPM_IDLE_STATE_BUCKET_EX extends ffi.Struct {
   @ffi.Uint64()
   external int TotalTimeUs;
 
@@ -57330,11 +57330,11 @@ class PPPM_IDLE_STATE_BUCKET_EX extends ffi.Struct {
   external int Count;
 }
 
-class PPPM_IDLE_STATE_ACCOUNTING_EX extends ffi.Struct {}
+base class PPPM_IDLE_STATE_ACCOUNTING_EX extends ffi.Opaque {}
 
-class PPPM_IDLE_ACCOUNTING_EX extends ffi.Struct {}
+base class PPPM_IDLE_ACCOUNTING_EX extends ffi.Opaque {}
 
-class PPPM_PERFSTATE_EVENT extends ffi.Struct {
+base class PPPM_PERFSTATE_EVENT extends ffi.Struct {
   @ffi.Uint64()
   external int State;
 
@@ -57351,7 +57351,7 @@ class PPPM_PERFSTATE_EVENT extends ffi.Struct {
   external int Processor;
 }
 
-class PPPM_PERFSTATE_DOMAIN_EVENT extends ffi.Struct {
+base class PPPM_PERFSTATE_DOMAIN_EVENT extends ffi.Struct {
   @ffi.Uint64()
   external int State;
 
@@ -57365,7 +57365,7 @@ class PPPM_PERFSTATE_DOMAIN_EVENT extends ffi.Struct {
   external int Processors;
 }
 
-class PPPM_IDLESTATE_EVENT extends ffi.Struct {
+base class PPPM_IDLESTATE_EVENT extends ffi.Struct {
   @ffi.Uint64()
   external int NewState;
 
@@ -57376,7 +57376,7 @@ class PPPM_IDLESTATE_EVENT extends ffi.Struct {
   external int Processors;
 }
 
-class PPPM_THERMALCHANGE_EVENT extends ffi.Struct {
+base class PPPM_THERMALCHANGE_EVENT extends ffi.Struct {
   @ffi.Uint64()
   external int ThermalConstraint;
 
@@ -57384,7 +57384,7 @@ class PPPM_THERMALCHANGE_EVENT extends ffi.Struct {
   external int Processors;
 }
 
-class PPPM_THERMAL_POLICY_EVENT extends ffi.Struct {
+base class PPPM_THERMAL_POLICY_EVENT extends ffi.Struct {
   @ffi.Uint8()
   external int Mode;
 
@@ -57392,7 +57392,7 @@ class PPPM_THERMAL_POLICY_EVENT extends ffi.Struct {
   external int Processors;
 }
 
-class PPOWER_ACTION_POLICY extends ffi.Struct {
+base class PPOWER_ACTION_POLICY extends ffi.Struct {
   @ffi.Int32()
   external int Action;
 
@@ -57403,19 +57403,19 @@ class PPOWER_ACTION_POLICY extends ffi.Struct {
   external int EventCode;
 }
 
-class PSYSTEM_POWER_LEVEL extends ffi.Struct {}
+base class PSYSTEM_POWER_LEVEL extends ffi.Opaque {}
 
-class PSYSTEM_POWER_POLICY extends ffi.Struct {}
+base class PSYSTEM_POWER_POLICY extends ffi.Opaque {}
 
-class PPROCESSOR_IDLESTATE_INFO extends ffi.Struct {}
+base class PPROCESSOR_IDLESTATE_INFO extends ffi.Opaque {}
 
-class PPROCESSOR_IDLESTATE_POLICY extends ffi.Struct {}
+base class PPROCESSOR_IDLESTATE_POLICY extends ffi.Opaque {}
 
-class PPROCESSOR_POWER_POLICY_INFO extends ffi.Struct {}
+base class PPROCESSOR_POWER_POLICY_INFO extends ffi.Opaque {}
 
-class PPROCESSOR_POWER_POLICY extends ffi.Struct {}
+base class PPROCESSOR_POWER_POLICY extends ffi.Opaque {}
 
-class PPROCESSOR_PERFSTATE_POLICY extends ffi.Struct {
+base class PPROCESSOR_PERFSTATE_POLICY extends ffi.Struct {
   @ffi.Uint64()
   external int Revision;
 
@@ -57444,7 +57444,7 @@ class PPROCESSOR_PERFSTATE_POLICY extends ffi.Struct {
   external int DecreasePercent;
 }
 
-class PADMINISTRATOR_POWER_POLICY extends ffi.Struct {
+base class PADMINISTRATOR_POWER_POLICY extends ffi.Struct {
   @ffi.Int32()
   external int MinSleep;
 
@@ -57475,15 +57475,15 @@ abstract class PHIBERFILE_BUCKET_SIZE {
   static const int HiberFileBucketMax = 7;
 }
 
-class PHIBERFILE_BUCKET extends ffi.Struct {}
+base class PHIBERFILE_BUCKET extends ffi.Opaque {}
 
-class PSYSTEM_POWER_CAPABILITIES extends ffi.Struct {}
+base class PSYSTEM_POWER_CAPABILITIES extends ffi.Opaque {}
 
-class PSYSTEM_BATTERY_STATE extends ffi.Struct {}
+base class PSYSTEM_BATTERY_STATE extends ffi.Opaque {}
 
-class PIMAGE_DOS_HEADER extends ffi.Struct {}
+base class PIMAGE_DOS_HEADER extends ffi.Opaque {}
 
-class PIMAGE_OS2_HEADER extends ffi.Struct {
+base class PIMAGE_OS2_HEADER extends ffi.Struct {
   @ffi.Uint16()
   external int ne_magic;
 
@@ -57575,9 +57575,9 @@ class PIMAGE_OS2_HEADER extends ffi.Struct {
   external int ne_expver;
 }
 
-class PIMAGE_VXD_HEADER extends ffi.Struct {}
+base class PIMAGE_VXD_HEADER extends ffi.Opaque {}
 
-class PIMAGE_FILE_HEADER extends ffi.Struct {
+base class PIMAGE_FILE_HEADER extends ffi.Struct {
   @ffi.Uint16()
   external int Machine;
 
@@ -57600,7 +57600,7 @@ class PIMAGE_FILE_HEADER extends ffi.Struct {
   external int Characteristics;
 }
 
-class PIMAGE_DATA_DIRECTORY extends ffi.Struct {
+base class PIMAGE_DATA_DIRECTORY extends ffi.Struct {
   @ffi.Uint64()
   external int VirtualAddress;
 
@@ -57608,37 +57608,37 @@ class PIMAGE_DATA_DIRECTORY extends ffi.Struct {
   external int Size;
 }
 
-class PIMAGE_OPTIONAL_HEADER32 extends ffi.Struct {}
+base class PIMAGE_OPTIONAL_HEADER32 extends ffi.Opaque {}
 
-class PIMAGE_ROM_OPTIONAL_HEADER extends ffi.Struct {}
+base class PIMAGE_ROM_OPTIONAL_HEADER extends ffi.Opaque {}
 
-class PIMAGE_OPTIONAL_HEADER64 extends ffi.Struct {}
+base class PIMAGE_OPTIONAL_HEADER64 extends ffi.Opaque {}
 
-class PIMAGE_NT_HEADERS64 extends ffi.Struct {}
+base class PIMAGE_NT_HEADERS64 extends ffi.Opaque {}
 
-class PIMAGE_NT_HEADERS32 extends ffi.Struct {}
+base class PIMAGE_NT_HEADERS32 extends ffi.Opaque {}
 
-class PIMAGE_ROM_HEADERS extends ffi.Struct {}
+base class PIMAGE_ROM_HEADERS extends ffi.Opaque {}
 
-class ANON_OBJECT_HEADER extends ffi.Struct {}
+base class ANON_OBJECT_HEADER extends ffi.Opaque {}
 
-class ANON_OBJECT_HEADER_V2 extends ffi.Struct {}
+base class ANON_OBJECT_HEADER_V2 extends ffi.Opaque {}
 
-class ANON_OBJECT_HEADER_BIGOBJ extends ffi.Struct {}
+base class ANON_OBJECT_HEADER_BIGOBJ extends ffi.Opaque {}
 
-class PIMAGE_SECTION_HEADER extends ffi.Struct {}
+base class PIMAGE_SECTION_HEADER extends ffi.Opaque {}
 
-class IMAGE_SYMBOL extends ffi.Struct {}
+base class IMAGE_SYMBOL extends ffi.Opaque {}
 
-class IMAGE_SYMBOL_EX extends ffi.Struct {}
+base class IMAGE_SYMBOL_EX extends ffi.Opaque {}
 
-class IMAGE_AUX_SYMBOL_TOKEN_DEF extends ffi.Struct {}
+base class IMAGE_AUX_SYMBOL_TOKEN_DEF extends ffi.Opaque {}
 
 abstract class IMAGE_AUX_SYMBOL_TYPE {
   static const int IMAGE_AUX_SYMBOL_TYPE_TOKEN_DEF = 1;
 }
 
-class IMAGE_RELOCATION extends ffi.Struct {
+base class IMAGE_RELOCATION extends ffi.Struct {
   @ffi.Uint64()
   external int SymbolTableIndex;
 
@@ -57646,9 +57646,9 @@ class IMAGE_RELOCATION extends ffi.Struct {
   external int Type;
 }
 
-class IMAGE_LINENUMBER extends ffi.Struct {}
+base class IMAGE_LINENUMBER extends ffi.Opaque {}
 
-class IMAGE_BASE_RELOCATION extends ffi.Struct {
+base class IMAGE_BASE_RELOCATION extends ffi.Struct {
   @ffi.Uint64()
   external int VirtualAddress;
 
@@ -57656,9 +57656,9 @@ class IMAGE_BASE_RELOCATION extends ffi.Struct {
   external int SizeOfBlock;
 }
 
-class PIMAGE_ARCHIVE_MEMBER_HEADER extends ffi.Struct {}
+base class PIMAGE_ARCHIVE_MEMBER_HEADER extends ffi.Opaque {}
 
-class PIMAGE_EXPORT_DIRECTORY extends ffi.Struct {
+base class PIMAGE_EXPORT_DIRECTORY extends ffi.Struct {
   @ffi.Uint64()
   external int Characteristics;
 
@@ -57693,13 +57693,13 @@ class PIMAGE_EXPORT_DIRECTORY extends ffi.Struct {
   external int AddressOfNameOrdinals;
 }
 
-class PIMAGE_IMPORT_BY_NAME extends ffi.Struct {}
+base class PIMAGE_IMPORT_BY_NAME extends ffi.Opaque {}
 
-class IMAGE_THUNK_DATA64 extends ffi.Struct {}
+base class IMAGE_THUNK_DATA64 extends ffi.Opaque {}
 
-class IMAGE_THUNK_DATA32 extends ffi.Struct {}
+base class IMAGE_THUNK_DATA32 extends ffi.Opaque {}
 
-class IMAGE_TLS_DIRECTORY64 extends ffi.Struct {
+base class IMAGE_TLS_DIRECTORY64 extends ffi.Struct {
   @ffi.Uint64()
   external int StartAddressOfRawData;
 
@@ -57716,7 +57716,7 @@ class IMAGE_TLS_DIRECTORY64 extends ffi.Struct {
   external int SizeOfZeroFill;
 }
 
-class IMAGE_TLS_DIRECTORY32 extends ffi.Struct {
+base class IMAGE_TLS_DIRECTORY32 extends ffi.Struct {
   @ffi.Uint64()
   external int StartAddressOfRawData;
 
@@ -57733,7 +57733,7 @@ class IMAGE_TLS_DIRECTORY32 extends ffi.Struct {
   external int SizeOfZeroFill;
 }
 
-class IMAGE_IMPORT_DESCRIPTOR extends ffi.Struct {
+base class IMAGE_IMPORT_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint64()
   external int TimeDateStamp;
 
@@ -57747,7 +57747,7 @@ class IMAGE_IMPORT_DESCRIPTOR extends ffi.Struct {
   external int FirstThunk;
 }
 
-class PIMAGE_BOUND_IMPORT_DESCRIPTOR extends ffi.Struct {
+base class PIMAGE_BOUND_IMPORT_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint64()
   external int TimeDateStamp;
 
@@ -57758,7 +57758,7 @@ class PIMAGE_BOUND_IMPORT_DESCRIPTOR extends ffi.Struct {
   external int NumberOfModuleForwarderRefs;
 }
 
-class PIMAGE_BOUND_FORWARDER_REF extends ffi.Struct {
+base class PIMAGE_BOUND_FORWARDER_REF extends ffi.Struct {
   @ffi.Uint64()
   external int TimeDateStamp;
 
@@ -57769,9 +57769,9 @@ class PIMAGE_BOUND_FORWARDER_REF extends ffi.Struct {
   external int Reserved;
 }
 
-class PIMAGE_DELAYLOAD_DESCRIPTOR extends ffi.Struct {}
+base class PIMAGE_DELAYLOAD_DESCRIPTOR extends ffi.Opaque {}
 
-class PIMAGE_RESOURCE_DIRECTORY extends ffi.Struct {
+base class PIMAGE_RESOURCE_DIRECTORY extends ffi.Struct {
   @ffi.Uint64()
   external int Characteristics;
 
@@ -57791,13 +57791,13 @@ class PIMAGE_RESOURCE_DIRECTORY extends ffi.Struct {
   external int NumberOfIdEntries;
 }
 
-class PIMAGE_RESOURCE_DIRECTORY_ENTRY extends ffi.Struct {}
+base class PIMAGE_RESOURCE_DIRECTORY_ENTRY extends ffi.Opaque {}
 
-class PIMAGE_RESOURCE_DIRECTORY_STRING extends ffi.Struct {}
+base class PIMAGE_RESOURCE_DIRECTORY_STRING extends ffi.Opaque {}
 
-class PIMAGE_RESOURCE_DIR_STRING_U extends ffi.Struct {}
+base class PIMAGE_RESOURCE_DIR_STRING_U extends ffi.Opaque {}
 
-class PIMAGE_RESOURCE_DATA_ENTRY extends ffi.Struct {
+base class PIMAGE_RESOURCE_DATA_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int OffsetToData;
 
@@ -57811,7 +57811,7 @@ class PIMAGE_RESOURCE_DATA_ENTRY extends ffi.Struct {
   external int Reserved;
 }
 
-class PIMAGE_LOAD_CONFIG_CODE_INTEGRITY extends ffi.Struct {
+base class PIMAGE_LOAD_CONFIG_CODE_INTEGRITY extends ffi.Struct {
   @ffi.Uint16()
   external int Flags;
 
@@ -57825,7 +57825,7 @@ class PIMAGE_LOAD_CONFIG_CODE_INTEGRITY extends ffi.Struct {
   external int Reserved;
 }
 
-class PIMAGE_DYNAMIC_RELOCATION_TABLE extends ffi.Struct {
+base class PIMAGE_DYNAMIC_RELOCATION_TABLE extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -57833,7 +57833,7 @@ class PIMAGE_DYNAMIC_RELOCATION_TABLE extends ffi.Struct {
   external int Size;
 }
 
-class PIMAGE_DYNAMIC_RELOCATION32 extends ffi.Struct {
+base class PIMAGE_DYNAMIC_RELOCATION32 extends ffi.Struct {
   @ffi.Uint64()
   external int Symbol;
 
@@ -57841,7 +57841,7 @@ class PIMAGE_DYNAMIC_RELOCATION32 extends ffi.Struct {
   external int BaseRelocSize;
 }
 
-class PIMAGE_DYNAMIC_RELOCATION64 extends ffi.Struct {
+base class PIMAGE_DYNAMIC_RELOCATION64 extends ffi.Struct {
   @ffi.Uint64()
   external int Symbol;
 
@@ -57849,7 +57849,7 @@ class PIMAGE_DYNAMIC_RELOCATION64 extends ffi.Struct {
   external int BaseRelocSize;
 }
 
-class PIMAGE_DYNAMIC_RELOCATION32_V2 extends ffi.Struct {
+base class PIMAGE_DYNAMIC_RELOCATION32_V2 extends ffi.Struct {
   @ffi.Uint64()
   external int HeaderSize;
 
@@ -57866,7 +57866,7 @@ class PIMAGE_DYNAMIC_RELOCATION32_V2 extends ffi.Struct {
   external int Flags;
 }
 
-class PIMAGE_DYNAMIC_RELOCATION64_V2 extends ffi.Struct {
+base class PIMAGE_DYNAMIC_RELOCATION64_V2 extends ffi.Struct {
   @ffi.Uint64()
   external int HeaderSize;
 
@@ -57883,12 +57883,12 @@ class PIMAGE_DYNAMIC_RELOCATION64_V2 extends ffi.Struct {
   external int Flags;
 }
 
-class IMAGE_PROLOGUE_DYNAMIC_RELOCATION_HEADER extends ffi.Struct {
+base class IMAGE_PROLOGUE_DYNAMIC_RELOCATION_HEADER extends ffi.Struct {
   @ffi.Uint8()
   external int PrologueByteCount;
 }
 
-class IMAGE_EPILOGUE_DYNAMIC_RELOCATION_HEADER extends ffi.Struct {
+base class IMAGE_EPILOGUE_DYNAMIC_RELOCATION_HEADER extends ffi.Struct {
   @ffi.Uint64()
   external int EpilogueCount;
 
@@ -57902,17 +57902,17 @@ class IMAGE_EPILOGUE_DYNAMIC_RELOCATION_HEADER extends ffi.Struct {
   external int BranchDescriptorCount;
 }
 
-class IMAGE_IMPORT_CONTROL_TRANSFER_DYNAMIC_RELOCATION extends ffi.Struct {}
+base class IMAGE_IMPORT_CONTROL_TRANSFER_DYNAMIC_RELOCATION extends ffi.Opaque {}
 
-class IMAGE_INDIR_CONTROL_TRANSFER_DYNAMIC_RELOCATION extends ffi.Struct {}
+base class IMAGE_INDIR_CONTROL_TRANSFER_DYNAMIC_RELOCATION extends ffi.Opaque {}
 
-class IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION extends ffi.Struct {}
+base class IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION extends ffi.Opaque {}
 
-class PIMAGE_LOAD_CONFIG_DIRECTORY32 extends ffi.Struct {}
+base class PIMAGE_LOAD_CONFIG_DIRECTORY32 extends ffi.Opaque {}
 
-class PIMAGE_LOAD_CONFIG_DIRECTORY64 extends ffi.Struct {}
+base class PIMAGE_LOAD_CONFIG_DIRECTORY64 extends ffi.Opaque {}
 
-class PIMAGE_HOT_PATCH_INFO extends ffi.Struct {
+base class PIMAGE_HOT_PATCH_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -57935,7 +57935,7 @@ class PIMAGE_HOT_PATCH_INFO extends ffi.Struct {
   external int ExtraPatchSize;
 }
 
-class PIMAGE_HOT_PATCH_BASE extends ffi.Struct {
+base class PIMAGE_HOT_PATCH_BASE extends ffi.Struct {
   @ffi.Uint64()
   external int SequenceNumber;
 
@@ -57961,11 +57961,11 @@ class PIMAGE_HOT_PATCH_BASE extends ffi.Struct {
   external int BufferOffset;
 }
 
-class PIMAGE_HOT_PATCH_HASHES extends ffi.Struct {}
+base class PIMAGE_HOT_PATCH_HASHES extends ffi.Opaque {}
 
-class PIMAGE_CE_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {}
+base class PIMAGE_CE_RUNTIME_FUNCTION_ENTRY extends ffi.Opaque {}
 
-class PIMAGE_ARM_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
+base class PIMAGE_ARM_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int BeginAddress;
 }
@@ -57983,29 +57983,12 @@ abstract class ARM64_FNPDATA_CR {
   static const int PdataCrChained = 3;
 }
 
-class PIMAGE_ARM64_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
+base class PIMAGE_ARM64_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int BeginAddress;
 }
 
-class PIMAGE_ALPHA64_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
-  @ffi.Uint64()
-  external int BeginAddress;
-
-  @ffi.Uint64()
-  external int EndAddress;
-
-  @ffi.Uint64()
-  external int ExceptionHandler;
-
-  @ffi.Uint64()
-  external int HandlerData;
-
-  @ffi.Uint64()
-  external int PrologEndAddress;
-}
-
-class PIMAGE_ALPHA_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
+base class PIMAGE_ALPHA64_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int BeginAddress;
 
@@ -58022,13 +58005,30 @@ class PIMAGE_ALPHA_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
   external int PrologEndAddress;
 }
 
-class PIMAGE_ENCLAVE_CONFIG32 extends ffi.Struct {}
+base class PIMAGE_ALPHA_RUNTIME_FUNCTION_ENTRY extends ffi.Struct {
+  @ffi.Uint64()
+  external int BeginAddress;
 
-class PIMAGE_ENCLAVE_CONFIG64 extends ffi.Struct {}
+  @ffi.Uint64()
+  external int EndAddress;
 
-class PIMAGE_ENCLAVE_IMPORT extends ffi.Struct {}
+  @ffi.Uint64()
+  external int ExceptionHandler;
 
-class PIMAGE_DEBUG_DIRECTORY extends ffi.Struct {
+  @ffi.Uint64()
+  external int HandlerData;
+
+  @ffi.Uint64()
+  external int PrologEndAddress;
+}
+
+base class PIMAGE_ENCLAVE_CONFIG32 extends ffi.Opaque {}
+
+base class PIMAGE_ENCLAVE_CONFIG64 extends ffi.Opaque {}
+
+base class PIMAGE_ENCLAVE_IMPORT extends ffi.Opaque {}
+
+base class PIMAGE_DEBUG_DIRECTORY extends ffi.Struct {
   @ffi.Uint64()
   external int Characteristics;
 
@@ -58054,7 +58054,7 @@ class PIMAGE_DEBUG_DIRECTORY extends ffi.Struct {
   external int PointerToRawData;
 }
 
-class PIMAGE_COFF_SYMBOLS_HEADER extends ffi.Struct {
+base class PIMAGE_COFF_SYMBOLS_HEADER extends ffi.Struct {
   @ffi.Uint64()
   external int NumberOfSymbols;
 
@@ -58080,11 +58080,11 @@ class PIMAGE_COFF_SYMBOLS_HEADER extends ffi.Struct {
   external int RvaToLastByteOfData;
 }
 
-class PFPO_DATA extends ffi.Struct {}
+base class PFPO_DATA extends ffi.Opaque {}
 
-class PIMAGE_DEBUG_MISC extends ffi.Struct {}
+base class PIMAGE_DEBUG_MISC extends ffi.Opaque {}
 
-class PIMAGE_FUNCTION_ENTRY extends ffi.Struct {
+base class PIMAGE_FUNCTION_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int StartingAddress;
 
@@ -58095,7 +58095,7 @@ class PIMAGE_FUNCTION_ENTRY extends ffi.Struct {
   external int EndOfPrologue;
 }
 
-class PIMAGE_FUNCTION_ENTRY64 extends ffi.Struct {
+base class PIMAGE_FUNCTION_ENTRY64 extends ffi.Struct {
   @ffi.Uint64()
   external int StartingAddress;
 
@@ -58103,9 +58103,9 @@ class PIMAGE_FUNCTION_ENTRY64 extends ffi.Struct {
   external int EndingAddress;
 }
 
-class PIMAGE_SEPARATE_DEBUG_HEADER extends ffi.Struct {}
+base class PIMAGE_SEPARATE_DEBUG_HEADER extends ffi.Opaque {}
 
-class PNON_PAGED_DEBUG_INFO extends ffi.Struct {
+base class PNON_PAGED_DEBUG_INFO extends ffi.Struct {
   @ffi.Uint16()
   external int Signature;
 
@@ -58134,9 +58134,9 @@ class PNON_PAGED_DEBUG_INFO extends ffi.Struct {
   external int ImageBase;
 }
 
-class PIMAGE_ARCHITECTURE_HEADER extends ffi.Struct {}
+base class PIMAGE_ARCHITECTURE_HEADER extends ffi.Opaque {}
 
-class PIMAGE_ARCHITECTURE_ENTRY extends ffi.Struct {
+base class PIMAGE_ARCHITECTURE_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int FixupInstRVA;
 
@@ -58144,7 +58144,7 @@ class PIMAGE_ARCHITECTURE_ENTRY extends ffi.Struct {
   external int NewInst;
 }
 
-class IMPORT_OBJECT_HEADER extends ffi.Struct {}
+base class IMPORT_OBJECT_HEADER extends ffi.Opaque {}
 
 abstract class IMPORT_OBJECT_TYPE {
   static const int IMPORT_OBJECT_CODE = 0;
@@ -58188,17 +58188,17 @@ abstract class ReplacesCorHdrNumericDefines {
   static const int MAX_PACKAGE_NAME = 1024;
 }
 
-class PIMAGE_COR20_HEADER extends ffi.Struct {}
+base class PIMAGE_COR20_HEADER extends ffi.Opaque {}
 
-class PSLIST_ENTRY extends ffi.Struct {
+base class PSLIST_ENTRY extends ffi.Struct {
   external ffi.Pointer<PSLIST_ENTRY> Next;
 }
 
-class PRTL_BARRIER extends ffi.Struct {}
+base class PRTL_BARRIER extends ffi.Opaque {}
 
-class PMESSAGE_RESOURCE_ENTRY extends ffi.Struct {}
+base class PMESSAGE_RESOURCE_ENTRY extends ffi.Opaque {}
 
-class PMESSAGE_RESOURCE_BLOCK extends ffi.Struct {
+base class PMESSAGE_RESOURCE_BLOCK extends ffi.Struct {
   @ffi.Uint64()
   external int LowId;
 
@@ -58209,15 +58209,15 @@ class PMESSAGE_RESOURCE_BLOCK extends ffi.Struct {
   external int OffsetToEntries;
 }
 
-class PMESSAGE_RESOURCE_DATA extends ffi.Struct {}
+base class PMESSAGE_RESOURCE_DATA extends ffi.Opaque {}
 
-class LPOSVERSIONINFOA extends ffi.Struct {}
+base class LPOSVERSIONINFOA extends ffi.Opaque {}
 
-class PRTL_OSVERSIONINFOW extends ffi.Struct {}
+base class PRTL_OSVERSIONINFOW extends ffi.Opaque {}
 
-class LPOSVERSIONINFOEXA extends ffi.Struct {}
+base class LPOSVERSIONINFOEXA extends ffi.Opaque {}
 
-class PRTL_OSVERSIONINFOEXW extends ffi.Struct {}
+base class PRTL_OSVERSIONINFOEXW extends ffi.Opaque {}
 
 abstract class PRTL_UMS_THREAD_INFO_CLASS {
   static const int UmsThreadInvalidInfoClass = 0;
@@ -58241,16 +58241,16 @@ abstract class OS_DEPLOYEMENT_STATE_VALUES {
   static const int OS_DEPLOYMENT_COMPACT = 2;
 }
 
-class PNV_MEMORY_RANGE extends ffi.Struct {
+base class PNV_MEMORY_RANGE extends ffi.Struct {
   external ffi.Pointer<ffi.Void> BaseAddress;
 
   @ffi.Uint64()
   external int Length;
 }
 
-class CORRELATION_VECTOR extends ffi.Struct {}
+base class CORRELATION_VECTOR extends ffi.Opaque {}
 
-class PCUSTOM_SYSTEM_EVENT_TRIGGER_CONFIG extends ffi.Struct {
+base class PCUSTOM_SYSTEM_EVENT_TRIGGER_CONFIG extends ffi.Struct {
   @ffi.Uint64()
   external int Size;
 
@@ -58290,11 +58290,11 @@ abstract class IMAGE_POLICY_ID {
   static const int ImagePolicyIdMaximum = 12;
 }
 
-class IMAGE_POLICY_ENTRY extends ffi.Struct {}
+base class IMAGE_POLICY_ENTRY extends ffi.Opaque {}
 
-class IMAGE_POLICY_METADATA extends ffi.Struct {}
+base class IMAGE_POLICY_METADATA extends ffi.Opaque {}
 
-class PRTL_CRITICAL_SECTION extends ffi.Struct {
+base class PRTL_CRITICAL_SECTION extends ffi.Struct {
   external ffi.Pointer<PRTL_RESOURCE_DEBUG> DebugInfo;
 
   @ffi.Int64()
@@ -58311,13 +58311,13 @@ class PRTL_CRITICAL_SECTION extends ffi.Struct {
   external int SpinCount;
 }
 
-class PRTL_RESOURCE_DEBUG extends ffi.Struct {}
+base class PRTL_RESOURCE_DEBUG extends ffi.Opaque {}
 
-class PRTL_SRWLOCK extends ffi.Struct {
+base class PRTL_SRWLOCK extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Ptr;
 }
 
-class PRTL_CONDITION_VARIABLE extends ffi.Struct {
+base class PRTL_CONDITION_VARIABLE extends ffi.Struct {
   external ffi.Pointer<ffi.Void> Ptr;
 }
 
@@ -58327,7 +58327,7 @@ abstract class HEAP_INFORMATION_CLASS {
   static const int HeapOptimizeResources = 3;
 }
 
-class PHEAP_OPTIMIZE_RESOURCES_INFORMATION extends ffi.Struct {
+base class PHEAP_OPTIMIZE_RESOURCES_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -58348,7 +58348,7 @@ abstract class ACTIVATION_CONTEXT_INFO_CLASS {
   static const int FileInformationInAssemblyOfAssemblyInActivationContxt = 4;
 }
 
-class PACTIVATION_CONTEXT_QUERY_INDEX extends ffi.Struct {
+base class PACTIVATION_CONTEXT_QUERY_INDEX extends ffi.Struct {
   @ffi.Uint64()
   external int ulAssemblyIndex;
 
@@ -58356,7 +58356,7 @@ class PACTIVATION_CONTEXT_QUERY_INDEX extends ffi.Struct {
   external int ulFileIndexInAssembly;
 }
 
-class PASSEMBLY_FILE_DETAILED_INFORMATION extends ffi.Struct {
+base class PASSEMBLY_FILE_DETAILED_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ulFlags;
 
@@ -58371,7 +58371,7 @@ class PASSEMBLY_FILE_DETAILED_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpFilePath;
 }
 
-class PACTIVATION_CONTEXT_ASSEMBLY_DETAILED_INFORMATION extends ffi.Struct {}
+base class PACTIVATION_CONTEXT_ASSEMBLY_DETAILED_INFORMATION extends ffi.Opaque {}
 
 abstract class ACTCTX_REQUESTED_RUN_LEVEL {
   static const int ACTCTX_RUN_LEVEL_UNSPECIFIED = 0;
@@ -58381,7 +58381,7 @@ abstract class ACTCTX_REQUESTED_RUN_LEVEL {
   static const int ACTCTX_RUN_LEVEL_NUMBERS = 4;
 }
 
-class PACTIVATION_CONTEXT_RUN_LEVEL_INFORMATION extends ffi.Struct {
+base class PACTIVATION_CONTEXT_RUN_LEVEL_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ulFlags;
 
@@ -58399,11 +58399,11 @@ abstract class ACTCTX_COMPATIBILITY_ELEMENT_TYPE {
   static const int ACTCTX_COMPATIBILITY_ELEMENT_TYPE_MAXVERSIONTESTED = 3;
 }
 
-class PCOMPATIBILITY_CONTEXT_ELEMENT extends ffi.Struct {}
+base class PCOMPATIBILITY_CONTEXT_ELEMENT extends ffi.Opaque {}
 
-class PACTIVATION_CONTEXT_COMPATIBILITY_INFORMATION extends ffi.Struct {}
+base class PACTIVATION_CONTEXT_COMPATIBILITY_INFORMATION extends ffi.Opaque {}
 
-class PSUPPORTED_OS_INFO extends ffi.Struct {
+base class PSUPPORTED_OS_INFO extends ffi.Struct {
   @ffi.Uint16()
   external int MajorVersion;
 
@@ -58411,12 +58411,12 @@ class PSUPPORTED_OS_INFO extends ffi.Struct {
   external int MinorVersion;
 }
 
-class PMAXVERSIONTESTED_INFO extends ffi.Struct {
+base class PMAXVERSIONTESTED_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int MaxVersionTested;
 }
 
-class PACTIVATION_CONTEXT_DETAILED_INFORMATION extends ffi.Struct {
+base class PACTIVATION_CONTEXT_DETAILED_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int dwFlags;
 
@@ -58451,7 +58451,7 @@ class PACTIVATION_CONTEXT_DETAILED_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpAppDirPath;
 }
 
-class PHARDWARE_COUNTER_DATA extends ffi.Struct {
+base class PHARDWARE_COUNTER_DATA extends ffi.Struct {
   @ffi.Int32()
   external int Type;
 
@@ -58462,9 +58462,9 @@ class PHARDWARE_COUNTER_DATA extends ffi.Struct {
   external int Value;
 }
 
-class PPERFORMANCE_DATA extends ffi.Struct {}
+base class PPERFORMANCE_DATA extends ffi.Opaque {}
 
-class PEVENTLOGRECORD extends ffi.Struct {
+base class PEVENTLOGRECORD extends ffi.Struct {
   @ffi.Uint64()
   external int Length;
 
@@ -58514,9 +58514,9 @@ class PEVENTLOGRECORD extends ffi.Struct {
   external int DataOffset;
 }
 
-class _EVENTSFORLOGFILE extends ffi.Struct {}
+base class _EVENTSFORLOGFILE extends ffi.Opaque {}
 
-class _PACKEDEVENTINFO extends ffi.Struct {}
+base class _PACKEDEVENTINFO extends ffi.Opaque {}
 
 abstract class SERVICE_NODE_TYPE {
   static const int DriverType = 1;
@@ -58542,7 +58542,7 @@ abstract class SERVICE_ERROR_TYPE {
   static const int CriticalError = 3;
 }
 
-class PTAPE_ERASE extends ffi.Struct {
+base class PTAPE_ERASE extends ffi.Struct {
   @ffi.Uint64()
   external int Type;
 
@@ -58550,7 +58550,7 @@ class PTAPE_ERASE extends ffi.Struct {
   external int Immediate;
 }
 
-class PTAPE_PREPARE extends ffi.Struct {
+base class PTAPE_PREPARE extends ffi.Struct {
   @ffi.Uint64()
   external int Operation;
 
@@ -58558,7 +58558,7 @@ class PTAPE_PREPARE extends ffi.Struct {
   external int Immediate;
 }
 
-class PTAPE_WRITE_MARKS extends ffi.Struct {
+base class PTAPE_WRITE_MARKS extends ffi.Struct {
   @ffi.Uint64()
   external int Type;
 
@@ -58569,11 +58569,11 @@ class PTAPE_WRITE_MARKS extends ffi.Struct {
   external int Immediate;
 }
 
-class PTAPE_GET_POSITION extends ffi.Struct {}
+base class PTAPE_GET_POSITION extends ffi.Opaque {}
 
-class PTAPE_SET_POSITION extends ffi.Struct {}
+base class PTAPE_SET_POSITION extends ffi.Opaque {}
 
-class PTAPE_GET_DRIVE_PARAMETERS extends ffi.Struct {
+base class PTAPE_GET_DRIVE_PARAMETERS extends ffi.Struct {
   @ffi.Uint8()
   external int ECC;
 
@@ -58608,7 +58608,7 @@ class PTAPE_GET_DRIVE_PARAMETERS extends ffi.Struct {
   external int EOTWarningZoneSize;
 }
 
-class PTAPE_SET_DRIVE_PARAMETERS extends ffi.Struct {
+base class PTAPE_SET_DRIVE_PARAMETERS extends ffi.Struct {
   @ffi.Uint8()
   external int ECC;
 
@@ -58625,14 +58625,14 @@ class PTAPE_SET_DRIVE_PARAMETERS extends ffi.Struct {
   external int EOTWarningZoneSize;
 }
 
-class PTAPE_GET_MEDIA_PARAMETERS extends ffi.Struct {}
+base class PTAPE_GET_MEDIA_PARAMETERS extends ffi.Opaque {}
 
-class PTAPE_SET_MEDIA_PARAMETERS extends ffi.Struct {
+base class PTAPE_SET_MEDIA_PARAMETERS extends ffi.Struct {
   @ffi.Uint64()
   external int BlockSize;
 }
 
-class PTAPE_CREATE_PARTITION extends ffi.Struct {
+base class PTAPE_CREATE_PARTITION extends ffi.Struct {
   @ffi.Uint64()
   external int Method;
 
@@ -58643,7 +58643,7 @@ class PTAPE_CREATE_PARTITION extends ffi.Struct {
   external int Size;
 }
 
-class PTAPE_WMI_OPERATIONS extends ffi.Struct {
+base class PTAPE_WMI_OPERATIONS extends ffi.Struct {
   @ffi.Uint64()
   external int Method;
 
@@ -58670,22 +58670,22 @@ abstract class TAPE_DRIVE_PROBLEM_TYPE {
   static const int TapeDriveSnappedTape = 13;
 }
 
-class PTRANSACTION_NOTIFICATION extends ffi.Struct {}
+base class PTRANSACTION_NOTIFICATION extends ffi.Opaque {}
 
-class PTRANSACTION_NOTIFICATION_RECOVERY_ARGUMENT extends ffi.Struct {}
+base class PTRANSACTION_NOTIFICATION_RECOVERY_ARGUMENT extends ffi.Opaque {}
 
-class PTRANSACTION_NOTIFICATION_TM_ONLINE_ARGUMENT extends ffi.Struct {}
+base class PTRANSACTION_NOTIFICATION_TM_ONLINE_ARGUMENT extends ffi.Opaque {}
 
-class PTRANSACTION_NOTIFICATION_SAVEPOINT_ARGUMENT extends ffi.Struct {
+base class PTRANSACTION_NOTIFICATION_SAVEPOINT_ARGUMENT extends ffi.Struct {
   @ffi.Uint64()
   external int SavepointId;
 }
 
-class PTRANSACTION_NOTIFICATION_PROPAGATE_ARGUMENT extends ffi.Struct {}
+base class PTRANSACTION_NOTIFICATION_PROPAGATE_ARGUMENT extends ffi.Opaque {}
 
-class PTRANSACTION_NOTIFICATION_MARSHAL_ARGUMENT extends ffi.Struct {}
+base class PTRANSACTION_NOTIFICATION_MARSHAL_ARGUMENT extends ffi.Opaque {}
 
-class PRKCRM_MARSHAL_HEADER extends ffi.Struct {
+base class PRKCRM_MARSHAL_HEADER extends ffi.Struct {
   @ffi.Uint64()
   external int VersionMajor;
 
@@ -58699,9 +58699,9 @@ class PRKCRM_MARSHAL_HEADER extends ffi.Struct {
   external int Unused;
 }
 
-class PRKCRM_TRANSACTION_BLOB extends ffi.Struct {}
+base class PRKCRM_TRANSACTION_BLOB extends ffi.Opaque {}
 
-class PRKCRM_PROTOCOL_BLOB extends ffi.Struct {}
+base class PRKCRM_PROTOCOL_BLOB extends ffi.Opaque {}
 
 abstract class TRANSACTION_OUTCOME {
   static const int TransactionOutcomeUndetermined = 1;
@@ -58715,36 +58715,36 @@ abstract class TRANSACTION_STATE {
   static const int TransactionStateCommittedNotify = 3;
 }
 
-class PTRANSACTION_BASIC_INFORMATION extends ffi.Struct {}
+base class PTRANSACTION_BASIC_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTIONMANAGER_BASIC_INFORMATION extends ffi.Struct {}
+base class PTRANSACTIONMANAGER_BASIC_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTIONMANAGER_LOG_INFORMATION extends ffi.Struct {}
+base class PTRANSACTIONMANAGER_LOG_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTIONMANAGER_LOGPATH_INFORMATION extends ffi.Struct {}
+base class PTRANSACTIONMANAGER_LOGPATH_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTIONMANAGER_RECOVERY_INFORMATION extends ffi.Struct {
+base class PTRANSACTIONMANAGER_RECOVERY_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int LastRecoveredLsn;
 }
 
-class PTRANSACTIONMANAGER_OLDEST_INFORMATION extends ffi.Struct {}
+base class PTRANSACTIONMANAGER_OLDEST_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTION_PROPERTIES_INFORMATION extends ffi.Struct {}
+base class PTRANSACTION_PROPERTIES_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTION_BIND_INFORMATION extends ffi.Struct {
+base class PTRANSACTION_BIND_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> TmHandle;
 }
 
-class PTRANSACTION_ENLISTMENT_PAIR extends ffi.Struct {}
+base class PTRANSACTION_ENLISTMENT_PAIR extends ffi.Opaque {}
 
-class PTRANSACTION_ENLISTMENTS_INFORMATION extends ffi.Struct {}
+base class PTRANSACTION_ENLISTMENTS_INFORMATION extends ffi.Opaque {}
 
-class PTRANSACTION_SUPERIOR_ENLISTMENT_INFORMATION extends ffi.Struct {}
+base class PTRANSACTION_SUPERIOR_ENLISTMENT_INFORMATION extends ffi.Opaque {}
 
-class PRESOURCEMANAGER_BASIC_INFORMATION extends ffi.Struct {}
+base class PRESOURCEMANAGER_BASIC_INFORMATION extends ffi.Opaque {}
 
-class PRESOURCEMANAGER_COMPLETION_INFORMATION extends ffi.Struct {
+base class PRESOURCEMANAGER_COMPLETION_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> IoCompletionPortHandle;
 
   @ffi.Uint64()
@@ -58774,9 +58774,9 @@ abstract class RESOURCEMANAGER_INFORMATION_CLASS {
   static const int ResourceManagerCompletionInformation = 1;
 }
 
-class PENLISTMENT_BASIC_INFORMATION extends ffi.Struct {}
+base class PENLISTMENT_BASIC_INFORMATION extends ffi.Opaque {}
 
-class PENLISTMENT_CRM_INFORMATION extends ffi.Struct {}
+base class PENLISTMENT_CRM_INFORMATION extends ffi.Opaque {}
 
 abstract class ENLISTMENT_INFORMATION_CLASS {
   static const int EnlistmentBasicInformation = 0;
@@ -58784,9 +58784,9 @@ abstract class ENLISTMENT_INFORMATION_CLASS {
   static const int EnlistmentCrmInformation = 2;
 }
 
-class PTRANSACTION_LIST_ENTRY extends ffi.Struct {}
+base class PTRANSACTION_LIST_ENTRY extends ffi.Opaque {}
 
-class PTRANSACTION_LIST_INFORMATION extends ffi.Struct {}
+base class PTRANSACTION_LIST_INFORMATION extends ffi.Opaque {}
 
 abstract class PKTMOBJECT_TYPE {
   static const int KTMOBJECT_TRANSACTION = 0;
@@ -58796,11 +58796,11 @@ abstract class PKTMOBJECT_TYPE {
   static const int KTMOBJECT_INVALID = 4;
 }
 
-class PKTMOBJECT_CURSOR extends ffi.Struct {}
+base class PKTMOBJECT_CURSOR extends ffi.Opaque {}
 
-class _TP_CALLBACK_INSTANCE extends ffi.Struct {}
+base class _TP_CALLBACK_INSTANCE extends ffi.Opaque {}
 
-class _TP_POOL extends ffi.Struct {}
+base class _TP_POOL extends ffi.Opaque {}
 
 abstract class TP_CALLBACK_PRIORITY {
   static const int TP_CALLBACK_PRIORITY_HIGH = 0;
@@ -58810,7 +58810,7 @@ abstract class TP_CALLBACK_PRIORITY {
   static const int TP_CALLBACK_PRIORITY_COUNT = 3;
 }
 
-class PTP_POOL_STACK_INFORMATION extends ffi.Struct {
+base class PTP_POOL_STACK_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int StackReserve;
 
@@ -58818,78 +58818,78 @@ class PTP_POOL_STACK_INFORMATION extends ffi.Struct {
   external int StackCommit;
 }
 
-class _TP_CLEANUP_GROUP extends ffi.Struct {}
+base class _TP_CLEANUP_GROUP extends ffi.Opaque {}
 
-class _ACTIVATION_CONTEXT extends ffi.Struct {}
+base class _ACTIVATION_CONTEXT extends ffi.Opaque {}
 
-class TP_CALLBACK_ENVIRON_V3 extends ffi.Struct {}
+base class TP_CALLBACK_ENVIRON_V3 extends ffi.Opaque {}
 
-class _TP_WORK extends ffi.Struct {}
+base class _TP_WORK extends ffi.Opaque {}
 
-class _TP_TIMER extends ffi.Struct {}
+base class _TP_TIMER extends ffi.Opaque {}
 
-class _TP_WAIT extends ffi.Struct {}
+base class _TP_WAIT extends ffi.Opaque {}
 
-class _TP_IO extends ffi.Struct {}
+base class _TP_IO extends ffi.Opaque {}
 
-class _TEB extends ffi.Struct {}
+base class _TEB extends ffi.Opaque {}
 
-class HKEY__ extends ffi.Struct {
+base class HKEY__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HMETAFILE__ extends ffi.Struct {
+base class HMETAFILE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HINSTANCE__ extends ffi.Struct {
+base class HINSTANCE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HRGN__ extends ffi.Struct {
+base class HRGN__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HRSRC__ extends ffi.Struct {
+base class HRSRC__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HSPRITE__ extends ffi.Struct {
+base class HSPRITE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HLSURF__ extends ffi.Struct {
+base class HLSURF__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HSTR__ extends ffi.Struct {
+base class HSTR__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HTASK__ extends ffi.Struct {
+base class HTASK__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HWINSTA__ extends ffi.Struct {
+base class HWINSTA__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HKL__ extends ffi.Struct {
+base class HKL__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class LPFILETIME extends ffi.Struct {
+base class LPFILETIME extends ffi.Struct {
   @ffi.Uint64()
   external int dwLowDateTime;
 
@@ -58897,97 +58897,97 @@ class LPFILETIME extends ffi.Struct {
   external int dwHighDateTime;
 }
 
-class HWND__ extends ffi.Struct {
+base class HWND__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HHOOK__ extends ffi.Struct {
+base class HHOOK__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HACCEL__ extends ffi.Struct {
+base class HACCEL__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HBITMAP__ extends ffi.Struct {
+base class HBITMAP__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HBRUSH__ extends ffi.Struct {
+base class HBRUSH__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HCOLORSPACE__ extends ffi.Struct {
+base class HCOLORSPACE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HDC__ extends ffi.Struct {
+base class HDC__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HGLRC__ extends ffi.Struct {
+base class HGLRC__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HDESK__ extends ffi.Struct {
+base class HDESK__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HENHMETAFILE__ extends ffi.Struct {
+base class HENHMETAFILE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HFONT__ extends ffi.Struct {
+base class HFONT__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HICON__ extends ffi.Struct {
+base class HICON__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HMENU__ extends ffi.Struct {
+base class HMENU__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HPALETTE__ extends ffi.Struct {
+base class HPALETTE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HPEN__ extends ffi.Struct {
+base class HPEN__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HWINEVENTHOOK__ extends ffi.Struct {
+base class HWINEVENTHOOK__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HMONITOR__ extends ffi.Struct {
+base class HMONITOR__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HUMPD__ extends ffi.Struct {
+base class HUMPD__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class LPRECT extends ffi.Struct {
+base class LPRECT extends ffi.Struct {
   @ffi.Int64()
   external int left;
 
@@ -59001,7 +59001,7 @@ class LPRECT extends ffi.Struct {
   external int bottom;
 }
 
-class LPRECTL extends ffi.Struct {
+base class LPRECTL extends ffi.Struct {
   @ffi.Int64()
   external int left;
 
@@ -59015,7 +59015,7 @@ class LPRECTL extends ffi.Struct {
   external int bottom;
 }
 
-class LPPOINT extends ffi.Struct {
+base class LPPOINT extends ffi.Struct {
   @ffi.Int64()
   external int x;
 
@@ -59023,7 +59023,7 @@ class LPPOINT extends ffi.Struct {
   external int y;
 }
 
-class PPOINTL extends ffi.Struct {
+base class PPOINTL extends ffi.Struct {
   @ffi.Int64()
   external int x;
 
@@ -59031,7 +59031,7 @@ class PPOINTL extends ffi.Struct {
   external int y;
 }
 
-class LPSIZE extends ffi.Struct {
+base class LPSIZE extends ffi.Struct {
   @ffi.Int64()
   external int cx;
 
@@ -59039,7 +59039,7 @@ class LPSIZE extends ffi.Struct {
   external int cy;
 }
 
-class LPPOINTS extends ffi.Struct {
+base class LPPOINTS extends ffi.Struct {
   @ffi.Int16()
   external int x;
 
@@ -59047,9 +59047,9 @@ class LPPOINTS extends ffi.Struct {
   external int y;
 }
 
-class APP_LOCAL_DEVICE_ID extends ffi.Struct {}
+base class APP_LOCAL_DEVICE_ID extends ffi.Opaque {}
 
-class DPI_AWARENESS_CONTEXT__ extends ffi.Struct {
+base class DPI_AWARENESS_CONTEXT__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
@@ -59067,7 +59067,7 @@ abstract class DPI_HOSTING_BEHAVIOR {
   static const int DPI_HOSTING_BEHAVIOR_MIXED = 1;
 }
 
-class LPSECURITY_ATTRIBUTES extends ffi.Struct {
+base class LPSECURITY_ATTRIBUTES extends ffi.Struct {
   @ffi.Uint64()
   external int nLength;
 
@@ -59077,7 +59077,7 @@ class LPSECURITY_ATTRIBUTES extends ffi.Struct {
   external int bInheritHandle;
 }
 
-class LPOVERLAPPED extends ffi.Struct {
+base class LPOVERLAPPED extends ffi.Struct {
   @ffi.Uint64()
   external int Internal;
 
@@ -59087,7 +59087,7 @@ class LPOVERLAPPED extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hEvent;
 }
 
-class LPOVERLAPPED_ENTRY extends ffi.Struct {
+base class LPOVERLAPPED_ENTRY extends ffi.Struct {
   @ffi.Uint64()
   external int lpCompletionKey;
 
@@ -59100,7 +59100,7 @@ class LPOVERLAPPED_ENTRY extends ffi.Struct {
   external int dwNumberOfBytesTransferred;
 }
 
-class LPSYSTEMTIME extends ffi.Struct {
+base class LPSYSTEMTIME extends ffi.Struct {
   @ffi.Uint16()
   external int wYear;
 
@@ -59126,9 +59126,9 @@ class LPSYSTEMTIME extends ffi.Struct {
   external int wMilliseconds;
 }
 
-class LPWIN32_FIND_DATAA extends ffi.Struct {}
+base class LPWIN32_FIND_DATAA extends ffi.Opaque {}
 
-class LPWIN32_FIND_DATAW extends ffi.Struct {}
+base class LPWIN32_FIND_DATAW extends ffi.Opaque {}
 
 abstract class FINDEX_INFO_LEVELS {
   static const int FindExInfoStandard = 0;
@@ -59182,7 +59182,7 @@ abstract class PFILE_INFO_BY_HANDLE_CLASS {
   static const int MaximumFileInfoByHandleClass = 25;
 }
 
-class PPROCESS_HEAP_ENTRY extends ffi.Struct {
+base class PPROCESS_HEAP_ENTRY extends ffi.Struct {
   external ffi.Pointer<ffi.Void> lpData;
 
   @ffi.Uint64()
@@ -59198,11 +59198,11 @@ class PPROCESS_HEAP_ENTRY extends ffi.Struct {
   external int wFlags;
 }
 
-class PREASON_CONTEXT extends ffi.Struct {}
+base class PREASON_CONTEXT extends ffi.Opaque {}
 
-class LPEXCEPTION_DEBUG_INFO extends ffi.Struct {}
+base class LPEXCEPTION_DEBUG_INFO extends ffi.Opaque {}
 
-class LPCREATE_THREAD_DEBUG_INFO extends ffi.Struct {
+base class LPCREATE_THREAD_DEBUG_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hThread;
 
   external ffi.Pointer<ffi.Void> lpThreadLocalBase;
@@ -59211,7 +59211,7 @@ class LPCREATE_THREAD_DEBUG_INFO extends ffi.Struct {
       lpStartAddress;
 }
 
-class LPCREATE_PROCESS_DEBUG_INFO extends ffi.Struct {
+base class LPCREATE_PROCESS_DEBUG_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hFile;
 
   external ffi.Pointer<ffi.Void> hProcess;
@@ -59237,17 +59237,17 @@ class LPCREATE_PROCESS_DEBUG_INFO extends ffi.Struct {
   external int fUnicode;
 }
 
-class LPEXIT_THREAD_DEBUG_INFO extends ffi.Struct {
+base class LPEXIT_THREAD_DEBUG_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwExitCode;
 }
 
-class LPEXIT_PROCESS_DEBUG_INFO extends ffi.Struct {
+base class LPEXIT_PROCESS_DEBUG_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwExitCode;
 }
 
-class LPLOAD_DLL_DEBUG_INFO extends ffi.Struct {
+base class LPLOAD_DLL_DEBUG_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hFile;
 
   external ffi.Pointer<ffi.Void> lpBaseOfDll;
@@ -59264,11 +59264,11 @@ class LPLOAD_DLL_DEBUG_INFO extends ffi.Struct {
   external int fUnicode;
 }
 
-class LPUNLOAD_DLL_DEBUG_INFO extends ffi.Struct {
+base class LPUNLOAD_DLL_DEBUG_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Void> lpBaseOfDll;
 }
 
-class LPOUTPUT_DEBUG_STRING_INFO extends ffi.Struct {
+base class LPOUTPUT_DEBUG_STRING_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpDebugStringData;
 
   @ffi.Uint16()
@@ -59278,7 +59278,7 @@ class LPOUTPUT_DEBUG_STRING_INFO extends ffi.Struct {
   external int nDebugStringLength;
 }
 
-class LPRIP_INFO extends ffi.Struct {
+base class LPRIP_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwError;
 
@@ -59286,9 +59286,9 @@ class LPRIP_INFO extends ffi.Struct {
   external int dwType;
 }
 
-class LPDEBUG_EVENT extends ffi.Struct {}
+base class LPDEBUG_EVENT extends ffi.Opaque {}
 
-class DISK_SPACE_INFORMATION extends ffi.Struct {
+base class DISK_SPACE_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ActualTotalAllocationUnits;
 
@@ -59329,11 +59329,11 @@ class DISK_SPACE_INFORMATION extends ffi.Struct {
   external int BytesPerSector;
 }
 
-class LPWIN32_FILE_ATTRIBUTE_DATA extends ffi.Struct {}
+base class LPWIN32_FILE_ATTRIBUTE_DATA extends ffi.Opaque {}
 
-class LPBY_HANDLE_FILE_INFORMATION extends ffi.Struct {}
+base class LPBY_HANDLE_FILE_INFORMATION extends ffi.Opaque {}
 
-class LPCREATEFILE2_EXTENDED_PARAMETERS extends ffi.Struct {
+base class LPCREATEFILE2_EXTENDED_PARAMETERS extends ffi.Struct {
   @ffi.Uint64()
   external int dwSize;
 
@@ -59356,9 +59356,9 @@ abstract class STREAM_INFO_LEVELS {
   static const int FindStreamInfoMaxInfoLevel = 1;
 }
 
-class PWIN32_FIND_STREAM_DATA extends ffi.Struct {}
+base class PWIN32_FIND_STREAM_DATA extends ffi.Opaque {}
 
-class PHEAP_SUMMARY extends ffi.Struct {
+base class PHEAP_SUMMARY extends ffi.Struct {
   @ffi.Uint64()
   external int cb;
 
@@ -59375,7 +59375,7 @@ class PHEAP_SUMMARY extends ffi.Struct {
   external int cbMaxReserve;
 }
 
-class LPPROCESS_INFORMATION extends ffi.Struct {
+base class LPPROCESS_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hProcess;
 
   external ffi.Pointer<ffi.Void> hThread;
@@ -59387,7 +59387,7 @@ class LPPROCESS_INFORMATION extends ffi.Struct {
   external int dwThreadId;
 }
 
-class LPSTARTUPINFOA extends ffi.Struct {
+base class LPSTARTUPINFOA extends ffi.Struct {
   @ffi.Uint64()
   external int cb;
 
@@ -59436,7 +59436,7 @@ class LPSTARTUPINFOA extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hStdError;
 }
 
-class LPSTARTUPINFOW extends ffi.Struct {
+base class LPSTARTUPINFOW extends ffi.Struct {
   @ffi.Uint64()
   external int cb;
 
@@ -59485,7 +59485,7 @@ class LPSTARTUPINFOW extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hStdError;
 }
 
-class _PROC_THREAD_ATTRIBUTE_LIST extends ffi.Struct {}
+base class _PROC_THREAD_ATTRIBUTE_LIST extends ffi.Opaque {}
 
 abstract class THREAD_INFORMATION_CLASS {
   static const int ThreadMemoryPriority = 0;
@@ -59495,12 +59495,12 @@ abstract class THREAD_INFORMATION_CLASS {
   static const int ThreadInformationClassMax = 4;
 }
 
-class PMEMORY_PRIORITY_INFORMATION extends ffi.Struct {
+base class PMEMORY_PRIORITY_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int MemoryPriority;
 }
 
-class THREAD_POWER_THROTTLING_STATE extends ffi.Struct {
+base class THREAD_POWER_THROTTLING_STATE extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -59524,7 +59524,7 @@ abstract class PROCESS_INFORMATION_CLASS {
   static const int ProcessInformationClassMax = 9;
 }
 
-class PAPP_MEMORY_INFORMATION extends ffi.Struct {
+base class PAPP_MEMORY_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int AvailableCommit;
 
@@ -59543,7 +59543,7 @@ abstract class PPROCESS_MEMORY_EXHAUSTION_TYPE {
   static const int PMETypeMax = 1;
 }
 
-class PPROCESS_MEMORY_EXHAUSTION_INFO extends ffi.Struct {
+base class PPROCESS_MEMORY_EXHAUSTION_INFO extends ffi.Struct {
   @ffi.Uint16()
   external int Version;
 
@@ -59557,7 +59557,7 @@ class PPROCESS_MEMORY_EXHAUSTION_INFO extends ffi.Struct {
   external int Value;
 }
 
-class PPROCESS_POWER_THROTTLING_STATE extends ffi.Struct {
+base class PPROCESS_POWER_THROTTLING_STATE extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -59568,12 +59568,12 @@ class PPROCESS_POWER_THROTTLING_STATE extends ffi.Struct {
   external int StateMask;
 }
 
-class PROCESS_PROTECTION_LEVEL_INFORMATION extends ffi.Struct {
+base class PROCESS_PROTECTION_LEVEL_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int ProtectionLevel;
 }
 
-class PPROCESS_LEAP_SECOND_INFO extends ffi.Struct {
+base class PPROCESS_LEAP_SECOND_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int Flags;
 
@@ -59581,7 +59581,7 @@ class PPROCESS_LEAP_SECOND_INFO extends ffi.Struct {
   external int Reserved;
 }
 
-class LPSYSTEM_INFO extends ffi.Struct {
+base class LPSYSTEM_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwPageSize;
 
@@ -59608,7 +59608,7 @@ class LPSYSTEM_INFO extends ffi.Struct {
   external int wProcessorRevision;
 }
 
-class LPMEMORYSTATUSEX extends ffi.Struct {
+base class LPMEMORYSTATUSEX extends ffi.Struct {
   @ffi.Uint64()
   external int dwLength;
 
@@ -59654,7 +59654,7 @@ abstract class MEMORY_RESOURCE_NOTIFICATION_TYPE {
   static const int HighMemoryResourceNotification = 1;
 }
 
-class PWIN32_MEMORY_RANGE_ENTRY extends ffi.Struct {
+base class PWIN32_MEMORY_RANGE_ENTRY extends ffi.Struct {
   external ffi.Pointer<ffi.Void> VirtualAddress;
 
   @ffi.Uint64()
@@ -59672,7 +59672,7 @@ abstract class WIN32_MEMORY_INFORMATION_CLASS {
   static const int MemoryRegionInfo = 0;
 }
 
-class WIN32_MEMORY_REGION_INFORMATION extends ffi.Struct {
+base class WIN32_MEMORY_REGION_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> AllocationBase;
 
   @ffi.Uint64()
@@ -59685,7 +59685,7 @@ class WIN32_MEMORY_REGION_INFORMATION extends ffi.Struct {
   external int CommitSize;
 }
 
-class JOBOBJECT_IO_RATE_CONTROL_INFORMATION extends ffi.Struct {
+base class JOBOBJECT_IO_RATE_CONTROL_INFORMATION extends ffi.Struct {
   @ffi.Int64()
   external int MaxIops;
 
@@ -59704,7 +59704,7 @@ class JOBOBJECT_IO_RATE_CONTROL_INFORMATION extends ffi.Struct {
   external int ControlFlags;
 }
 
-class PENUMUILANG extends ffi.Struct {
+base class PENUMUILANG extends ffi.Struct {
   @ffi.Uint64()
   external int NumOfEnumUILang;
 
@@ -59714,7 +59714,7 @@ class PENUMUILANG extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> pEnumUIBuffer;
 }
 
-class PREDIRECTION_FUNCTION_DESCRIPTOR extends ffi.Struct {
+base class PREDIRECTION_FUNCTION_DESCRIPTOR extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> DllName;
 
   external ffi.Pointer<ffi.Int8> FunctionName;
@@ -59722,7 +59722,7 @@ class PREDIRECTION_FUNCTION_DESCRIPTOR extends ffi.Struct {
   external ffi.Pointer<ffi.Void> RedirectionTarget;
 }
 
-class PREDIRECTION_DESCRIPTOR extends ffi.Struct {
+base class PREDIRECTION_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -59732,13 +59732,13 @@ class PREDIRECTION_DESCRIPTOR extends ffi.Struct {
   external ffi.Pointer<PREDIRECTION_FUNCTION_DESCRIPTOR> Redirections;
 }
 
-class LPCOMMPROP extends ffi.Struct {}
+base class LPCOMMPROP extends ffi.Opaque {}
 
-class LPCOMSTAT extends ffi.Struct {}
+base class LPCOMSTAT extends ffi.Opaque {}
 
-class LPDCB extends ffi.Struct {}
+base class LPDCB extends ffi.Opaque {}
 
-class LPCOMMTIMEOUTS extends ffi.Struct {
+base class LPCOMMTIMEOUTS extends ffi.Struct {
   @ffi.Uint64()
   external int ReadIntervalTimeout;
 
@@ -59755,9 +59755,9 @@ class LPCOMMTIMEOUTS extends ffi.Struct {
   external int WriteTotalTimeoutConstant;
 }
 
-class LPCOMMCONFIG extends ffi.Struct {}
+base class LPCOMMCONFIG extends ffi.Opaque {}
 
-class LPMEMORYSTATUS extends ffi.Struct {
+base class LPMEMORYSTATUS extends ffi.Struct {
   @ffi.Uint64()
   external int dwLength;
 
@@ -59783,7 +59783,7 @@ class LPMEMORYSTATUS extends ffi.Struct {
   external int dwAvailVirtual;
 }
 
-class LPJIT_DEBUG_INFO extends ffi.Struct {
+base class LPJIT_DEBUG_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwSize;
 
@@ -59806,9 +59806,9 @@ class LPJIT_DEBUG_INFO extends ffi.Struct {
   external int lpContextRecord;
 }
 
-class POFSTRUCT extends ffi.Struct {}
+base class POFSTRUCT extends ffi.Opaque {}
 
-class PUMS_SCHEDULER_STARTUP_INFO extends ffi.Struct {
+base class PUMS_SCHEDULER_STARTUP_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int UmsVersion;
 
@@ -59820,7 +59820,7 @@ class PUMS_SCHEDULER_STARTUP_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Void> SchedulerParam;
 }
 
-class PUMS_SYSTEM_THREAD_INFORMATION extends ffi.Struct {
+base class PUMS_SYSTEM_THREAD_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int UmsVersion;
 }
@@ -59833,11 +59833,11 @@ abstract class DEP_SYSTEM_POLICY_TYPE {
   static const int DEPTotalPolicyCount = 4;
 }
 
-class LPWIN32_STREAM_ID extends ffi.Struct {}
+base class LPWIN32_STREAM_ID extends ffi.Opaque {}
 
-class LPSTARTUPINFOEXA extends ffi.Struct {}
+base class LPSTARTUPINFOEXA extends ffi.Opaque {}
 
-class LPSTARTUPINFOEXW extends ffi.Struct {}
+base class LPSTARTUPINFOEXW extends ffi.Opaque {}
 
 abstract class PROC_THREAD_ATTRIBUTE_NUM {
   static const int ProcThreadAttributeParentProcess = 0;
@@ -59889,9 +59889,9 @@ abstract class COPYFILE2_COPY_PHASE {
   static const int COPYFILE2_PHASE_MAX = 7;
 }
 
-class COPYFILE2_MESSAGE extends ffi.Struct {}
+base class COPYFILE2_MESSAGE extends ffi.Opaque {}
 
-class COPYFILE2_EXTENDED_PARAMETERS extends ffi.Struct {
+base class COPYFILE2_EXTENDED_PARAMETERS extends ffi.Struct {
   @ffi.Uint64()
   external int dwSize;
 
@@ -59906,12 +59906,12 @@ class COPYFILE2_EXTENDED_PARAMETERS extends ffi.Struct {
   external ffi.Pointer<ffi.Void> pvCallbackContext;
 }
 
-class LPEVENTLOG_FULL_INFORMATION extends ffi.Struct {
+base class LPEVENTLOG_FULL_INFORMATION extends ffi.Struct {
   @ffi.Uint64()
   external int dwFull;
 }
 
-class POPERATION_START_PARAMETERS extends ffi.Struct {
+base class POPERATION_START_PARAMETERS extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -59922,7 +59922,7 @@ class POPERATION_START_PARAMETERS extends ffi.Struct {
   external int Flags;
 }
 
-class POPERATION_END_PARAMETERS extends ffi.Struct {
+base class POPERATION_END_PARAMETERS extends ffi.Struct {
   @ffi.Uint64()
   external int Version;
 
@@ -59933,15 +59933,15 @@ class POPERATION_END_PARAMETERS extends ffi.Struct {
   external int Flags;
 }
 
-class LPHW_PROFILE_INFOA extends ffi.Struct {}
+base class LPHW_PROFILE_INFOA extends ffi.Opaque {}
 
-class LPHW_PROFILE_INFOW extends ffi.Struct {}
+base class LPHW_PROFILE_INFOW extends ffi.Opaque {}
 
-class LPTIME_ZONE_INFORMATION extends ffi.Struct {}
+base class LPTIME_ZONE_INFORMATION extends ffi.Opaque {}
 
-class PDYNAMIC_TIME_ZONE_INFORMATION extends ffi.Struct {}
+base class PDYNAMIC_TIME_ZONE_INFORMATION extends ffi.Opaque {}
 
-class LPSYSTEM_POWER_STATUS extends ffi.Struct {
+base class LPSYSTEM_POWER_STATUS extends ffi.Struct {
   @ffi.Uint8()
   external int ACLineStatus;
 
@@ -59961,7 +59961,7 @@ class LPSYSTEM_POWER_STATUS extends ffi.Struct {
   external int BatteryFullLifeTime;
 }
 
-class PACTCTXA extends ffi.Struct {
+base class PACTCTXA extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -59985,7 +59985,7 @@ class PACTCTXA extends ffi.Struct {
   external ffi.Pointer<HINSTANCE__> hModule;
 }
 
-class PACTCTXW extends ffi.Struct {
+base class PACTCTXW extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -60009,7 +60009,7 @@ class PACTCTXW extends ffi.Struct {
   external ffi.Pointer<HINSTANCE__> hModule;
 }
 
-class PACTCTX_SECTION_KEYED_DATA_2600 extends ffi.Struct {
+base class PACTCTX_SECTION_KEYED_DATA_2600 extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -60037,7 +60037,7 @@ class PACTCTX_SECTION_KEYED_DATA_2600 extends ffi.Struct {
   external int ulAssemblyRosterIndex;
 }
 
-class PACTCTX_SECTION_KEYED_DATA_ASSEMBLY_METADATA extends ffi.Struct {
+base class PACTCTX_SECTION_KEYED_DATA_ASSEMBLY_METADATA extends ffi.Struct {
   external ffi.Pointer<ffi.Void> lpInformation;
 
   external ffi.Pointer<ffi.Void> lpSectionBase;
@@ -60051,37 +60051,37 @@ class PACTCTX_SECTION_KEYED_DATA_ASSEMBLY_METADATA extends ffi.Struct {
   external int ulSectionGlobalDataLength;
 }
 
-class PACTCTX_SECTION_KEYED_DATA extends ffi.Struct {}
+base class PACTCTX_SECTION_KEYED_DATA extends ffi.Opaque {}
 
-class PACTIVATION_CONTEXT_BASIC_INFORMATION extends ffi.Struct {
+base class PACTIVATION_CONTEXT_BASIC_INFORMATION extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hActCtx;
 
   @ffi.Uint64()
   external int dwFlags;
 }
 
-class PFILE_BASIC_INFO extends ffi.Struct {}
+base class PFILE_BASIC_INFO extends ffi.Opaque {}
 
-class PFILE_STANDARD_INFO extends ffi.Struct {}
+base class PFILE_STANDARD_INFO extends ffi.Opaque {}
 
-class PFILE_NAME_INFO extends ffi.Struct {}
+base class PFILE_NAME_INFO extends ffi.Opaque {}
 
-class PFILE_CASE_SENSITIVE_INFO extends ffi.Struct {
+base class PFILE_CASE_SENSITIVE_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int Flags;
 }
 
-class PFILE_RENAME_INFO extends ffi.Struct {}
+base class PFILE_RENAME_INFO extends ffi.Opaque {}
 
-class PFILE_ALLOCATION_INFO extends ffi.Struct {}
+base class PFILE_ALLOCATION_INFO extends ffi.Opaque {}
 
-class PFILE_END_OF_FILE_INFO extends ffi.Struct {}
+base class PFILE_END_OF_FILE_INFO extends ffi.Opaque {}
 
-class PFILE_STREAM_INFO extends ffi.Struct {}
+base class PFILE_STREAM_INFO extends ffi.Opaque {}
 
-class PFILE_COMPRESSION_INFO extends ffi.Struct {}
+base class PFILE_COMPRESSION_INFO extends ffi.Opaque {}
 
-class PFILE_ATTRIBUTE_TAG_INFO extends ffi.Struct {
+base class PFILE_ATTRIBUTE_TAG_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int FileAttributes;
 
@@ -60089,19 +60089,19 @@ class PFILE_ATTRIBUTE_TAG_INFO extends ffi.Struct {
   external int ReparseTag;
 }
 
-class PFILE_DISPOSITION_INFO extends ffi.Struct {
+base class PFILE_DISPOSITION_INFO extends ffi.Struct {
   @ffi.Uint8()
   external int DeleteFileA;
 }
 
-class PFILE_DISPOSITION_INFO_EX extends ffi.Struct {
+base class PFILE_DISPOSITION_INFO_EX extends ffi.Struct {
   @ffi.Uint64()
   external int Flags;
 }
 
-class PFILE_ID_BOTH_DIR_INFO extends ffi.Struct {}
+base class PFILE_ID_BOTH_DIR_INFO extends ffi.Opaque {}
 
-class PFILE_FULL_DIR_INFO extends ffi.Struct {}
+base class PFILE_FULL_DIR_INFO extends ffi.Opaque {}
 
 abstract class PRIORITY_HINT {
   static const int IoPriorityHintVeryLow = 0;
@@ -60110,17 +60110,17 @@ abstract class PRIORITY_HINT {
   static const int MaximumIoPriorityHintType = 3;
 }
 
-class PFILE_IO_PRIORITY_HINT_INFO extends ffi.Struct {
+base class PFILE_IO_PRIORITY_HINT_INFO extends ffi.Struct {
   @ffi.Int32()
   external int PriorityHint;
 }
 
-class PFILE_ALIGNMENT_INFO extends ffi.Struct {
+base class PFILE_ALIGNMENT_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int AlignmentRequirement;
 }
 
-class PFILE_STORAGE_INFO extends ffi.Struct {
+base class PFILE_STORAGE_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int LogicalBytesPerSector;
 
@@ -60143,11 +60143,11 @@ class PFILE_STORAGE_INFO extends ffi.Struct {
   external int ByteOffsetForPartitionAlignment;
 }
 
-class PFILE_ID_INFO extends ffi.Struct {}
+base class PFILE_ID_INFO extends ffi.Opaque {}
 
-class PFILE_ID_EXTD_DIR_INFO extends ffi.Struct {}
+base class PFILE_ID_EXTD_DIR_INFO extends ffi.Opaque {}
 
-class PFILE_REMOTE_PROTOCOL_INFO extends ffi.Struct {}
+base class PFILE_REMOTE_PROTOCOL_INFO extends ffi.Opaque {}
 
 abstract class PFILE_ID_TYPE {
   static const int FileIdType = 0;
@@ -60156,7 +60156,7 @@ abstract class PFILE_ID_TYPE {
   static const int MaximumFileIdType = 3;
 }
 
-class LPFILE_ID_DESCRIPTOR extends ffi.Struct {
+base class LPFILE_ID_DESCRIPTOR extends ffi.Struct {
   @ffi.Uint64()
   external int dwSize;
 
@@ -60164,9 +60164,9 @@ class LPFILE_ID_DESCRIPTOR extends ffi.Struct {
   external int Type;
 }
 
-class PDRAWPATRECT extends ffi.Struct {}
+base class PDRAWPATRECT extends ffi.Opaque {}
 
-class PPSINJECTDATA extends ffi.Struct {
+base class PPSINJECTDATA extends ffi.Struct {
   @ffi.Uint64()
   external int DataBytes;
 
@@ -60177,7 +60177,7 @@ class PPSINJECTDATA extends ffi.Struct {
   external int PageNumber;
 }
 
-class PPSFEATURE_OUTPUT extends ffi.Struct {
+base class PPSFEATURE_OUTPUT extends ffi.Struct {
   @ffi.Int32()
   external int bPageIndependent;
 
@@ -60185,7 +60185,7 @@ class PPSFEATURE_OUTPUT extends ffi.Struct {
   external int bSetPageDevice;
 }
 
-class PPSFEATURE_CUSTPAPER extends ffi.Struct {
+base class PPSFEATURE_CUSTPAPER extends ffi.Struct {
   @ffi.Int64()
   external int lOrientation;
 
@@ -60202,7 +60202,7 @@ class PPSFEATURE_CUSTPAPER extends ffi.Struct {
   external int lHeightOffset;
 }
 
-class LPXFORM extends ffi.Struct {
+base class LPXFORM extends ffi.Struct {
   @ffi.Float()
   external double eM11;
 
@@ -60222,7 +60222,7 @@ class LPXFORM extends ffi.Struct {
   external double eDy;
 }
 
-class LPBITMAP extends ffi.Struct {
+base class LPBITMAP extends ffi.Struct {
   @ffi.Int64()
   external int bmType;
 
@@ -60244,7 +60244,7 @@ class LPBITMAP extends ffi.Struct {
   external ffi.Pointer<ffi.Void> bmBits;
 }
 
-class LPRGBTRIPLE extends ffi.Struct {
+base class LPRGBTRIPLE extends ffi.Struct {
   @ffi.Uint8()
   external int rgbtBlue;
 
@@ -60255,7 +60255,7 @@ class LPRGBTRIPLE extends ffi.Struct {
   external int rgbtRed;
 }
 
-class RGBQUAD extends ffi.Struct {
+base class RGBQUAD extends ffi.Struct {
   @ffi.Uint8()
   external int rgbBlue;
 
@@ -60269,7 +60269,7 @@ class RGBQUAD extends ffi.Struct {
   external int rgbReserved;
 }
 
-class CIEXYZ extends ffi.Struct {
+base class CIEXYZ extends ffi.Struct {
   @ffi.Int64()
   external int ciexyzX;
 
@@ -60280,13 +60280,13 @@ class CIEXYZ extends ffi.Struct {
   external int ciexyzZ;
 }
 
-class CIEXYZTRIPLE extends ffi.Struct {}
+base class CIEXYZTRIPLE extends ffi.Opaque {}
 
-class LPLOGCOLORSPACEA extends ffi.Struct {}
+base class LPLOGCOLORSPACEA extends ffi.Opaque {}
 
-class LPLOGCOLORSPACEW extends ffi.Struct {}
+base class LPLOGCOLORSPACEW extends ffi.Opaque {}
 
-class PBITMAPCOREHEADER extends ffi.Struct {
+base class PBITMAPCOREHEADER extends ffi.Struct {
   @ffi.Uint64()
   external int bcSize;
 
@@ -60303,7 +60303,7 @@ class PBITMAPCOREHEADER extends ffi.Struct {
   external int bcBitCount;
 }
 
-class PBITMAPINFOHEADER extends ffi.Struct {
+base class PBITMAPINFOHEADER extends ffi.Struct {
   @ffi.Uint64()
   external int biSize;
 
@@ -60338,15 +60338,15 @@ class PBITMAPINFOHEADER extends ffi.Struct {
   external int biClrImportant;
 }
 
-class PBITMAPV4HEADER extends ffi.Struct {}
+base class PBITMAPV4HEADER extends ffi.Opaque {}
 
-class PBITMAPV5HEADER extends ffi.Struct {}
+base class PBITMAPV5HEADER extends ffi.Opaque {}
 
-class PBITMAPINFO extends ffi.Struct {}
+base class PBITMAPINFO extends ffi.Opaque {}
 
-class PBITMAPCOREINFO extends ffi.Struct {}
+base class PBITMAPCOREINFO extends ffi.Opaque {}
 
-class PBITMAPFILEHEADER extends ffi.Struct {
+base class PBITMAPFILEHEADER extends ffi.Struct {
   @ffi.Uint16()
   external int bfType;
 
@@ -60363,17 +60363,17 @@ class PBITMAPFILEHEADER extends ffi.Struct {
   external int bfOffBits;
 }
 
-class LPFONTSIGNATURE extends ffi.Struct {}
+base class LPFONTSIGNATURE extends ffi.Opaque {}
 
-class LPCHARSETINFO extends ffi.Struct {}
+base class LPCHARSETINFO extends ffi.Opaque {}
 
-class LPLOCALESIGNATURE extends ffi.Struct {}
+base class LPLOCALESIGNATURE extends ffi.Opaque {}
 
-class LPHANDLETABLE extends ffi.Struct {}
+base class LPHANDLETABLE extends ffi.Opaque {}
 
-class METARECORD extends ffi.Struct {}
+base class METARECORD extends ffi.Opaque {}
 
-class LPMETAFILEPICT extends ffi.Struct {
+base class LPMETAFILEPICT extends ffi.Struct {
   @ffi.Int64()
   external int mm;
 
@@ -60386,7 +60386,7 @@ class LPMETAFILEPICT extends ffi.Struct {
   external ffi.Pointer<HMETAFILE__> hMF;
 }
 
-class METAHEADER extends ffi.Struct {
+base class METAHEADER extends ffi.Struct {
   @ffi.Uint16()
   external int mtType;
 
@@ -60409,11 +60409,11 @@ class METAHEADER extends ffi.Struct {
   external int mtNoParameters;
 }
 
-class LPENHMETARECORD extends ffi.Struct {}
+base class LPENHMETARECORD extends ffi.Opaque {}
 
-class LPENHMETAHEADER extends ffi.Struct {}
+base class LPENHMETAHEADER extends ffi.Opaque {}
 
-class LPTEXTMETRICA extends ffi.Struct {
+base class LPTEXTMETRICA extends ffi.Struct {
   @ffi.Int64()
   external int tmHeight;
 
@@ -60475,7 +60475,7 @@ class LPTEXTMETRICA extends ffi.Struct {
   external int tmCharSet;
 }
 
-class LPTEXTMETRICW extends ffi.Struct {
+base class LPTEXTMETRICW extends ffi.Struct {
   @ffi.Int64()
   external int tmHeight;
 
@@ -60537,7 +60537,7 @@ class LPTEXTMETRICW extends ffi.Struct {
   external int tmCharSet;
 }
 
-class LPNEWTEXTMETRICA extends ffi.Struct {
+base class LPNEWTEXTMETRICA extends ffi.Struct {
   @ffi.Int64()
   external int tmHeight;
 
@@ -60611,7 +60611,7 @@ class LPNEWTEXTMETRICA extends ffi.Struct {
   external int ntmAvgWidth;
 }
 
-class LPNEWTEXTMETRICW extends ffi.Struct {
+base class LPNEWTEXTMETRICW extends ffi.Struct {
   @ffi.Int64()
   external int tmHeight;
 
@@ -60685,11 +60685,11 @@ class LPNEWTEXTMETRICW extends ffi.Struct {
   external int ntmAvgWidth;
 }
 
-class NEWTEXTMETRICEXA extends ffi.Struct {}
+base class NEWTEXTMETRICEXA extends ffi.Opaque {}
 
-class NEWTEXTMETRICEXW extends ffi.Struct {}
+base class NEWTEXTMETRICEXW extends ffi.Opaque {}
 
-class LPPELARRAY extends ffi.Struct {
+base class LPPELARRAY extends ffi.Struct {
   @ffi.Int64()
   external int paXCount;
 
@@ -60706,7 +60706,7 @@ class LPPELARRAY extends ffi.Struct {
   external int paRGBs;
 }
 
-class LPLOGBRUSH extends ffi.Struct {
+base class LPLOGBRUSH extends ffi.Struct {
   @ffi.Uint32()
   external int lbStyle;
 
@@ -60717,7 +60717,7 @@ class LPLOGBRUSH extends ffi.Struct {
   external int lbHatch;
 }
 
-class LPLOGBRUSH32 extends ffi.Struct {
+base class LPLOGBRUSH32 extends ffi.Struct {
   @ffi.Uint32()
   external int lbStyle;
 
@@ -60728,13 +60728,13 @@ class LPLOGBRUSH32 extends ffi.Struct {
   external int lbHatch;
 }
 
-class LPLOGPEN extends ffi.Struct {}
+base class LPLOGPEN extends ffi.Opaque {}
 
-class LPEXTLOGPEN extends ffi.Struct {}
+base class LPEXTLOGPEN extends ffi.Opaque {}
 
-class LPEXTLOGPEN32 extends ffi.Struct {}
+base class LPEXTLOGPEN32 extends ffi.Opaque {}
 
-class LPPALETTEENTRY extends ffi.Struct {
+base class LPPALETTEENTRY extends ffi.Struct {
   @ffi.Uint8()
   external int peRed;
 
@@ -60748,21 +60748,21 @@ class LPPALETTEENTRY extends ffi.Struct {
   external int peFlags;
 }
 
-class LPLOGPALETTE extends ffi.Struct {}
+base class LPLOGPALETTE extends ffi.Opaque {}
 
-class LPLOGFONTA extends ffi.Struct {}
+base class LPLOGFONTA extends ffi.Opaque {}
 
-class LPLOGFONTW extends ffi.Struct {}
+base class LPLOGFONTW extends ffi.Opaque {}
 
-class LPENUMLOGFONTA extends ffi.Struct {}
+base class LPENUMLOGFONTA extends ffi.Opaque {}
 
-class LPENUMLOGFONTW extends ffi.Struct {}
+base class LPENUMLOGFONTW extends ffi.Opaque {}
 
-class LPENUMLOGFONTEXA extends ffi.Struct {}
+base class LPENUMLOGFONTEXA extends ffi.Opaque {}
 
-class LPENUMLOGFONTEXW extends ffi.Struct {}
+base class LPENUMLOGFONTEXW extends ffi.Opaque {}
 
-class LPPANOSE extends ffi.Struct {
+base class LPPANOSE extends ffi.Struct {
   @ffi.Uint8()
   external int bFamilyType;
 
@@ -60794,19 +60794,19 @@ class LPPANOSE extends ffi.Struct {
   external int bXHeight;
 }
 
-class LPEXTLOGFONTA extends ffi.Struct {}
+base class LPEXTLOGFONTA extends ffi.Opaque {}
 
-class LPEXTLOGFONTW extends ffi.Struct {}
+base class LPEXTLOGFONTW extends ffi.Opaque {}
 
-class LPDEVMODEA extends ffi.Struct {}
+base class LPDEVMODEA extends ffi.Opaque {}
 
-class LPDEVMODEW extends ffi.Struct {}
+base class LPDEVMODEW extends ffi.Opaque {}
 
-class LPDISPLAY_DEVICEA extends ffi.Struct {}
+base class LPDISPLAY_DEVICEA extends ffi.Opaque {}
 
-class LPDISPLAY_DEVICEW extends ffi.Struct {}
+base class LPDISPLAY_DEVICEW extends ffi.Opaque {}
 
-class DISPLAYCONFIG_RATIONAL extends ffi.Struct {
+base class DISPLAYCONFIG_RATIONAL extends ffi.Struct {
   @ffi.Uint32()
   external int Numerator;
 
@@ -60848,7 +60848,7 @@ abstract class DISPLAYCONFIG_SCANLINE_ORDERING {
   static const int DISPLAYCONFIG_SCANLINE_ORDERING_FORCE_UINT32 = -1;
 }
 
-class DISPLAYCONFIG_2DREGION extends ffi.Struct {
+base class DISPLAYCONFIG_2DREGION extends ffi.Struct {
   @ffi.Uint32()
   external int cx;
 
@@ -60856,7 +60856,7 @@ class DISPLAYCONFIG_2DREGION extends ffi.Struct {
   external int cy;
 }
 
-class DISPLAYCONFIG_VIDEO_SIGNAL_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_VIDEO_SIGNAL_INFO extends ffi.Opaque {}
 
 abstract class DISPLAYCONFIG_SCALING {
   static const int DISPLAYCONFIG_SCALING_IDENTITY = 1;
@@ -60892,19 +60892,19 @@ abstract class DISPLAYCONFIG_PIXELFORMAT {
   static const int DISPLAYCONFIG_PIXELFORMAT_FORCE_UINT32 = -1;
 }
 
-class DISPLAYCONFIG_SOURCE_MODE extends ffi.Struct {}
+base class DISPLAYCONFIG_SOURCE_MODE extends ffi.Opaque {}
 
-class DISPLAYCONFIG_TARGET_MODE extends ffi.Struct {}
+base class DISPLAYCONFIG_TARGET_MODE extends ffi.Opaque {}
 
-class DISPLAYCONFIG_DESKTOP_IMAGE_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_DESKTOP_IMAGE_INFO extends ffi.Opaque {}
 
-class DISPLAYCONFIG_MODE_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_MODE_INFO extends ffi.Opaque {}
 
-class DISPLAYCONFIG_PATH_SOURCE_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_PATH_SOURCE_INFO extends ffi.Opaque {}
 
-class DISPLAYCONFIG_PATH_TARGET_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_PATH_TARGET_INFO extends ffi.Opaque {}
 
-class DISPLAYCONFIG_PATH_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_PATH_INFO extends ffi.Opaque {}
 
 abstract class DISPLAYCONFIG_TOPOLOGY_ID {
   static const int DISPLAYCONFIG_TOPOLOGY_INTERNAL = 1;
@@ -60929,23 +60929,23 @@ abstract class DISPLAYCONFIG_DEVICE_INFO_TYPE {
   static const int DISPLAYCONFIG_DEVICE_INFO_FORCE_UINT32 = -1;
 }
 
-class DISPLAYCONFIG_DEVICE_INFO_HEADER extends ffi.Struct {}
+base class DISPLAYCONFIG_DEVICE_INFO_HEADER extends ffi.Opaque {}
 
-class DISPLAYCONFIG_SOURCE_DEVICE_NAME extends ffi.Struct {}
+base class DISPLAYCONFIG_SOURCE_DEVICE_NAME extends ffi.Opaque {}
 
-class DISPLAYCONFIG_TARGET_DEVICE_NAME_FLAGS extends ffi.Struct {}
+base class DISPLAYCONFIG_TARGET_DEVICE_NAME_FLAGS extends ffi.Opaque {}
 
-class DISPLAYCONFIG_TARGET_DEVICE_NAME extends ffi.Struct {}
+base class DISPLAYCONFIG_TARGET_DEVICE_NAME extends ffi.Opaque {}
 
-class DISPLAYCONFIG_TARGET_PREFERRED_MODE extends ffi.Struct {}
+base class DISPLAYCONFIG_TARGET_PREFERRED_MODE extends ffi.Opaque {}
 
-class DISPLAYCONFIG_ADAPTER_NAME extends ffi.Struct {}
+base class DISPLAYCONFIG_ADAPTER_NAME extends ffi.Opaque {}
 
-class DISPLAYCONFIG_TARGET_BASE_TYPE extends ffi.Struct {}
+base class DISPLAYCONFIG_TARGET_BASE_TYPE extends ffi.Opaque {}
 
-class DISPLAYCONFIG_SET_TARGET_PERSISTENCE extends ffi.Struct {}
+base class DISPLAYCONFIG_SET_TARGET_PERSISTENCE extends ffi.Opaque {}
 
-class DISPLAYCONFIG_SUPPORT_VIRTUAL_RESOLUTION extends ffi.Struct {}
+base class DISPLAYCONFIG_SUPPORT_VIRTUAL_RESOLUTION extends ffi.Opaque {}
 
 abstract class DISPLAYCONFIG_COLOR_ENCODING {
   static const int DISPLAYCONFIG_COLOR_ENCODING_RGB = 0;
@@ -60956,17 +60956,17 @@ abstract class DISPLAYCONFIG_COLOR_ENCODING {
   static const int DISPLAYCONFIG_COLOR_ENCODING_FORCE_UINT32 = -1;
 }
 
-class DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO extends ffi.Struct {}
+base class DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO extends ffi.Opaque {}
 
-class DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE extends ffi.Struct {}
+base class DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE extends ffi.Opaque {}
 
-class DISPLAYCONFIG_SDR_WHITE_LEVEL extends ffi.Struct {}
+base class DISPLAYCONFIG_SDR_WHITE_LEVEL extends ffi.Opaque {}
 
-class PRGNDATAHEADER extends ffi.Struct {}
+base class PRGNDATAHEADER extends ffi.Opaque {}
 
-class LPRGNDATA extends ffi.Struct {}
+base class LPRGNDATA extends ffi.Opaque {}
 
-class LPABC extends ffi.Struct {
+base class LPABC extends ffi.Struct {
   @ffi.Int32()
   external int abcA;
 
@@ -60977,7 +60977,7 @@ class LPABC extends ffi.Struct {
   external int abcC;
 }
 
-class LPABCFLOAT extends ffi.Struct {
+base class LPABCFLOAT extends ffi.Struct {
   @ffi.Float()
   external double abcfA;
 
@@ -60988,15 +60988,15 @@ class LPABCFLOAT extends ffi.Struct {
   external double abcfC;
 }
 
-class LPOUTLINETEXTMETRICA extends ffi.Struct {}
+base class LPOUTLINETEXTMETRICA extends ffi.Opaque {}
 
-class LPOUTLINETEXTMETRICW extends ffi.Struct {}
+base class LPOUTLINETEXTMETRICW extends ffi.Opaque {}
 
-class LPPOLYTEXTA extends ffi.Struct {}
+base class LPPOLYTEXTA extends ffi.Opaque {}
 
-class LPPOLYTEXTW extends ffi.Struct {}
+base class LPPOLYTEXTW extends ffi.Opaque {}
 
-class FIXED extends ffi.Struct {
+base class FIXED extends ffi.Struct {
   @ffi.Uint16()
   external int fract;
 
@@ -61004,17 +61004,17 @@ class FIXED extends ffi.Struct {
   external int value;
 }
 
-class LPMAT2 extends ffi.Struct {}
+base class LPMAT2 extends ffi.Opaque {}
 
-class LPGLYPHMETRICS extends ffi.Struct {}
+base class LPGLYPHMETRICS extends ffi.Opaque {}
 
-class LPPOINTFX extends ffi.Struct {}
+base class LPPOINTFX extends ffi.Opaque {}
 
-class LPTTPOLYCURVE extends ffi.Struct {}
+base class LPTTPOLYCURVE extends ffi.Opaque {}
 
-class LPTTPOLYGONHEADER extends ffi.Struct {}
+base class LPTTPOLYGONHEADER extends ffi.Opaque {}
 
-class LPGCP_RESULTSA extends ffi.Struct {
+base class LPGCP_RESULTSA extends ffi.Struct {
   @ffi.Uint64()
   external int lStructSize;
 
@@ -61037,7 +61037,7 @@ class LPGCP_RESULTSA extends ffi.Struct {
   external int nMaxFit;
 }
 
-class LPGCP_RESULTSW extends ffi.Struct {
+base class LPGCP_RESULTSW extends ffi.Struct {
   @ffi.Uint64()
   external int lStructSize;
 
@@ -61060,7 +61060,7 @@ class LPGCP_RESULTSW extends ffi.Struct {
   external int nMaxFit;
 }
 
-class LPRASTERIZER_STATUS extends ffi.Struct {
+base class LPRASTERIZER_STATUS extends ffi.Struct {
   @ffi.Int16()
   external int nSize;
 
@@ -61071,7 +61071,7 @@ class LPRASTERIZER_STATUS extends ffi.Struct {
   external int nLanguageID;
 }
 
-class LPPIXELFORMATDESCRIPTOR extends ffi.Struct {
+base class LPPIXELFORMATDESCRIPTOR extends ffi.Struct {
   @ffi.Uint16()
   external int nSize;
 
@@ -61151,7 +61151,7 @@ class LPPIXELFORMATDESCRIPTOR extends ffi.Struct {
   external int dwDamageMask;
 }
 
-class LPWCRANGE extends ffi.Struct {
+base class LPWCRANGE extends ffi.Struct {
   @ffi.Uint16()
   external int wcLow;
 
@@ -61159,27 +61159,27 @@ class LPWCRANGE extends ffi.Struct {
   external int cGlyphs;
 }
 
-class LPGLYPHSET extends ffi.Struct {}
+base class LPGLYPHSET extends ffi.Opaque {}
 
-class LPDESIGNVECTOR extends ffi.Struct {}
+base class LPDESIGNVECTOR extends ffi.Opaque {}
 
-class LPAXISINFOA extends ffi.Struct {}
+base class LPAXISINFOA extends ffi.Opaque {}
 
-class LPAXISINFOW extends ffi.Struct {}
+base class LPAXISINFOW extends ffi.Opaque {}
 
-class LPAXESLISTA extends ffi.Struct {}
+base class LPAXESLISTA extends ffi.Opaque {}
 
-class LPAXESLISTW extends ffi.Struct {}
+base class LPAXESLISTW extends ffi.Opaque {}
 
-class LPENUMLOGFONTEXDVA extends ffi.Struct {}
+base class LPENUMLOGFONTEXDVA extends ffi.Opaque {}
 
-class LPENUMLOGFONTEXDVW extends ffi.Struct {}
+base class LPENUMLOGFONTEXDVW extends ffi.Opaque {}
 
-class LPENUMTEXTMETRICA extends ffi.Struct {}
+base class LPENUMTEXTMETRICA extends ffi.Opaque {}
 
-class LPENUMTEXTMETRICW extends ffi.Struct {}
+base class LPENUMTEXTMETRICW extends ffi.Opaque {}
 
-class LPTRIVERTEX extends ffi.Struct {
+base class LPTRIVERTEX extends ffi.Struct {
   @ffi.Int64()
   external int x;
 
@@ -61199,7 +61199,7 @@ class LPTRIVERTEX extends ffi.Struct {
   external int Alpha;
 }
 
-class LPGRADIENT_TRIANGLE extends ffi.Struct {
+base class LPGRADIENT_TRIANGLE extends ffi.Struct {
   @ffi.Uint64()
   external int Vertex1;
 
@@ -61210,7 +61210,7 @@ class LPGRADIENT_TRIANGLE extends ffi.Struct {
   external int Vertex3;
 }
 
-class LPGRADIENT_RECT extends ffi.Struct {
+base class LPGRADIENT_RECT extends ffi.Struct {
   @ffi.Uint64()
   external int UpperLeft;
 
@@ -61218,7 +61218,7 @@ class LPGRADIENT_RECT extends ffi.Struct {
   external int LowerRight;
 }
 
-class PBLENDFUNCTION extends ffi.Struct {
+base class PBLENDFUNCTION extends ffi.Struct {
   @ffi.Uint8()
   external int BlendOp;
 
@@ -61232,9 +61232,9 @@ class PBLENDFUNCTION extends ffi.Struct {
   external int AlphaFormat;
 }
 
-class PDIBSECTION extends ffi.Struct {}
+base class PDIBSECTION extends ffi.Opaque {}
 
-class LPCOLORADJUSTMENT extends ffi.Struct {
+base class LPCOLORADJUSTMENT extends ffi.Struct {
   @ffi.Uint16()
   external int caSize;
 
@@ -61272,7 +61272,7 @@ class LPCOLORADJUSTMENT extends ffi.Struct {
   external int caRedGreenTint;
 }
 
-class LPDOCINFOA extends ffi.Struct {
+base class LPDOCINFOA extends ffi.Struct {
   @ffi.Int32()
   external int cbSize;
 
@@ -61286,7 +61286,7 @@ class LPDOCINFOA extends ffi.Struct {
   external int fwType;
 }
 
-class LPDOCINFOW extends ffi.Struct {
+base class LPDOCINFOW extends ffi.Struct {
   @ffi.Int32()
   external int cbSize;
 
@@ -61300,7 +61300,7 @@ class LPDOCINFOW extends ffi.Struct {
   external int fwType;
 }
 
-class LPKERNINGPAIR extends ffi.Struct {
+base class LPKERNINGPAIR extends ffi.Struct {
   @ffi.Uint16()
   external int wFirst;
 
@@ -61311,7 +61311,7 @@ class LPKERNINGPAIR extends ffi.Struct {
   external int iKernAmount;
 }
 
-class PEMR extends ffi.Struct {
+base class PEMR extends ffi.Struct {
   @ffi.Uint64()
   external int iType;
 
@@ -61319,117 +61319,117 @@ class PEMR extends ffi.Struct {
   external int nSize;
 }
 
-class PEMRTEXT extends ffi.Struct {}
+base class PEMRTEXT extends ffi.Opaque {}
 
-class PEMRREALIZEPALETTE extends ffi.Struct {}
+base class PEMRREALIZEPALETTE extends ffi.Opaque {}
 
-class PEMRSETTEXTALIGN extends ffi.Struct {}
+base class PEMRSETTEXTALIGN extends ffi.Opaque {}
 
-class PEMRSETMITERLIMIT extends ffi.Struct {}
+base class PEMRSETMITERLIMIT extends ffi.Opaque {}
 
-class PEMRRESTOREDC extends ffi.Struct {}
+base class PEMRRESTOREDC extends ffi.Opaque {}
 
-class PEMRSETARCDIRECTION extends ffi.Struct {}
+base class PEMRSETARCDIRECTION extends ffi.Opaque {}
 
-class PEMRSETMAPPERFLAGS extends ffi.Struct {}
+base class PEMRSETMAPPERFLAGS extends ffi.Opaque {}
 
-class PEMRSETTEXTCOLOR extends ffi.Struct {}
+base class PEMRSETTEXTCOLOR extends ffi.Opaque {}
 
-class PEMRDELETEOBJECT extends ffi.Struct {}
+base class PEMRDELETEOBJECT extends ffi.Opaque {}
 
-class PEMRSELECTPALETTE extends ffi.Struct {}
+base class PEMRSELECTPALETTE extends ffi.Opaque {}
 
-class PEMRRESIZEPALETTE extends ffi.Struct {}
+base class PEMRRESIZEPALETTE extends ffi.Opaque {}
 
-class PEMRSETPALETTEENTRIES extends ffi.Struct {}
+base class PEMRSETPALETTEENTRIES extends ffi.Opaque {}
 
-class PEMRSETCOLORADJUSTMENT extends ffi.Struct {}
+base class PEMRSETCOLORADJUSTMENT extends ffi.Opaque {}
 
-class PEMRGDICOMMENT extends ffi.Struct {}
+base class PEMRGDICOMMENT extends ffi.Opaque {}
 
-class PEMREOF extends ffi.Struct {}
+base class PEMREOF extends ffi.Opaque {}
 
-class PEMRMOVETOEX extends ffi.Struct {}
+base class PEMRMOVETOEX extends ffi.Opaque {}
 
-class PEMROFFSETCLIPRGN extends ffi.Struct {}
+base class PEMROFFSETCLIPRGN extends ffi.Opaque {}
 
-class PEMRSTROKEPATH extends ffi.Struct {}
+base class PEMRSTROKEPATH extends ffi.Opaque {}
 
-class PEMRINTERSECTCLIPRECT extends ffi.Struct {}
+base class PEMRINTERSECTCLIPRECT extends ffi.Opaque {}
 
-class PEMRSETBRUSHORGEX extends ffi.Struct {}
+base class PEMRSETBRUSHORGEX extends ffi.Opaque {}
 
-class PEMRSETWINDOWEXTEX extends ffi.Struct {}
+base class PEMRSETWINDOWEXTEX extends ffi.Opaque {}
 
-class PEMRSCALEWINDOWEXTEX extends ffi.Struct {}
+base class PEMRSCALEWINDOWEXTEX extends ffi.Opaque {}
 
-class PEMRSETWORLDTRANSFORM extends ffi.Struct {}
+base class PEMRSETWORLDTRANSFORM extends ffi.Opaque {}
 
-class PEMRMODIFYWORLDTRANSFORM extends ffi.Struct {}
+base class PEMRMODIFYWORLDTRANSFORM extends ffi.Opaque {}
 
-class PEMRSETPIXELV extends ffi.Struct {}
+base class PEMRSETPIXELV extends ffi.Opaque {}
 
-class PEMREXTFLOODFILL extends ffi.Struct {}
+base class PEMREXTFLOODFILL extends ffi.Opaque {}
 
-class PEMRRECTANGLE extends ffi.Struct {}
+base class PEMRRECTANGLE extends ffi.Opaque {}
 
-class PEMRROUNDRECT extends ffi.Struct {}
+base class PEMRROUNDRECT extends ffi.Opaque {}
 
-class PEMRPIE extends ffi.Struct {}
+base class PEMRPIE extends ffi.Opaque {}
 
-class PEMRANGLEARC extends ffi.Struct {}
+base class PEMRANGLEARC extends ffi.Opaque {}
 
-class PEMRPOLYLINETO extends ffi.Struct {}
+base class PEMRPOLYLINETO extends ffi.Opaque {}
 
-class PEMRPOLYLINETO16 extends ffi.Struct {}
+base class PEMRPOLYLINETO16 extends ffi.Opaque {}
 
-class PEMRPOLYDRAW extends ffi.Struct {}
+base class PEMRPOLYDRAW extends ffi.Opaque {}
 
-class PEMRPOLYDRAW16 extends ffi.Struct {}
+base class PEMRPOLYDRAW16 extends ffi.Opaque {}
 
-class PEMRPOLYPOLYGON extends ffi.Struct {}
+base class PEMRPOLYPOLYGON extends ffi.Opaque {}
 
-class PEMRPOLYPOLYGON16 extends ffi.Struct {}
+base class PEMRPOLYPOLYGON16 extends ffi.Opaque {}
 
-class PEMRPAINTRGN extends ffi.Struct {}
+base class PEMRPAINTRGN extends ffi.Opaque {}
 
-class PEMRFILLRGN extends ffi.Struct {}
+base class PEMRFILLRGN extends ffi.Opaque {}
 
-class PEMRFRAMERGN extends ffi.Struct {}
+base class PEMRFRAMERGN extends ffi.Opaque {}
 
-class PEMREXTSELECTCLIPRGN extends ffi.Struct {}
+base class PEMREXTSELECTCLIPRGN extends ffi.Opaque {}
 
-class PEMREXTTEXTOUTW extends ffi.Struct {}
+base class PEMREXTTEXTOUTW extends ffi.Opaque {}
 
-class PEMRPOLYTEXTOUTW extends ffi.Struct {}
+base class PEMRPOLYTEXTOUTW extends ffi.Opaque {}
 
-class PEMRBITBLT extends ffi.Struct {}
+base class PEMRBITBLT extends ffi.Opaque {}
 
-class PEMRSTRETCHBLT extends ffi.Struct {}
+base class PEMRSTRETCHBLT extends ffi.Opaque {}
 
-class PEMRMASKBLT extends ffi.Struct {}
+base class PEMRMASKBLT extends ffi.Opaque {}
 
-class PEMRPLGBLT extends ffi.Struct {}
+base class PEMRPLGBLT extends ffi.Opaque {}
 
-class PEMRSETDIBITSTODEVICE extends ffi.Struct {}
+base class PEMRSETDIBITSTODEVICE extends ffi.Opaque {}
 
-class PEMRSTRETCHDIBITS extends ffi.Struct {}
+base class PEMRSTRETCHDIBITS extends ffi.Opaque {}
 
-class PEMREXTCREATEFONTINDIRECTW extends ffi.Struct {}
+base class PEMREXTCREATEFONTINDIRECTW extends ffi.Opaque {}
 
-class PEMRCREATEPALETTE extends ffi.Struct {}
+base class PEMRCREATEPALETTE extends ffi.Opaque {}
 
-class PEMRCREATEPEN extends ffi.Struct {}
+base class PEMRCREATEPEN extends ffi.Opaque {}
 
-class PEMREXTCREATEPEN extends ffi.Struct {}
+base class PEMREXTCREATEPEN extends ffi.Opaque {}
 
-class PEMRCREATEBRUSHINDIRECT extends ffi.Struct {}
+base class PEMRCREATEBRUSHINDIRECT extends ffi.Opaque {}
 
-class PEMRCREATEMONOBRUSH extends ffi.Struct {}
+base class PEMRCREATEMONOBRUSH extends ffi.Opaque {}
 
-class PEMRCREATEDIBPATTERNBRUSHPT extends ffi.Struct {}
+base class PEMRCREATEDIBPATTERNBRUSHPT extends ffi.Opaque {}
 
-class PEMRFORMAT extends ffi.Struct {
+base class PEMRFORMAT extends ffi.Struct {
   @ffi.Uint64()
   external int dSignature;
 
@@ -61443,35 +61443,35 @@ class PEMRFORMAT extends ffi.Struct {
   external int offData;
 }
 
-class PEMRGLSRECORD extends ffi.Struct {}
+base class PEMRGLSRECORD extends ffi.Opaque {}
 
-class PEMRGLSBOUNDEDRECORD extends ffi.Struct {}
+base class PEMRGLSBOUNDEDRECORD extends ffi.Opaque {}
 
-class PEMRPIXELFORMAT extends ffi.Struct {}
+base class PEMRPIXELFORMAT extends ffi.Opaque {}
 
-class PEMRCREATECOLORSPACE extends ffi.Struct {}
+base class PEMRCREATECOLORSPACE extends ffi.Opaque {}
 
-class PEMRDELETECOLORSPACE extends ffi.Struct {}
+base class PEMRDELETECOLORSPACE extends ffi.Opaque {}
 
-class PEMRDRAWESCAPE extends ffi.Struct {}
+base class PEMRDRAWESCAPE extends ffi.Opaque {}
 
-class PEMRNAMEDESCAPE extends ffi.Struct {}
+base class PEMRNAMEDESCAPE extends ffi.Opaque {}
 
-class PEMRSETICMPROFILEW extends ffi.Struct {}
+base class PEMRSETICMPROFILEW extends ffi.Opaque {}
 
-class PEMRCREATECOLORSPACEW extends ffi.Struct {}
+base class PEMRCREATECOLORSPACEW extends ffi.Opaque {}
 
-class PEMRCOLORMATCHTOTARGET extends ffi.Struct {}
+base class PEMRCOLORMATCHTOTARGET extends ffi.Opaque {}
 
-class PEMRCOLORCORRECTPALETTE extends ffi.Struct {}
+base class PEMRCOLORCORRECTPALETTE extends ffi.Opaque {}
 
-class PEMRALPHABLEND extends ffi.Struct {}
+base class PEMRALPHABLEND extends ffi.Opaque {}
 
-class PEMRGRADIENTFILL extends ffi.Struct {}
+base class PEMRGRADIENTFILL extends ffi.Opaque {}
 
-class PEMRTRANSPARENTBLT extends ffi.Struct {}
+base class PEMRTRANSPARENTBLT extends ffi.Opaque {}
 
-class PPOINTFLOAT extends ffi.Struct {
+base class PPOINTFLOAT extends ffi.Struct {
   @ffi.Float()
   external double x;
 
@@ -61479,9 +61479,9 @@ class PPOINTFLOAT extends ffi.Struct {
   external double y;
 }
 
-class LPGLYPHMETRICSFLOAT extends ffi.Struct {}
+base class LPGLYPHMETRICSFLOAT extends ffi.Opaque {}
 
-class LPLAYERPLANEDESCRIPTOR extends ffi.Struct {
+base class LPLAYERPLANEDESCRIPTOR extends ffi.Struct {
   @ffi.Uint16()
   external int nSize;
 
@@ -61555,14 +61555,14 @@ class LPLAYERPLANEDESCRIPTOR extends ffi.Struct {
   external int crTransparent;
 }
 
-class LPWGLSWAP extends ffi.Struct {
+base class LPWGLSWAP extends ffi.Struct {
   external ffi.Pointer<HDC__> hdc;
 
   @ffi.Uint32()
   external int uiFlags;
 }
 
-class LPCREATESTRUCTA extends ffi.Struct {
+base class LPCREATESTRUCTA extends ffi.Struct {
   external ffi.Pointer<ffi.Void> lpCreateParams;
 
   external ffi.Pointer<HINSTANCE__> hInstance;
@@ -61594,13 +61594,13 @@ class LPCREATESTRUCTA extends ffi.Struct {
   external int dwExStyle;
 }
 
-class LPCBT_CREATEWNDA extends ffi.Struct {
+base class LPCBT_CREATEWNDA extends ffi.Struct {
   external ffi.Pointer<LPCREATESTRUCTA> lpcs;
 
   external ffi.Pointer<HWND__> hwndInsertAfter;
 }
 
-class LPCREATESTRUCTW extends ffi.Struct {
+base class LPCREATESTRUCTW extends ffi.Struct {
   external ffi.Pointer<ffi.Void> lpCreateParams;
 
   external ffi.Pointer<HINSTANCE__> hInstance;
@@ -61632,20 +61632,20 @@ class LPCREATESTRUCTW extends ffi.Struct {
   external int dwExStyle;
 }
 
-class LPCBT_CREATEWNDW extends ffi.Struct {
+base class LPCBT_CREATEWNDW extends ffi.Struct {
   external ffi.Pointer<LPCREATESTRUCTW> lpcs;
 
   external ffi.Pointer<HWND__> hwndInsertAfter;
 }
 
-class LPCBTACTIVATESTRUCT extends ffi.Struct {
+base class LPCBTACTIVATESTRUCT extends ffi.Struct {
   @ffi.Int32()
   external int fMouse;
 
   external ffi.Pointer<HWND__> hWndActive;
 }
 
-class PWTSSESSION_NOTIFICATION extends ffi.Struct {
+base class PWTSSESSION_NOTIFICATION extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -61653,9 +61653,9 @@ class PWTSSESSION_NOTIFICATION extends ffi.Struct {
   external int dwSessionId;
 }
 
-class LPSHELLHOOKINFO extends ffi.Struct {}
+base class LPSHELLHOOKINFO extends ffi.Opaque {}
 
-class LPEVENTMSGMSG extends ffi.Struct {
+base class LPEVENTMSGMSG extends ffi.Struct {
   @ffi.Uint32()
   external int message;
 
@@ -61671,7 +61671,7 @@ class LPEVENTMSGMSG extends ffi.Struct {
   external ffi.Pointer<HWND__> hwnd;
 }
 
-class LPCWPSTRUCT extends ffi.Struct {
+base class LPCWPSTRUCT extends ffi.Struct {
   @ffi.Int64()
   external int lParam;
 
@@ -61684,7 +61684,7 @@ class LPCWPSTRUCT extends ffi.Struct {
   external ffi.Pointer<HWND__> hwnd;
 }
 
-class LPCWPRETSTRUCT extends ffi.Struct {
+base class LPCWPRETSTRUCT extends ffi.Struct {
   @ffi.Int64()
   external int lResult;
 
@@ -61700,7 +61700,7 @@ class LPCWPRETSTRUCT extends ffi.Struct {
   external ffi.Pointer<HWND__> hwnd;
 }
 
-class PKBDLLHOOKSTRUCT extends ffi.Struct {
+base class PKBDLLHOOKSTRUCT extends ffi.Struct {
   @ffi.Uint64()
   external int vkCode;
 
@@ -61717,9 +61717,9 @@ class PKBDLLHOOKSTRUCT extends ffi.Struct {
   external int dwExtraInfo;
 }
 
-class PMSLLHOOKSTRUCT extends ffi.Struct {}
+base class PMSLLHOOKSTRUCT extends ffi.Opaque {}
 
-class LPDEBUGHOOKINFO extends ffi.Struct {
+base class LPDEBUGHOOKINFO extends ffi.Struct {
   @ffi.Uint64()
   external int idThread;
 
@@ -61736,14 +61736,14 @@ class LPDEBUGHOOKINFO extends ffi.Struct {
   external int code;
 }
 
-class PMOUSEHOOKSTRUCT extends ffi.Struct {}
+base class PMOUSEHOOKSTRUCT extends ffi.Opaque {}
 
-class PMOUSEHOOKSTRUCTEX extends ffi.Struct {
+base class PMOUSEHOOKSTRUCTEX extends ffi.Struct {
   @ffi.Uint64()
   external int mouseData;
 }
 
-class PHARDWAREHOOKSTRUCT extends ffi.Struct {
+base class PHARDWAREHOOKSTRUCT extends ffi.Struct {
   external ffi.Pointer<HWND__> hwnd;
 
   @ffi.Uint32()
@@ -61756,7 +61756,7 @@ class PHARDWAREHOOKSTRUCT extends ffi.Struct {
   external int lParam;
 }
 
-class LPMOUSEMOVEPOINT extends ffi.Struct {
+base class LPMOUSEMOVEPOINT extends ffi.Struct {
   @ffi.Int32()
   external int x;
 
@@ -61770,7 +61770,7 @@ class LPMOUSEMOVEPOINT extends ffi.Struct {
   external int dwExtraInfo;
 }
 
-class PUSEROBJECTFLAGS extends ffi.Struct {
+base class PUSEROBJECTFLAGS extends ffi.Struct {
   @ffi.Int32()
   external int fInherit;
 
@@ -61781,7 +61781,7 @@ class PUSEROBJECTFLAGS extends ffi.Struct {
   external int dwFlags;
 }
 
-class LPWNDCLASSEXA extends ffi.Struct {
+base class LPWNDCLASSEXA extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -61811,7 +61811,7 @@ class LPWNDCLASSEXA extends ffi.Struct {
   external ffi.Pointer<HICON__> hIconSm;
 }
 
-class LPWNDCLASSEXW extends ffi.Struct {
+base class LPWNDCLASSEXW extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -61841,7 +61841,7 @@ class LPWNDCLASSEXW extends ffi.Struct {
   external ffi.Pointer<HICON__> hIconSm;
 }
 
-class LPWNDCLASSA extends ffi.Struct {
+base class LPWNDCLASSA extends ffi.Struct {
   @ffi.Uint32()
   external int style;
 
@@ -61866,7 +61866,7 @@ class LPWNDCLASSA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpszClassName;
 }
 
-class LPWNDCLASSW extends ffi.Struct {
+base class LPWNDCLASSW extends ffi.Struct {
   @ffi.Uint32()
   external int style;
 
@@ -61891,11 +61891,11 @@ class LPWNDCLASSW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpszClassName;
 }
 
-class LPMSG extends ffi.Struct {}
+base class LPMSG extends ffi.Opaque {}
 
-class LPMINMAXINFO extends ffi.Struct {}
+base class LPMINMAXINFO extends ffi.Opaque {}
 
-class PCOPYDATASTRUCT extends ffi.Struct {
+base class PCOPYDATASTRUCT extends ffi.Struct {
   @ffi.Uint64()
   external int dwData;
 
@@ -61905,7 +61905,7 @@ class PCOPYDATASTRUCT extends ffi.Struct {
   external ffi.Pointer<ffi.Void> lpData;
 }
 
-class LPMDINEXTMENU extends ffi.Struct {
+base class LPMDINEXTMENU extends ffi.Struct {
   external ffi.Pointer<HMENU__> hmenuIn;
 
   external ffi.Pointer<HMENU__> hmenuNext;
@@ -61913,9 +61913,9 @@ class LPMDINEXTMENU extends ffi.Struct {
   external ffi.Pointer<HWND__> hwndNext;
 }
 
-class PPOWERBROADCAST_SETTING extends ffi.Struct {}
+base class PPOWERBROADCAST_SETTING extends ffi.Opaque {}
 
-class PWINDOWPOS extends ffi.Struct {
+base class PWINDOWPOS extends ffi.Struct {
   external ffi.Pointer<HWND__> hwnd;
 
   external ffi.Pointer<HWND__> hwndInsertAfter;
@@ -61936,9 +61936,9 @@ class PWINDOWPOS extends ffi.Struct {
   external int flags;
 }
 
-class LPNCCALCSIZE_PARAMS extends ffi.Struct {}
+base class LPNCCALCSIZE_PARAMS extends ffi.Opaque {}
 
-class LPTRACKMOUSEEVENT extends ffi.Struct {
+base class LPTRACKMOUSEEVENT extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -61951,7 +61951,7 @@ class LPTRACKMOUSEEVENT extends ffi.Struct {
   external int dwHoverTime;
 }
 
-class LPACCEL extends ffi.Struct {
+base class LPACCEL extends ffi.Struct {
   @ffi.Uint8()
   external int fVirt;
 
@@ -61962,11 +61962,11 @@ class LPACCEL extends ffi.Struct {
   external int cmd;
 }
 
-class LPPAINTSTRUCT extends ffi.Struct {}
+base class LPPAINTSTRUCT extends ffi.Opaque {}
 
-class WINDOWPLACEMENT extends ffi.Struct {}
+base class WINDOWPLACEMENT extends ffi.Opaque {}
 
-class NMHDR extends ffi.Struct {
+base class NMHDR extends ffi.Struct {
   external ffi.Pointer<HWND__> hwndFrom;
 
   @ffi.Uint64()
@@ -61976,7 +61976,7 @@ class NMHDR extends ffi.Struct {
   external int code;
 }
 
-class LPSTYLESTRUCT extends ffi.Struct {
+base class LPSTYLESTRUCT extends ffi.Struct {
   @ffi.Uint64()
   external int styleOld;
 
@@ -61984,7 +61984,7 @@ class LPSTYLESTRUCT extends ffi.Struct {
   external int styleNew;
 }
 
-class LPMEASUREITEMSTRUCT extends ffi.Struct {
+base class LPMEASUREITEMSTRUCT extends ffi.Struct {
   @ffi.Uint32()
   external int CtlType;
 
@@ -62004,9 +62004,9 @@ class LPMEASUREITEMSTRUCT extends ffi.Struct {
   external int itemData;
 }
 
-class LPDRAWITEMSTRUCT extends ffi.Struct {}
+base class LPDRAWITEMSTRUCT extends ffi.Opaque {}
 
-class LPDELETEITEMSTRUCT extends ffi.Struct {
+base class LPDELETEITEMSTRUCT extends ffi.Struct {
   @ffi.Uint32()
   external int CtlType;
 
@@ -62022,7 +62022,7 @@ class LPDELETEITEMSTRUCT extends ffi.Struct {
   external int itemData;
 }
 
-class LPCOMPAREITEMSTRUCT extends ffi.Struct {
+base class LPCOMPAREITEMSTRUCT extends ffi.Struct {
   @ffi.Uint32()
   external int CtlType;
 
@@ -62047,9 +62047,9 @@ class LPCOMPAREITEMSTRUCT extends ffi.Struct {
   external int dwLocaleId;
 }
 
-class PBSMINFO extends ffi.Struct {}
+base class PBSMINFO extends ffi.Opaque {}
 
-class PUPDATELAYEREDWINDOWINFO extends ffi.Struct {
+base class PUPDATELAYEREDWINDOWINFO extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -62074,7 +62074,7 @@ class PUPDATELAYEREDWINDOWINFO extends ffi.Struct {
   external ffi.Pointer<LPRECT> prcDirty;
 }
 
-class PFLASHWINFO extends ffi.Struct {
+base class PFLASHWINFO extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62090,7 +62090,7 @@ class PFLASHWINFO extends ffi.Struct {
   external int dwTimeout;
 }
 
-class DLGTEMPLATE extends ffi.Struct {
+base class DLGTEMPLATE extends ffi.Struct {
   @ffi.Uint64()
   external int style;
 
@@ -62113,7 +62113,7 @@ class DLGTEMPLATE extends ffi.Struct {
   external int cy;
 }
 
-class DLGITEMTEMPLATE extends ffi.Struct {
+base class DLGITEMTEMPLATE extends ffi.Struct {
   @ffi.Uint64()
   external int style;
 
@@ -62149,7 +62149,7 @@ abstract class DIALOG_DPI_CHANGE_BEHAVIORS {
   static const int DDC_DISABLE_CONTROL_RELAYOUT = 4;
 }
 
-class LPMOUSEINPUT extends ffi.Struct {
+base class LPMOUSEINPUT extends ffi.Struct {
   @ffi.Int64()
   external int dx;
 
@@ -62169,7 +62169,7 @@ class LPMOUSEINPUT extends ffi.Struct {
   external int dwExtraInfo;
 }
 
-class LPKEYBDINPUT extends ffi.Struct {
+base class LPKEYBDINPUT extends ffi.Struct {
   @ffi.Uint16()
   external int wVk;
 
@@ -62186,7 +62186,7 @@ class LPKEYBDINPUT extends ffi.Struct {
   external int dwExtraInfo;
 }
 
-class LPHARDWAREINPUT extends ffi.Struct {
+base class LPHARDWAREINPUT extends ffi.Struct {
   @ffi.Uint64()
   external int uMsg;
 
@@ -62197,17 +62197,17 @@ class LPHARDWAREINPUT extends ffi.Struct {
   external int wParamH;
 }
 
-class LPINPUT extends ffi.Struct {
+base class LPINPUT extends ffi.Struct {
   @ffi.Uint64()
   external int type;
 }
 
-class HTOUCHINPUT__ extends ffi.Struct {
+base class HTOUCHINPUT__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class PTOUCHINPUT extends ffi.Struct {
+base class PTOUCHINPUT extends ffi.Struct {
   @ffi.Int64()
   external int x;
 
@@ -62260,11 +62260,11 @@ abstract class POINTER_BUTTON_CHANGE_TYPE {
   static const int POINTER_CHANGE_FIFTHBUTTON_UP = 10;
 }
 
-class POINTER_INFO extends ffi.Struct {}
+base class POINTER_INFO extends ffi.Opaque {}
 
-class POINTER_TOUCH_INFO extends ffi.Struct {}
+base class POINTER_TOUCH_INFO extends ffi.Opaque {}
 
-class POINTER_PEN_INFO extends ffi.Struct {}
+base class POINTER_PEN_INFO extends ffi.Opaque {}
 
 abstract class POINTER_FEEDBACK_MODE {
   static const int POINTER_FEEDBACK_DEFAULT = 1;
@@ -62272,7 +62272,7 @@ abstract class POINTER_FEEDBACK_MODE {
   static const int POINTER_FEEDBACK_NONE = 3;
 }
 
-class PUSAGE_PROPERTIES extends ffi.Struct {
+base class PUSAGE_PROPERTIES extends ffi.Struct {
   @ffi.Uint16()
   external int level;
 
@@ -62304,12 +62304,12 @@ class PUSAGE_PROPERTIES extends ffi.Struct {
   external int physicalMaximum;
 }
 
-class PPOINTER_TYPE_INFO extends ffi.Struct {
+base class PPOINTER_TYPE_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int type;
 }
 
-class PINPUT_INJECTION_VALUE extends ffi.Struct {
+base class PINPUT_INJECTION_VALUE extends ffi.Struct {
   @ffi.Uint16()
   external int page;
 
@@ -62323,14 +62323,14 @@ class PINPUT_INJECTION_VALUE extends ffi.Struct {
   external int index;
 }
 
-class HSYNTHETICPOINTERDEVICE__ extends ffi.Struct {
+base class HSYNTHETICPOINTERDEVICE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class PTOUCH_HIT_TESTING_PROXIMITY_EVALUATION extends ffi.Struct {}
+base class PTOUCH_HIT_TESTING_PROXIMITY_EVALUATION extends ffi.Opaque {}
 
-class PTOUCH_HIT_TESTING_INPUT extends ffi.Struct {}
+base class PTOUCH_HIT_TESTING_INPUT extends ffi.Opaque {}
 
 abstract class FEEDBACK_TYPE {
   static const int FEEDBACK_TOUCH_CONTACTVISUALIZATION = 1;
@@ -62347,9 +62347,9 @@ abstract class FEEDBACK_TYPE {
   static const int FEEDBACK_MAX = -1;
 }
 
-class INPUT_TRANSFORM extends ffi.Struct {}
+base class INPUT_TRANSFORM extends ffi.Opaque {}
 
-class PLASTINPUTINFO extends ffi.Struct {
+base class PLASTINPUTINFO extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62357,9 +62357,9 @@ class PLASTINPUTINFO extends ffi.Struct {
   external int dwTime;
 }
 
-class TPMPARAMS extends ffi.Struct {}
+base class TPMPARAMS extends ffi.Opaque {}
 
-class LPMENUINFO extends ffi.Struct {
+base class LPMENUINFO extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -62381,7 +62381,7 @@ class LPMENUINFO extends ffi.Struct {
   external int dwMenuData;
 }
 
-class PMENUGETOBJECTINFO extends ffi.Struct {
+base class PMENUGETOBJECTINFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwFlags;
 
@@ -62395,7 +62395,7 @@ class PMENUGETOBJECTINFO extends ffi.Struct {
   external ffi.Pointer<ffi.Void> pvObj;
 }
 
-class LPMENUITEMINFOA extends ffi.Struct {
+base class LPMENUITEMINFOA extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62428,7 +62428,7 @@ class LPMENUITEMINFOA extends ffi.Struct {
   external ffi.Pointer<HBITMAP__> hbmpItem;
 }
 
-class LPMENUITEMINFOW extends ffi.Struct {
+base class LPMENUITEMINFOW extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62461,9 +62461,9 @@ class LPMENUITEMINFOW extends ffi.Struct {
   external ffi.Pointer<HBITMAP__> hbmpItem;
 }
 
-class LPDROPSTRUCT extends ffi.Struct {}
+base class LPDROPSTRUCT extends ffi.Opaque {}
 
-class LPDRAWTEXTPARAMS extends ffi.Struct {
+base class LPDRAWTEXTPARAMS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62480,9 +62480,9 @@ class LPDRAWTEXTPARAMS extends ffi.Struct {
   external int uiLengthDrawn;
 }
 
-class LPHELPINFO extends ffi.Struct {}
+base class LPHELPINFO extends ffi.Opaque {}
 
-class LPMSGBOXPARAMSA extends ffi.Struct {
+base class LPMSGBOXPARAMSA extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62508,7 +62508,7 @@ class LPMSGBOXPARAMSA extends ffi.Struct {
   external int dwLanguageId;
 }
 
-class LPMSGBOXPARAMSW extends ffi.Struct {
+base class LPMSGBOXPARAMSW extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62534,7 +62534,7 @@ class LPMSGBOXPARAMSW extends ffi.Struct {
   external int dwLanguageId;
 }
 
-class PMENUITEMTEMPLATEHEADER extends ffi.Struct {
+base class PMENUITEMTEMPLATEHEADER extends ffi.Struct {
   @ffi.Uint16()
   external int versionNumber;
 
@@ -62542,9 +62542,9 @@ class PMENUITEMTEMPLATEHEADER extends ffi.Struct {
   external int offset;
 }
 
-class PMENUITEMTEMPLATE extends ffi.Struct {}
+base class PMENUITEMTEMPLATE extends ffi.Opaque {}
 
-class ICONINFO extends ffi.Struct {
+base class ICONINFO extends ffi.Struct {
   @ffi.Int32()
   external int fIcon;
 
@@ -62559,7 +62559,7 @@ class ICONINFO extends ffi.Struct {
   external ffi.Pointer<HBITMAP__> hbmColor;
 }
 
-class LPCURSORSHAPE extends ffi.Struct {
+base class LPCURSORSHAPE extends ffi.Struct {
   @ffi.Int32()
   external int xHotSpot;
 
@@ -62582,9 +62582,9 @@ class LPCURSORSHAPE extends ffi.Struct {
   external int BitsPixel;
 }
 
-class PICONINFOEXA extends ffi.Struct {}
+base class PICONINFOEXA extends ffi.Opaque {}
 
-class PICONINFOEXW extends ffi.Struct {}
+base class PICONINFOEXW extends ffi.Opaque {}
 
 abstract class EDIT_CONTROL_FEATURE {
   static const int
@@ -62592,7 +62592,7 @@ abstract class EDIT_CONTROL_FEATURE {
   static const int EDIT_CONTROL_FEATURE_PASTE_NOTIFICATIONS = 1;
 }
 
-class LPSCROLLINFO extends ffi.Struct {
+base class LPSCROLLINFO extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62615,7 +62615,7 @@ class LPSCROLLINFO extends ffi.Struct {
   external int nTrackPos;
 }
 
-class LPMDICREATESTRUCTA extends ffi.Struct {
+base class LPMDICREATESTRUCTA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> szClass;
 
   external ffi.Pointer<ffi.Int8> szTitle;
@@ -62641,7 +62641,7 @@ class LPMDICREATESTRUCTA extends ffi.Struct {
   external int lParam;
 }
 
-class LPMDICREATESTRUCTW extends ffi.Struct {
+base class LPMDICREATESTRUCTW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> szClass;
 
   external ffi.Pointer<ffi.Uint16> szTitle;
@@ -62667,22 +62667,22 @@ class LPMDICREATESTRUCTW extends ffi.Struct {
   external int lParam;
 }
 
-class LPCLIENTCREATESTRUCT extends ffi.Struct {
+base class LPCLIENTCREATESTRUCT extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hWindowMenu;
 
   @ffi.Uint32()
   external int idFirstChild;
 }
 
-class LPMULTIKEYHELPA extends ffi.Struct {}
+base class LPMULTIKEYHELPA extends ffi.Opaque {}
 
-class LPMULTIKEYHELPW extends ffi.Struct {}
+base class LPMULTIKEYHELPW extends ffi.Opaque {}
 
-class LPHELPWININFOA extends ffi.Struct {}
+base class LPHELPWININFOA extends ffi.Opaque {}
 
-class LPHELPWININFOW extends ffi.Struct {}
+base class LPHELPWININFOW extends ffi.Opaque {}
 
-class PTOUCHPREDICTIONPARAMETERS extends ffi.Struct {
+base class PTOUCHPREDICTIONPARAMETERS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62701,11 +62701,11 @@ abstract class PHANDEDNESS {
   static const int HANDEDNESS_RIGHT = 1;
 }
 
-class LPNONCLIENTMETRICSA extends ffi.Struct {}
+base class LPNONCLIENTMETRICSA extends ffi.Opaque {}
 
-class LPNONCLIENTMETRICSW extends ffi.Struct {}
+base class LPNONCLIENTMETRICSW extends ffi.Opaque {}
 
-class LPMINIMIZEDMETRICS extends ffi.Struct {
+base class LPMINIMIZEDMETRICS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62722,11 +62722,11 @@ class LPMINIMIZEDMETRICS extends ffi.Struct {
   external int iArrange;
 }
 
-class LPICONMETRICSA extends ffi.Struct {}
+base class LPICONMETRICSA extends ffi.Opaque {}
 
-class LPICONMETRICSW extends ffi.Struct {}
+base class LPICONMETRICSW extends ffi.Opaque {}
 
-class LPANIMATIONINFO extends ffi.Struct {
+base class LPANIMATIONINFO extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62734,7 +62734,7 @@ class LPANIMATIONINFO extends ffi.Struct {
   external int iMinAnimate;
 }
 
-class LPSERIALKEYSA extends ffi.Struct {
+base class LPSERIALKEYSA extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62755,7 +62755,7 @@ class LPSERIALKEYSA extends ffi.Struct {
   external int iActive;
 }
 
-class LPSERIALKEYSW extends ffi.Struct {
+base class LPSERIALKEYSW extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62776,7 +62776,7 @@ class LPSERIALKEYSW extends ffi.Struct {
   external int iActive;
 }
 
-class LPHIGHCONTRASTA extends ffi.Struct {
+base class LPHIGHCONTRASTA extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62786,7 +62786,7 @@ class LPHIGHCONTRASTA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpszDefaultScheme;
 }
 
-class LPHIGHCONTRASTW extends ffi.Struct {
+base class LPHIGHCONTRASTW extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62796,9 +62796,9 @@ class LPHIGHCONTRASTW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpszDefaultScheme;
 }
 
-class LPVIDEOPARAMETERS extends ffi.Struct {}
+base class LPVIDEOPARAMETERS extends ffi.Opaque {}
 
-class LPFILTERKEYS extends ffi.Struct {
+base class LPFILTERKEYS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62818,7 +62818,7 @@ class LPFILTERKEYS extends ffi.Struct {
   external int iBounceMSec;
 }
 
-class LPSTICKYKEYS extends ffi.Struct {
+base class LPSTICKYKEYS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62826,7 +62826,7 @@ class LPSTICKYKEYS extends ffi.Struct {
   external int dwFlags;
 }
 
-class LPMOUSEKEYS extends ffi.Struct {
+base class LPMOUSEKEYS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62849,7 +62849,7 @@ class LPMOUSEKEYS extends ffi.Struct {
   external int dwReserved2;
 }
 
-class LPACCESSTIMEOUT extends ffi.Struct {
+base class LPACCESSTIMEOUT extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62860,7 +62860,7 @@ class LPACCESSTIMEOUT extends ffi.Struct {
   external int iTimeOutMSec;
 }
 
-class LPSOUNDSENTRYA extends ffi.Struct {
+base class LPSOUNDSENTRYA extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62897,7 +62897,7 @@ class LPSOUNDSENTRYA extends ffi.Struct {
   external int iWindowsEffectOrdinal;
 }
 
-class LPSOUNDSENTRYW extends ffi.Struct {
+base class LPSOUNDSENTRYW extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62934,7 +62934,7 @@ class LPSOUNDSENTRYW extends ffi.Struct {
   external int iWindowsEffectOrdinal;
 }
 
-class LPTOGGLEKEYS extends ffi.Struct {
+base class LPTOGGLEKEYS extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62942,7 +62942,7 @@ class LPTOGGLEKEYS extends ffi.Struct {
   external int dwFlags;
 }
 
-class LPAUDIODESCRIPTION extends ffi.Struct {
+base class LPAUDIODESCRIPTION extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -62953,36 +62953,36 @@ class LPAUDIODESCRIPTION extends ffi.Struct {
   external int Locale;
 }
 
-class LPMONITORINFO extends ffi.Struct {}
+base class LPMONITORINFO extends ffi.Opaque {}
 
-class LPMONITORINFOEXA extends ffi.Struct {}
+base class LPMONITORINFOEXA extends ffi.Opaque {}
 
-class LPMONITORINFOEXW extends ffi.Struct {}
+base class LPMONITORINFOEXW extends ffi.Opaque {}
 
-class LPGUITHREADINFO extends ffi.Struct {}
+base class LPGUITHREADINFO extends ffi.Opaque {}
 
-class LPCURSORINFO extends ffi.Struct {}
+base class LPCURSORINFO extends ffi.Opaque {}
 
-class LPWINDOWINFO extends ffi.Struct {}
+base class LPWINDOWINFO extends ffi.Opaque {}
 
-class LPTITLEBARINFO extends ffi.Struct {}
+base class LPTITLEBARINFO extends ffi.Opaque {}
 
-class LPTITLEBARINFOEX extends ffi.Struct {}
+base class LPTITLEBARINFOEX extends ffi.Opaque {}
 
-class LPMENUBARINFO extends ffi.Struct {}
+base class LPMENUBARINFO extends ffi.Opaque {}
 
-class LPSCROLLBARINFO extends ffi.Struct {}
+base class LPSCROLLBARINFO extends ffi.Opaque {}
 
-class LPCOMBOBOXINFO extends ffi.Struct {}
+base class LPCOMBOBOXINFO extends ffi.Opaque {}
 
-class LPALTTABINFO extends ffi.Struct {}
+base class LPALTTABINFO extends ffi.Opaque {}
 
-class HRAWINPUT__ extends ffi.Struct {
+base class HRAWINPUT__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class LPRAWINPUTHEADER extends ffi.Struct {
+base class LPRAWINPUTHEADER extends ffi.Struct {
   @ffi.Uint64()
   external int dwType;
 
@@ -62995,7 +62995,7 @@ class LPRAWINPUTHEADER extends ffi.Struct {
   external int wParam;
 }
 
-class LPRAWMOUSE extends ffi.Struct {
+base class LPRAWMOUSE extends ffi.Struct {
   @ffi.Uint16()
   external int usFlags;
 
@@ -63012,7 +63012,7 @@ class LPRAWMOUSE extends ffi.Struct {
   external int ulExtraInformation;
 }
 
-class LPRAWKEYBOARD extends ffi.Struct {
+base class LPRAWKEYBOARD extends ffi.Struct {
   @ffi.Uint16()
   external int MakeCode;
 
@@ -63032,11 +63032,11 @@ class LPRAWKEYBOARD extends ffi.Struct {
   external int ExtraInformation;
 }
 
-class LPRAWHID extends ffi.Struct {}
+base class LPRAWHID extends ffi.Opaque {}
 
-class LPRAWINPUT extends ffi.Struct {}
+base class LPRAWINPUT extends ffi.Opaque {}
 
-class PRID_DEVICE_INFO_MOUSE extends ffi.Struct {
+base class PRID_DEVICE_INFO_MOUSE extends ffi.Struct {
   @ffi.Uint64()
   external int dwId;
 
@@ -63050,7 +63050,7 @@ class PRID_DEVICE_INFO_MOUSE extends ffi.Struct {
   external int fHasHorizontalWheel;
 }
 
-class PRID_DEVICE_INFO_KEYBOARD extends ffi.Struct {
+base class PRID_DEVICE_INFO_KEYBOARD extends ffi.Struct {
   @ffi.Uint64()
   external int dwType;
 
@@ -63070,7 +63070,7 @@ class PRID_DEVICE_INFO_KEYBOARD extends ffi.Struct {
   external int dwNumberOfKeysTotal;
 }
 
-class PRID_DEVICE_INFO_HID extends ffi.Struct {
+base class PRID_DEVICE_INFO_HID extends ffi.Struct {
   @ffi.Uint64()
   external int dwVendorId;
 
@@ -63087,7 +63087,7 @@ class PRID_DEVICE_INFO_HID extends ffi.Struct {
   external int usUsage;
 }
 
-class LPRID_DEVICE_INFO extends ffi.Struct {
+base class LPRID_DEVICE_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -63095,7 +63095,7 @@ class LPRID_DEVICE_INFO extends ffi.Struct {
   external int dwType;
 }
 
-class LPRAWINPUTDEVICE extends ffi.Struct {
+base class LPRAWINPUTDEVICE extends ffi.Struct {
   @ffi.Uint16()
   external int usUsagePage;
 
@@ -63108,7 +63108,7 @@ class LPRAWINPUTDEVICE extends ffi.Struct {
   external ffi.Pointer<HWND__> hwndTarget;
 }
 
-class PRAWINPUTDEVICELIST extends ffi.Struct {
+base class PRAWINPUTDEVICELIST extends ffi.Struct {
   external ffi.Pointer<ffi.Void> hDevice;
 
   @ffi.Uint64()
@@ -63123,9 +63123,9 @@ abstract class POINTER_DEVICE_TYPE {
   static const int POINTER_DEVICE_TYPE_MAX = -1;
 }
 
-class POINTER_DEVICE_INFO extends ffi.Struct {}
+base class POINTER_DEVICE_INFO extends ffi.Opaque {}
 
-class POINTER_DEVICE_PROPERTY extends ffi.Struct {
+base class POINTER_DEVICE_PROPERTY extends ffi.Struct {
   @ffi.Int32()
   external int logicalMin;
 
@@ -63158,7 +63158,7 @@ abstract class POINTER_DEVICE_CURSOR_TYPE {
   static const int POINTER_DEVICE_CURSOR_TYPE_MAX = -1;
 }
 
-class POINTER_DEVICE_CURSOR_INFO extends ffi.Struct {
+base class POINTER_DEVICE_CURSOR_INFO extends ffi.Struct {
   @ffi.Uint32()
   external int cursorId;
 
@@ -63166,7 +63166,7 @@ class POINTER_DEVICE_CURSOR_INFO extends ffi.Struct {
   external int cursor;
 }
 
-class PCHANGEFILTERSTRUCT extends ffi.Struct {
+base class PCHANGEFILTERSTRUCT extends ffi.Struct {
   @ffi.Uint64()
   external int cbSize;
 
@@ -63174,16 +63174,16 @@ class PCHANGEFILTERSTRUCT extends ffi.Struct {
   external int ExtStatus;
 }
 
-class HGESTUREINFO__ extends ffi.Struct {
+base class HGESTUREINFO__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class PGESTUREINFO extends ffi.Struct {}
+base class PGESTUREINFO extends ffi.Opaque {}
 
-class PGESTURENOTIFYSTRUCT extends ffi.Struct {}
+base class PGESTURENOTIFYSTRUCT extends ffi.Opaque {}
 
-class PGESTURECONFIG extends ffi.Struct {
+base class PGESTURECONFIG extends ffi.Struct {
   @ffi.Uint64()
   external int dwID;
 
@@ -63210,7 +63210,7 @@ abstract class INPUT_MESSAGE_ORIGIN_ID {
   static const int IMO_SYSTEM = 4;
 }
 
-class INPUT_MESSAGE_SOURCE extends ffi.Struct {
+base class INPUT_MESSAGE_SOURCE extends ffi.Struct {
   @ffi.Int32()
   external int deviceType;
 
@@ -63238,13 +63238,13 @@ abstract class ORIENTATION_PREFERENCE {
   static const int ORIENTATION_PREFERENCE_PORTRAIT_FLIPPED = 8;
 }
 
-class LPCPINFO extends ffi.Struct {}
+base class LPCPINFO extends ffi.Opaque {}
 
-class LPCPINFOEXA extends ffi.Struct {}
+base class LPCPINFOEXA extends ffi.Opaque {}
 
-class LPCPINFOEXW extends ffi.Struct {}
+base class LPCPINFOEXW extends ffi.Opaque {}
 
-class LPNUMBERFMTA extends ffi.Struct {
+base class LPNUMBERFMTA extends ffi.Struct {
   @ffi.Uint32()
   external int NumDigits;
 
@@ -63262,7 +63262,7 @@ class LPNUMBERFMTA extends ffi.Struct {
   external int NegativeOrder;
 }
 
-class LPNUMBERFMTW extends ffi.Struct {
+base class LPNUMBERFMTW extends ffi.Struct {
   @ffi.Uint32()
   external int NumDigits;
 
@@ -63280,7 +63280,7 @@ class LPNUMBERFMTW extends ffi.Struct {
   external int NegativeOrder;
 }
 
-class LPCURRENCYFMTA extends ffi.Struct {
+base class LPCURRENCYFMTA extends ffi.Struct {
   @ffi.Uint32()
   external int NumDigits;
 
@@ -63303,7 +63303,7 @@ class LPCURRENCYFMTA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpCurrencySymbol;
 }
 
-class LPCURRENCYFMTW extends ffi.Struct {
+base class LPCURRENCYFMTW extends ffi.Struct {
   @ffi.Uint32()
   external int NumDigits;
 
@@ -63330,9 +63330,9 @@ abstract class SYSNLS_FUNCTION {
   static const int COMPARE_STRING = 1;
 }
 
-class LPNLSVERSIONINFO extends ffi.Struct {}
+base class LPNLSVERSIONINFO extends ffi.Opaque {}
 
-class LPNLSVERSIONINFOEX extends ffi.Struct {}
+base class LPNLSVERSIONINFOEX extends ffi.Opaque {}
 
 abstract class SYSGEOTYPE {
   static const int GEO_NATION = 1;
@@ -63369,14 +63369,14 @@ abstract class NORM_FORM {
   static const int NormalizationKD = 6;
 }
 
-class PFILEMUIINFO extends ffi.Struct {}
+base class PFILEMUIINFO extends ffi.Opaque {}
 
-class HSAVEDUILANGUAGES__ extends ffi.Struct {
+base class HSAVEDUILANGUAGES__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class PCOORD extends ffi.Struct {
+base class PCOORD extends ffi.Struct {
   @ffi.Int16()
   external int X;
 
@@ -63384,7 +63384,7 @@ class PCOORD extends ffi.Struct {
   external int Y;
 }
 
-class PSMALL_RECT extends ffi.Struct {
+base class PSMALL_RECT extends ffi.Struct {
   @ffi.Int16()
   external int Left;
 
@@ -63398,29 +63398,29 @@ class PSMALL_RECT extends ffi.Struct {
   external int Bottom;
 }
 
-class PKEY_EVENT_RECORD extends ffi.Struct {}
+base class PKEY_EVENT_RECORD extends ffi.Opaque {}
 
-class PMOUSE_EVENT_RECORD extends ffi.Struct {}
+base class PMOUSE_EVENT_RECORD extends ffi.Opaque {}
 
-class PWINDOW_BUFFER_SIZE_RECORD extends ffi.Struct {}
+base class PWINDOW_BUFFER_SIZE_RECORD extends ffi.Opaque {}
 
-class PMENU_EVENT_RECORD extends ffi.Struct {
+base class PMENU_EVENT_RECORD extends ffi.Struct {
   @ffi.Uint32()
   external int dwCommandId;
 }
 
-class PFOCUS_EVENT_RECORD extends ffi.Struct {
+base class PFOCUS_EVENT_RECORD extends ffi.Struct {
   @ffi.Int32()
   external int bSetFocus;
 }
 
-class PINPUT_RECORD extends ffi.Struct {}
+base class PINPUT_RECORD extends ffi.Opaque {}
 
-class PCHAR_INFO extends ffi.Struct {}
+base class PCHAR_INFO extends ffi.Opaque {}
 
-class PCONSOLE_FONT_INFO extends ffi.Struct {}
+base class PCONSOLE_FONT_INFO extends ffi.Opaque {}
 
-class PCONSOLE_READCONSOLE_CONTROL extends ffi.Struct {
+base class PCONSOLE_READCONSOLE_CONTROL extends ffi.Struct {
   @ffi.Uint64()
   external int nLength;
 
@@ -63434,7 +63434,7 @@ class PCONSOLE_READCONSOLE_CONTROL extends ffi.Struct {
   external int dwControlKeyState;
 }
 
-class PCONSOLE_CURSOR_INFO extends ffi.Struct {
+base class PCONSOLE_CURSOR_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwSize;
 
@@ -63442,15 +63442,15 @@ class PCONSOLE_CURSOR_INFO extends ffi.Struct {
   external int bVisible;
 }
 
-class PCONSOLE_SCREEN_BUFFER_INFO extends ffi.Struct {}
+base class PCONSOLE_SCREEN_BUFFER_INFO extends ffi.Opaque {}
 
-class PCONSOLE_SCREEN_BUFFER_INFOEX extends ffi.Struct {}
+base class PCONSOLE_SCREEN_BUFFER_INFOEX extends ffi.Opaque {}
 
-class PCONSOLE_FONT_INFOEX extends ffi.Struct {}
+base class PCONSOLE_FONT_INFOEX extends ffi.Opaque {}
 
-class PCONSOLE_SELECTION_INFO extends ffi.Struct {}
+base class PCONSOLE_SELECTION_INFO extends ffi.Opaque {}
 
-class PCONSOLE_HISTORY_INFO extends ffi.Struct {
+base class PCONSOLE_HISTORY_INFO extends ffi.Struct {
   @ffi.Uint32()
   external int cbSize;
 
@@ -63464,7 +63464,7 @@ class PCONSOLE_HISTORY_INFO extends ffi.Struct {
   external int dwFlags;
 }
 
-class VS_FIXEDFILEINFO extends ffi.Struct {
+base class VS_FIXEDFILEINFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwSignature;
 
@@ -63505,7 +63505,7 @@ class VS_FIXEDFILEINFO extends ffi.Struct {
   external int dwFileDateLS;
 }
 
-class val_context extends ffi.Struct {
+base class val_context extends ffi.Struct {
   @ffi.Int32()
   external int valuelen;
 
@@ -63514,7 +63514,7 @@ class val_context extends ffi.Struct {
   external ffi.Pointer<ffi.Void> val_buff_ptr;
 }
 
-class PPVALUEA extends ffi.Struct {
+base class PPVALUEA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> pv_valuename;
 
   @ffi.Int32()
@@ -63526,7 +63526,7 @@ class PPVALUEA extends ffi.Struct {
   external int pv_type;
 }
 
-class PPVALUEW extends ffi.Struct {
+base class PPVALUEW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> pv_valuename;
 
   @ffi.Int32()
@@ -63538,7 +63538,7 @@ class PPVALUEW extends ffi.Struct {
   external int pv_type;
 }
 
-class REG_PROVIDER extends ffi.Struct {
+base class REG_PROVIDER extends ffi.Struct {
   external ffi.Pointer<ffi.NativeFunction<PQUERYHANDLER>> pi_R0_1val;
 
   external ffi.Pointer<ffi.NativeFunction<PQUERYHANDLER>> pi_R0_allvals;
@@ -63553,7 +63553,7 @@ class REG_PROVIDER extends ffi.Struct {
   external ffi.Pointer<ffi.Void> pi_key_context;
 }
 
-class PVALENTA extends ffi.Struct {
+base class PVALENTA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> ve_valuename;
 
   @ffi.Uint64()
@@ -63566,7 +63566,7 @@ class PVALENTA extends ffi.Struct {
   external int ve_type;
 }
 
-class PVALENTW extends ffi.Struct {
+base class PVALENTW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> ve_valuename;
 
   @ffi.Uint64()
@@ -63579,7 +63579,7 @@ class PVALENTW extends ffi.Struct {
   external int ve_type;
 }
 
-class LPNETRESOURCEA extends ffi.Struct {
+base class LPNETRESOURCEA extends ffi.Struct {
   @ffi.Uint64()
   external int dwScope;
 
@@ -63601,7 +63601,7 @@ class LPNETRESOURCEA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpProvider;
 }
 
-class LPNETRESOURCEW extends ffi.Struct {
+base class LPNETRESOURCEW extends ffi.Struct {
   @ffi.Uint64()
   external int dwScope;
 
@@ -63623,7 +63623,7 @@ class LPNETRESOURCEW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpProvider;
 }
 
-class LPCONNECTDLGSTRUCTA extends ffi.Struct {
+base class LPCONNECTDLGSTRUCTA extends ffi.Struct {
   @ffi.Uint64()
   external int cbStructure;
 
@@ -63638,7 +63638,7 @@ class LPCONNECTDLGSTRUCTA extends ffi.Struct {
   external int dwDevNum;
 }
 
-class LPCONNECTDLGSTRUCTW extends ffi.Struct {
+base class LPCONNECTDLGSTRUCTW extends ffi.Struct {
   @ffi.Uint64()
   external int cbStructure;
 
@@ -63653,7 +63653,7 @@ class LPCONNECTDLGSTRUCTW extends ffi.Struct {
   external int dwDevNum;
 }
 
-class LPDISCDLGSTRUCTA extends ffi.Struct {
+base class LPDISCDLGSTRUCTA extends ffi.Struct {
   @ffi.Uint64()
   external int cbStructure;
 
@@ -63667,7 +63667,7 @@ class LPDISCDLGSTRUCTA extends ffi.Struct {
   external int dwFlags;
 }
 
-class LPDISCDLGSTRUCTW extends ffi.Struct {
+base class LPDISCDLGSTRUCTW extends ffi.Struct {
   @ffi.Uint64()
   external int cbStructure;
 
@@ -63681,15 +63681,15 @@ class LPDISCDLGSTRUCTW extends ffi.Struct {
   external int dwFlags;
 }
 
-class LPUNIVERSAL_NAME_INFOA extends ffi.Struct {
+base class LPUNIVERSAL_NAME_INFOA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpUniversalName;
 }
 
-class LPUNIVERSAL_NAME_INFOW extends ffi.Struct {
+base class LPUNIVERSAL_NAME_INFOW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpUniversalName;
 }
 
-class LPREMOTE_NAME_INFOA extends ffi.Struct {
+base class LPREMOTE_NAME_INFOA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpUniversalName;
 
   external ffi.Pointer<ffi.Int8> lpConnectionName;
@@ -63697,7 +63697,7 @@ class LPREMOTE_NAME_INFOA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpRemainingPath;
 }
 
-class LPREMOTE_NAME_INFOW extends ffi.Struct {
+base class LPREMOTE_NAME_INFOW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpUniversalName;
 
   external ffi.Pointer<ffi.Uint16> lpConnectionName;
@@ -63705,7 +63705,7 @@ class LPREMOTE_NAME_INFOW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpRemainingPath;
 }
 
-class LPNETINFOSTRUCT extends ffi.Struct {
+base class LPNETINFOSTRUCT extends ffi.Struct {
   @ffi.Uint64()
   external int cbStructure;
 
@@ -63731,7 +63731,7 @@ class LPNETINFOSTRUCT extends ffi.Struct {
   external int dwDrives;
 }
 
-class LPNETCONNECTINFOSTRUCT extends ffi.Struct {
+base class LPNETCONNECTINFOSTRUCT extends ffi.Struct {
   @ffi.Uint64()
   external int cbStructure;
 
@@ -63748,15 +63748,15 @@ class LPNETCONNECTINFOSTRUCT extends ffi.Struct {
   external int dwOptDataSize;
 }
 
-class SERVICE_TRIGGER_CUSTOM_STATE_ID extends ffi.Struct {}
+base class SERVICE_TRIGGER_CUSTOM_STATE_ID extends ffi.Opaque {}
 
-class LPSERVICE_CUSTOM_SYSTEM_STATE_CHANGE_DATA_ITEM extends ffi.Struct {}
+base class LPSERVICE_CUSTOM_SYSTEM_STATE_CHANGE_DATA_ITEM extends ffi.Opaque {}
 
-class LPSERVICE_DESCRIPTIONA extends ffi.Struct {
+base class LPSERVICE_DESCRIPTIONA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpDescription;
 }
 
-class LPSERVICE_DESCRIPTIONW extends ffi.Struct {
+base class LPSERVICE_DESCRIPTIONW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpDescription;
 }
 
@@ -63768,7 +63768,7 @@ abstract class SC_ACTION_TYPE {
   static const int SC_ACTION_OWN_RESTART = 4;
 }
 
-class LPSC_ACTION extends ffi.Struct {
+base class LPSC_ACTION extends ffi.Struct {
   @ffi.Int32()
   external int Type;
 
@@ -63776,7 +63776,7 @@ class LPSC_ACTION extends ffi.Struct {
   external int Delay;
 }
 
-class LPSERVICE_FAILURE_ACTIONSA extends ffi.Struct {
+base class LPSERVICE_FAILURE_ACTIONSA extends ffi.Struct {
   @ffi.Uint64()
   external int dwResetPeriod;
 
@@ -63790,7 +63790,7 @@ class LPSERVICE_FAILURE_ACTIONSA extends ffi.Struct {
   external ffi.Pointer<LPSC_ACTION> lpsaActions;
 }
 
-class LPSERVICE_FAILURE_ACTIONSW extends ffi.Struct {
+base class LPSERVICE_FAILURE_ACTIONSW extends ffi.Struct {
   @ffi.Uint64()
   external int dwResetPeriod;
 
@@ -63804,35 +63804,35 @@ class LPSERVICE_FAILURE_ACTIONSW extends ffi.Struct {
   external ffi.Pointer<LPSC_ACTION> lpsaActions;
 }
 
-class LPSERVICE_DELAYED_AUTO_START_INFO extends ffi.Struct {
+base class LPSERVICE_DELAYED_AUTO_START_INFO extends ffi.Struct {
   @ffi.Int32()
   external int fDelayedAutostart;
 }
 
-class LPSERVICE_FAILURE_ACTIONS_FLAG extends ffi.Struct {
+base class LPSERVICE_FAILURE_ACTIONS_FLAG extends ffi.Struct {
   @ffi.Int32()
   external int fFailureActionsOnNonCrashFailures;
 }
 
-class LPSERVICE_SID_INFO extends ffi.Struct {
+base class LPSERVICE_SID_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwServiceSidType;
 }
 
-class LPSERVICE_REQUIRED_PRIVILEGES_INFOA extends ffi.Struct {
+base class LPSERVICE_REQUIRED_PRIVILEGES_INFOA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> pmszRequiredPrivileges;
 }
 
-class LPSERVICE_REQUIRED_PRIVILEGES_INFOW extends ffi.Struct {
+base class LPSERVICE_REQUIRED_PRIVILEGES_INFOW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> pmszRequiredPrivileges;
 }
 
-class LPSERVICE_PRESHUTDOWN_INFO extends ffi.Struct {
+base class LPSERVICE_PRESHUTDOWN_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwPreshutdownTimeout;
 }
 
-class PSERVICE_TRIGGER_SPECIFIC_DATA_ITEM extends ffi.Struct {
+base class PSERVICE_TRIGGER_SPECIFIC_DATA_ITEM extends ffi.Struct {
   @ffi.Uint64()
   external int dwDataType;
 
@@ -63842,7 +63842,7 @@ class PSERVICE_TRIGGER_SPECIFIC_DATA_ITEM extends ffi.Struct {
   external ffi.Pointer<ffi.Uint8> pData;
 }
 
-class PSERVICE_TRIGGER extends ffi.Struct {
+base class PSERVICE_TRIGGER extends ffi.Struct {
   @ffi.Uint64()
   external int dwTriggerType;
 
@@ -63857,7 +63857,7 @@ class PSERVICE_TRIGGER extends ffi.Struct {
   external ffi.Pointer<PSERVICE_TRIGGER_SPECIFIC_DATA_ITEM> pDataItems;
 }
 
-class PSERVICE_TRIGGER_INFO extends ffi.Struct {
+base class PSERVICE_TRIGGER_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int cTriggers;
 
@@ -63866,7 +63866,7 @@ class PSERVICE_TRIGGER_INFO extends ffi.Struct {
   external ffi.Pointer<ffi.Uint8> pReserved;
 }
 
-class LPSERVICE_PREFERRED_NODE_INFO extends ffi.Struct {
+base class LPSERVICE_PREFERRED_NODE_INFO extends ffi.Struct {
   @ffi.Uint16()
   external int usPreferredNode;
 
@@ -63874,19 +63874,19 @@ class LPSERVICE_PREFERRED_NODE_INFO extends ffi.Struct {
   external int fDelete;
 }
 
-class PSERVICE_TIMECHANGE_INFO extends ffi.Struct {}
+base class PSERVICE_TIMECHANGE_INFO extends ffi.Opaque {}
 
-class PSERVICE_LAUNCH_PROTECTED_INFO extends ffi.Struct {
+base class PSERVICE_LAUNCH_PROTECTED_INFO extends ffi.Struct {
   @ffi.Uint64()
   external int dwLaunchProtected;
 }
 
-class SC_HANDLE__ extends ffi.Struct {
+base class SC_HANDLE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class SERVICE_STATUS_HANDLE__ extends ffi.Struct {
+base class SERVICE_STATUS_HANDLE__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
@@ -63899,7 +63899,7 @@ abstract class SC_ENUM_TYPE {
   static const int SC_ENUM_PROCESS_INFO = 0;
 }
 
-class LPSERVICE_STATUS extends ffi.Struct {
+base class LPSERVICE_STATUS extends ffi.Struct {
   @ffi.Uint64()
   external int dwServiceType;
 
@@ -63922,7 +63922,7 @@ class LPSERVICE_STATUS extends ffi.Struct {
   external int dwWaitHint;
 }
 
-class LPSERVICE_STATUS_PROCESS extends ffi.Struct {
+base class LPSERVICE_STATUS_PROCESS extends ffi.Struct {
   @ffi.Uint64()
   external int dwServiceType;
 
@@ -63951,15 +63951,15 @@ class LPSERVICE_STATUS_PROCESS extends ffi.Struct {
   external int dwServiceFlags;
 }
 
-class LPENUM_SERVICE_STATUSA extends ffi.Struct {}
+base class LPENUM_SERVICE_STATUSA extends ffi.Opaque {}
 
-class LPENUM_SERVICE_STATUSW extends ffi.Struct {}
+base class LPENUM_SERVICE_STATUSW extends ffi.Opaque {}
 
-class LPENUM_SERVICE_STATUS_PROCESSA extends ffi.Struct {}
+base class LPENUM_SERVICE_STATUS_PROCESSA extends ffi.Opaque {}
 
-class LPENUM_SERVICE_STATUS_PROCESSW extends ffi.Struct {}
+base class LPENUM_SERVICE_STATUS_PROCESSW extends ffi.Opaque {}
 
-class LPQUERY_SERVICE_LOCK_STATUSA extends ffi.Struct {
+base class LPQUERY_SERVICE_LOCK_STATUSA extends ffi.Struct {
   @ffi.Uint64()
   external int fIsLocked;
 
@@ -63969,7 +63969,7 @@ class LPQUERY_SERVICE_LOCK_STATUSA extends ffi.Struct {
   external int dwLockDuration;
 }
 
-class LPQUERY_SERVICE_LOCK_STATUSW extends ffi.Struct {
+base class LPQUERY_SERVICE_LOCK_STATUSW extends ffi.Struct {
   @ffi.Uint64()
   external int fIsLocked;
 
@@ -63979,7 +63979,7 @@ class LPQUERY_SERVICE_LOCK_STATUSW extends ffi.Struct {
   external int dwLockDuration;
 }
 
-class LPQUERY_SERVICE_CONFIGA extends ffi.Struct {
+base class LPQUERY_SERVICE_CONFIGA extends ffi.Struct {
   @ffi.Uint64()
   external int dwServiceType;
 
@@ -64003,7 +64003,7 @@ class LPQUERY_SERVICE_CONFIGA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpDisplayName;
 }
 
-class LPQUERY_SERVICE_CONFIGW extends ffi.Struct {
+base class LPQUERY_SERVICE_CONFIGW extends ffi.Struct {
   @ffi.Uint64()
   external int dwServiceType;
 
@@ -64027,31 +64027,31 @@ class LPQUERY_SERVICE_CONFIGW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpDisplayName;
 }
 
-class LPSERVICE_TABLE_ENTRYA extends ffi.Struct {
+base class LPSERVICE_TABLE_ENTRYA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpServiceName;
 
   external ffi.Pointer<ffi.NativeFunction<LPSERVICE_MAIN_FUNCTIONA>>
       lpServiceProc;
 }
 
-class LPSERVICE_TABLE_ENTRYW extends ffi.Struct {
+base class LPSERVICE_TABLE_ENTRYW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpServiceName;
 
   external ffi.Pointer<ffi.NativeFunction<LPSERVICE_MAIN_FUNCTIONW>>
       lpServiceProc;
 }
 
-class PSERVICE_NOTIFY_1 extends ffi.Struct {}
+base class PSERVICE_NOTIFY_1 extends ffi.Opaque {}
 
-class PSERVICE_NOTIFY_2A extends ffi.Struct {}
+base class PSERVICE_NOTIFY_2A extends ffi.Opaque {}
 
-class PSERVICE_NOTIFY_2W extends ffi.Struct {}
+base class PSERVICE_NOTIFY_2W extends ffi.Opaque {}
 
-class PSERVICE_CONTROL_STATUS_REASON_PARAMSA extends ffi.Struct {}
+base class PSERVICE_CONTROL_STATUS_REASON_PARAMSA extends ffi.Opaque {}
 
-class PSERVICE_CONTROL_STATUS_REASON_PARAMSW extends ffi.Struct {}
+base class PSERVICE_CONTROL_STATUS_REASON_PARAMSW extends ffi.Opaque {}
 
-class PSERVICE_START_REASON extends ffi.Struct {
+base class PSERVICE_START_REASON extends ffi.Struct {
   @ffi.Uint64()
   external int dwReason;
 }
@@ -64062,7 +64062,7 @@ abstract class PSC_EVENT_TYPE {
   static const int SC_EVENT_STATUS_CHANGE = 2;
 }
 
-class _SC_NOTIFICATION_REGISTRATION extends ffi.Struct {}
+base class _SC_NOTIFICATION_REGISTRATION extends ffi.Opaque {}
 
 abstract class SERVICE_REGISTRY_STATE_TYPE {
   static const int ServiceRegistryStateParameters = 0;
@@ -64075,39 +64075,39 @@ abstract class SERVICE_DIRECTORY_TYPE {
   static const int ServiceDirectoryTypeMax = 1;
 }
 
-class LPMODEMDEVCAPS extends ffi.Struct {}
+base class LPMODEMDEVCAPS extends ffi.Opaque {}
 
-class LPMODEMSETTINGS extends ffi.Struct {}
+base class LPMODEMSETTINGS extends ffi.Opaque {}
 
-class HIMC__ extends ffi.Struct {
+base class HIMC__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class HIMCC__ extends ffi.Struct {
+base class HIMCC__ extends ffi.Struct {
   @ffi.Int32()
   external int unused;
 }
 
-class LPCOMPOSITIONFORM extends ffi.Struct {}
+base class LPCOMPOSITIONFORM extends ffi.Opaque {}
 
-class LPCANDIDATEFORM extends ffi.Struct {}
+base class LPCANDIDATEFORM extends ffi.Opaque {}
 
-class LPCANDIDATELIST extends ffi.Struct {}
+base class LPCANDIDATELIST extends ffi.Opaque {}
 
-class LPREGISTERWORDA extends ffi.Struct {
+base class LPREGISTERWORDA extends ffi.Struct {
   external ffi.Pointer<ffi.Int8> lpReading;
 
   external ffi.Pointer<ffi.Int8> lpWord;
 }
 
-class LPREGISTERWORDW extends ffi.Struct {
+base class LPREGISTERWORDW extends ffi.Struct {
   external ffi.Pointer<ffi.Uint16> lpReading;
 
   external ffi.Pointer<ffi.Uint16> lpWord;
 }
 
-class LPRECONVERTSTRING extends ffi.Struct {
+base class LPRECONVERTSTRING extends ffi.Struct {
   @ffi.Uint64()
   external int dwSize;
 
@@ -64133,21 +64133,21 @@ class LPRECONVERTSTRING extends ffi.Struct {
   external int dwTargetStrOffset;
 }
 
-class LPSTYLEBUFA extends ffi.Struct {}
+base class LPSTYLEBUFA extends ffi.Opaque {}
 
-class LPSTYLEBUFW extends ffi.Struct {}
+base class LPSTYLEBUFW extends ffi.Opaque {}
 
-class LPIMEMENUITEMINFOA extends ffi.Struct {}
+base class LPIMEMENUITEMINFOA extends ffi.Opaque {}
 
-class LPIMEMENUITEMINFOW extends ffi.Struct {}
+base class LPIMEMENUITEMINFOW extends ffi.Opaque {}
 
-class LPIMECHARPOSITION extends ffi.Struct {}
+base class LPIMECHARPOSITION extends ffi.Opaque {}
 
-class _CrtMemBlockHeader extends ffi.Struct {}
+base class _CrtMemBlockHeader extends ffi.Opaque {}
 
-class _CrtMemState extends ffi.Struct {}
+base class _CrtMemState extends ffi.Opaque {}
 
-class _exception extends ffi.Struct {
+base class _exception extends ffi.Struct {
   @ffi.Int32()
   external int type;
 
@@ -64163,7 +64163,7 @@ class _exception extends ffi.Struct {
   external double retval;
 }
 
-class _complex extends ffi.Struct {
+base class _complex extends ffi.Struct {
   @ffi.Double()
   external double x;
 
@@ -64171,7 +64171,7 @@ class _complex extends ffi.Struct {
   external double y;
 }
 
-class div_t extends ffi.Struct {
+base class div_t extends ffi.Struct {
   @ffi.Int32()
   external int quot;
 
@@ -64179,7 +64179,7 @@ class div_t extends ffi.Struct {
   external int rem;
 }
 
-class ldiv_t extends ffi.Struct {
+base class ldiv_t extends ffi.Struct {
   @ffi.Int64()
   external int quot;
 
@@ -64187,7 +64187,7 @@ class ldiv_t extends ffi.Struct {
   external int rem;
 }
 
-class lldiv_t extends ffi.Struct {
+base class lldiv_t extends ffi.Struct {
   @ffi.Int64()
   external int quot;
 
@@ -64195,21 +64195,21 @@ class lldiv_t extends ffi.Struct {
   external int rem;
 }
 
-class _LDOUBLE extends ffi.Struct {}
+base class _LDOUBLE extends ffi.Opaque {}
 
-class _CRT_DOUBLE extends ffi.Struct {
+base class _CRT_DOUBLE extends ffi.Struct {
   @ffi.Double()
   external double x;
 }
 
-class _CRT_FLOAT extends ffi.Struct {
+base class _CRT_FLOAT extends ffi.Struct {
   @ffi.Float()
   external double f;
 }
 
-class _LONGDOUBLE extends ffi.Struct {}
+base class _LONGDOUBLE extends ffi.Opaque {}
 
-class _LDBL12 extends ffi.Struct {}
+base class _LDBL12 extends ffi.Opaque {}
 
 const int __egl_h_ = 1;
 
